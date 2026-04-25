@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VMF Asset Packer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <span class="logo-dot"></span>
+            <h1>VMF Asset Packer</h1>
+        </div>
+        <div class="status" id="status">готов</div>
+    </header>
+
+    <main class="layout">
+        <section class="panel" id="config-panel">
+            <h2>Параметры</h2>
+
+            <form id="run-form" autocomplete="off">
+                <label class="field">
+                    <span>VMF файл</span>
+                    <div class="picker-row">
+                        <input name="vmfPath" type="text" spellcheck="false" readonly placeholder="Выбери .vmf через проводник" required>
+                        <button type="button" id="pick-vmf-btn" class="ghost picker-btn">Выбрать</button>
+                    </div>
+                    <small>Файл читается локальным helper-сервером, без загрузки на удалённый сервер.</small>
+                </label>
+
+                <label class="field">
+                    <span>Content roots</span>
+                    <div class="root-list" id="content-roots"></div>
+                    <div class="inline-actions">
+                        <button type="button" id="add-root-btn" class="ghost">Добавить папку контента</button>
+                    </div>
+                    <small>Добавь все большие папки, где лежат <code>materials/</code>, <code>models/</code>, <code>sound/</code> и связанные данные.</small>
+                </label>
+
+                <label class="field">
+                    <span>Output папка</span>
+                    <div class="picker-row">
+                        <input name="outputPath" type="text" spellcheck="false" readonly placeholder="Куда копировать найденные ассеты" required>
+                        <button type="button" id="pick-output-btn" class="ghost picker-btn">Выбрать</button>
+                    </div>
+                    <label class="check-row">
+                        <input name="cleanOutput" type="checkbox">
+                        <span>Очистить output перед запуском</span>
+                    </label>
+                    <small>Результат будет записан прямо на локальный диск, без промежуточного ZIP.</small>
+                </label>
+
+                <div class="server-note">
+                    Этот режим рассчитан на localhost: браузер даёт удобный UI, а helper-сервер работает с твоими локальными путями и большими библиотеками контента.
+                </div>
+
+                <div class="row">
+                    <label class="field">
+                        <span>Расширения</span>
+                        <input name="exts" type="text" spellcheck="false" required>
+                        <small>Через запятую: <code>vmt, vtf, mp3</code> и т.д.</small>
+                    </label>
+
+                    <label class="field">
+                        <span>Content keys</span>
+                        <input name="contentKeys" type="text" spellcheck="false" required>
+                        <small>Ключи VMF, чьи значения считаются путями к ассетам.</small>
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" id="run-btn" class="primary">Запустить</button>
+                    <button type="button" id="clear-btn" class="ghost">Очистить лог</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel" id="run-panel">
+            <h2>Прогресс</h2>
+
+            <div class="progress-wrap">
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+                <div class="progress-meta">
+                    <span id="progress-text">—</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-file" id="progress-file"></div>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><span class="stat-label">Обработано</span><span class="stat-value" id="stat-processed">0</span></div>
+                <div class="stat"><span class="stat-label">Всего</span><span class="stat-value" id="stat-total">0</span></div>
+                <div class="stat err"><span class="stat-label">Ошибок exec</span><span class="stat-value" id="stat-exec-err">0</span></div>
+                <div class="stat err"><span class="stat-label">Ошибок copy</span><span class="stat-value" id="stat-copy-err">0</span></div>
+            </div>
+
+            <h2 class="log-header">
+                Лог
+                <span class="log-filters">
+                    <label><input type="checkbox" id="filter-progress" checked> прогресс</label>
+                    <label><input type="checkbox" id="filter-debug" checked> debug</label>
+                    <label><input type="checkbox" id="filter-warn" checked> warn</label>
+                    <label><input type="checkbox" id="filter-error" checked> error</label>
+                </span>
+            </h2>
+            <div class="log" id="log"></div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
