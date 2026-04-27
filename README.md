@@ -1,80 +1,197 @@
-# VMF Asset Packer
+# Source Asset Toolkit
 
-Local web utility for collecting Source Engine / Garry's Mod map assets from a VMF into an output folder.
+Локальный Windows-инструмент для двух сценариев работы с ассетами Source / Garry's Mod:
 
-The app is built for mapper workstations with large local content libraries. The browser provides the UI, while the localhost helper server reads local folders directly, so you do not need to upload hundreds of gigabytes of `materials`, `models`, or `sound` content anywhere.
+- `vmf-pack`: собрать ассеты, на которые ссылается VMF, в выходную папку.
+- `content-pack`: объединить библиотеку контента по аддонам, разрешить дубликаты внутренних путей и разложить победителей по группам.
 
-## Features
+UI работает через localhost, а helper-сервер читает локальные папки напрямую. Ничего не отправляется на удалённый сервер.
 
-- Pick a `.vmf` file through the Windows file dialog.
-- Add multiple content roots, such as Garry's Mod `garrysmod/` and custom content folders.
-- Copy found loose assets into an output folder while preserving relative paths.
-- Optionally clean the output folder before each run.
-- Track progress and errors in the web UI through server-sent events.
-- CLI mode for scripted local runs.
+## Возможности
 
-## Requirements
+- Сбор ассетов из VMF по нескольким папкам контента.
+- Режим объединения контента с группами, правилами и fallback-поведением прямо в интерфейсе.
+- Необязательное пережатие звуков и VTF только для `content-pack`.
+- Очистка output с защитными проверками.
+- CLI-режим для локальных сценариев и автоматизации.
+- Веб-интерфейс с потоковым прогрессом через server-sent events.
+
+## Требования
 
 - Windows
 - Node.js
-- A local Source / Garry's Mod content folder.
-- `bin/source_asset_tracer.exe` present in the project, or `SOURCE_ASSET_TRACER_PATH` pointing to a local build.
+- Необязательно: `bin/source_asset_tracer.exe` для режима `vmf-pack` при трассировке зависимостей `.mdl` и `.vmt`
 
-## Install
+## Установка
 
 ```powershell
 npm install
 ```
 
-## Web UI
+## Структура workspace
+
+По умолчанию инструмент теперь использует такую локальную структуру:
+
+- `workspace/01_vmf_maps` — VMF-файлы для режима `vmf-pack`
+- `workspace/02_vmf_content_root` — loose-контент, по которому ищутся ассеты для `vmf-pack`
+- `workspace/03_vmf_pack_output` — результат режима `vmf-pack`
+- `workspace/04_addons_source` — исходные папки аддонов для режима `content-pack`
+- `workspace/05_addons_merged` — дедуплицированный и объединённый результат `content-pack`
+- `workspace/06_content_split` — результат режима `content-split`
+
+Такой layout позволяет пройти весь процесс по стадиям без ручной путаницы между `content`, `output`, `maps` и промежуточными результатами.
+
+## Веб-интерфейс
 
 ```powershell
 npm run dev:web
 ```
 
-Open:
+Открой [http://127.0.0.1:5780/](http://127.0.0.1:5780/).
 
-```text
-http://127.0.0.1:5780/
-```
-
-If that port is already busy:
+Если порт занят:
 
 ```powershell
 $env:PORT = "5781"
 npm run dev:web
 ```
 
-In the UI:
+### `vmf-pack`
 
-1. Choose the VMF file.
-2. Add one or more content roots.
-3. Choose the output folder.
-4. Enable the clean-output checkbox only when you want a clean output folder.
-5. Click the run button.
+1. Выбери VMF-файл.
+2. Добавь одну или несколько папок контента.
+3. При необходимости скорректируй список расширений и ключей.
+4. Выбери output и при желании включи его очистку.
+5. Запусти задачу.
+
+### `content-pack`
+
+1. Выбери одну или несколько папок контента.
+   Обычно это `workspace/04_addons_source` и, при необходимости, `workspace/03_vmf_pack_output`.
+2. Добавь группы вывода.
+3. Настрой правила сопоставления аддонов прямо в интерфейсе.
+4. Настрой fallback для нераспознанных аддонов.
+5. При необходимости включи пережатие звуков и/или VTF.
+6. Выбери output и запусти задачу.
 
 ## CLI
 
-```powershell
-npm run dev:cli
-```
+Оба режима используют общий CLI-вход.
 
-Optional environment variables:
+### `vmf-pack`
 
 ```powershell
+$env:RUN_MODE = "vmf-pack"
 $env:VMF_PATH = "E:\maps\example.vmf"
 $env:OUTPUT_PATH = "E:\packed-map"
 $env:CONTENT_ROOTS = "F:\steam\steamapps\common\GarrysMod\garrysmod;E:\gmod-content"
 $env:CLEAN_OUTPUT = "1"
-$env:SOURCE_ASSET_TRACER_PATH = "E:\prog\rust\source-asset-tracer\source_asset_tracer\target\debug\source_asset_tracer.exe"
+$env:SOURCE_ASSET_TRACER_PATH = "E:\tools\source_asset_tracer.exe"
 npm run dev:cli
 ```
 
-`CONTENT_ROOTS` is semicolon-separated.
-`SOURCE_ASSET_TRACER_PATH` is optional. By default the app tries `bin/source_asset_tracer.exe`, then the local Rust debug build path above if it exists.
+`CONTENT_ROOTS` задаётся через `;`.
 
-## Notes
+`SOURCE_ASSET_TRACER_PATH` необязателен. Если его не указать, инструмент ищет `bin/source_asset_tracer.exe`.
 
-- The output-clean option has safety checks and refuses to clean dangerous locations such as a drive root, a folder containing the VMF, or a folder containing a content root.
-- Large content folders are read locally by the helper server. This project is intended for trusted localhost use, not public internet hosting.
-- The current scanner focuses on loose files under content roots. VPK/GMA indexing can be added later if needed.
+### `content-pack`
+
+Для CLI JSON-правила по-прежнему поддерживаются.
+
+```powershell
+$env:RUN_MODE = "content-pack"
+$env:PACK_CONTENT_DIRS = "E:\content\all-addons;E:\content\vmf-pack-output"
+$env:PACK_RULES_PATH = "E:\prog\vmf-asset-packer\examples\qanon-content-pack.rules.json"
+$env:OUTPUT_PATH = "E:\content\packed"
+$env:CLEAN_OUTPUT = "1"
+$env:COMPRESS_SOUNDS = "1"
+$env:COMPRESS_VTF = "1"
+$env:FFMPEG_PATH = "E:\tools\ffmpeg.exe"
+$env:VTFCMD_PATH = "E:\tools\VTFCmd.exe"
+npm run dev:cli
+```
+
+`PACK_CONTENT_DIRS` можно передать и как `CONTENT_DIRS`. Список путей задаётся через `;`.
+
+Для обратной совместимости можно по-прежнему передать один путь через `PACK_CONTENT_DIR` или `CONTENT_DIR`.
+
+`PACK_RULES_PATH` можно передать и как `RULES_PATH`.
+
+Переменные окружения для необязательной пост-обработки:
+
+- `COMPRESS_SOUNDS=1` включает пережатие `.wav`, `.mp3` и `.ogg` в выходной папке.
+- `COMPRESS_VTF=1` включает пережатие `.vtf` в выходной папке.
+- `FFMPEG_PATH` переопределяет поиск `ffmpeg`.
+- `VTFCMD_PATH` или `VTF_CMD_PATH` переопределяет поиск `VTFCmd.exe`.
+- Если явный путь пуст, инструмент сначала смотрит env-переменные, потом проектную `bin/`, потом системный `PATH`.
+
+## Формат правил для CLI
+
+В CLI-файле правил используются:
+
+- `groups`: список групп вывода.
+- `rules`: список правил сопоставления аддонов.
+- `unmatched`: fallback для аддонов без совпавшего правила.
+
+Минимальный пример:
+
+```json
+{
+  "groups": [
+    {
+      "id": "core",
+      "folder": "01_core",
+      "displayName": "Core"
+    },
+    {
+      "id": "optional",
+      "folder": "02_optional",
+      "displayName": "Optional"
+    }
+  ],
+  "unmatched": {
+    "action": "skip"
+  },
+  "rules": [
+    {
+      "match": { "addonName": "my_required_addon_123" },
+      "action": "pack",
+      "groupId": "core",
+      "priority": 1000
+    },
+    {
+      "match": { "addonNamePattern": "^optional_" },
+      "action": "pack",
+      "groupId": "optional",
+      "priority": 200
+    },
+    {
+      "match": { "addonName": "logs" },
+      "action": "skip"
+    }
+  ]
+}
+```
+
+Правила проверяются сверху вниз. Если несколько аддонов дают один и тот же внутренний путь, победитель определяется по:
+
+1. `priority`
+2. меньшей глубине пути
+3. большему размеру файла
+4. лексикографически меньшему имени аддона
+
+## Пример
+
+Мигрированные правила из старого скрипта лежат здесь:
+
+- [examples/qanon-content-pack.rules.json](examples/qanon-content-pack.rules.json)
+
+Их можно использовать как стартовую точку для CLI или как образец логики, которую затем удобнее перенести в UI.
+
+## Примечания
+
+- `content-pack` работает только с loose-файлами. GMA/VPK-архивы он не индексирует.
+- `content-pack` запрещает использовать output, совпадающий с папкой контента или вложенный в неё.
+- Пережатие звуков и VTF не относится к `vmf-pack` и применяется только после `content-pack`.
+- Встроенные бинарники можно положить в `bin/`, тогда UI и CLI смогут подхватывать их без явного пути.
+- Защитные проверки очистки запрещают опасные случаи вроде корня диска или output-папки, внутри которой находятся защищённые входные данные.

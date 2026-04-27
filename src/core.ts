@@ -4,18 +4,26 @@ import { execFile } from 'child_process'
 import { promisify } from 'util'
 import { fileURLToPath } from 'url'
 import vmfparserModule from 'vmfparser'
+import {
+    DEFAULT_VMF_CONTENT_ROOT_DIR,
+    DEFAULT_VMF_PACK_OUTPUT_DIR,
+    ensureCleanOutputDirectory,
+    ensureOutputDirectory,
+    pathExists,
+    type RunEvent,
+} from './shared.js'
 
 const parser = vmfparserModule.default
 const execFileAsync = promisify(execFile)
 
 export const DEFAULT_EXTS = ['vmt', 'vtf', 'mp3', 'wav', 'ogg', 'mdl', 'spr']
 export const DEFAULT_CONTENT_KEYS = ['RopeMaterial', 'model', 'texture', 'material']
-export const DEFAULT_GMOD_PATH = 'F:/steam/steamapps/common/GarrysMod/garrysmod'
-export const DEFAULT_CONTENT_ROOTS = [DEFAULT_GMOD_PATH]
-export const DEFAULT_VMF_PATH = path.resolve('maps/shabonka_1_final_optimize.vmf')
-export const DEFAULT_OUTPUT_PATH = path.resolve('output/')
+export const DEFAULT_GMOD_PATH = ''
+export const DEFAULT_CONTENT_ROOTS: string[] = [DEFAULT_VMF_CONTENT_ROOT_DIR]
+export const DEFAULT_VMF_PATH = ''
+export const DEFAULT_VMF_OUTPUT_PATH = DEFAULT_VMF_PACK_OUTPUT_DIR
 
-export type RunConfig = {
+export type VmfPackConfig = {
     contentRoots: string[]
     vmfPath: string
     outputPath: string
@@ -24,15 +32,7 @@ export type RunConfig = {
     contentKeys: string[]
 }
 
-export type RunEvent =
-    | { type: 'info'; message: string }
-    | { type: 'debug'; tag: string; message: string }
-    | { type: 'scanning' }
-    | { type: 'scanned'; total: number }
-    | { type: 'progress'; processed: number; total: number; file: string }
-    | { type: 'warn'; message: string }
-    | { type: 'error'; stage: 'exec' | 'copy' | 'fatal'; file?: string; message: string }
-    | { type: 'done'; processed: number; execErrors: number; copyErrors: number }
+export type { RunEvent } from './shared.js'
 
 type SearchLocation = {
     searchPath: string
@@ -47,45 +47,26 @@ type ResolvedAsset = {
 const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const SOURCE_ASSET_TRACER_ENV = 'SOURCE_ASSET_TRACER_PATH'
 const SOURCE_ASSET_TRACER_FILENAME = 'source_asset_tracer.exe'
-const DEV_SOURCE_ASSET_TRACER_PATH = 'E:\\prog\\rust\\source-asset-tracer\\source_asset_tracer\\target\\debug\\source_asset_tracer.exe'
-
-function getSourceAssetTracerCandidates(): string[] {
-    return [
-        path.join(PROJECT_ROOT, 'bin', SOURCE_ASSET_TRACER_FILENAME),
-        DEV_SOURCE_ASSET_TRACER_PATH,
-    ]
-}
 
 async function resolveSourceAssetTracerPath(): Promise<string> {
     const envPath = process.env[SOURCE_ASSET_TRACER_ENV]?.trim().replace(/^["']|["']$/g, '')
 
     if (envPath) {
         const resolvedEnvPath = path.resolve(envPath)
-        if (!await fspExists(resolvedEnvPath)) {
-            throw new Error(`${SOURCE_ASSET_TRACER_ENV} points to a missing file: ${resolvedEnvPath}`)
+        if (!await pathExists(resolvedEnvPath)) {
+            throw new Error(`${SOURCE_ASSET_TRACER_ENV} указывает на отсутствующий файл: ${resolvedEnvPath}`)
         }
         return resolvedEnvPath
     }
 
-    for (const candidate of getSourceAssetTracerCandidates()) {
-        const resolvedCandidate = path.resolve(candidate)
-        if (await fspExists(resolvedCandidate)) {
-            return resolvedCandidate
-        }
+    const bundledCandidate = path.resolve(PROJECT_ROOT, 'bin', SOURCE_ASSET_TRACER_FILENAME)
+    if (await pathExists(bundledCandidate)) {
+        return bundledCandidate
     }
 
     throw new Error(
-        `Missing ${SOURCE_ASSET_TRACER_FILENAME}. Checked: ${getSourceAssetTracerCandidates().map(p => path.resolve(p)).join('; ')}`,
+        `Не найден ${SOURCE_ASSET_TRACER_FILENAME}. Проверен путь: ${bundledCandidate}`,
     )
-}
-
-async function fspExists(filePath: string): Promise<boolean> {
-    try {
-        await fsp.access(filePath)
-        return true
-    } catch {
-        return false
-    }
 }
 
 function normalizeRelativeAssetPath(filePath: string): string {
@@ -110,81 +91,6 @@ function normalizeContentRoots(contentRoots: string[]): string[] {
     }
 
     return [...deduped]
-}
-
-function isSameOrInside(parentPath: string, childPath: string): boolean {
-    const relativePath = path.relative(
-        path.resolve(parentPath).toLowerCase(),
-        path.resolve(childPath).toLowerCase(),
-    )
-    return relativePath === '' || (!relativePath.startsWith('..') && !path.isAbsolute(relativePath))
-}
-
-function getUnsafeOutputReason(outputPath: string, contentRoots: string[], vmfPath: string): string | null {
-    const resolvedOutputPath = path.resolve(outputPath)
-    const parsedOutputPath = path.parse(resolvedOutputPath)
-
-    if (resolvedOutputPath === parsedOutputPath.root) {
-        return `Нельзя очищать корень диска: ${resolvedOutputPath}`
-    }
-
-    const resolvedVmfPath = path.resolve(vmfPath)
-    if (isSameOrInside(resolvedOutputPath, resolvedVmfPath)) {
-        return `Output папка содержит VMF файл, очистка небезопасна: ${resolvedOutputPath}`
-    }
-
-    for (const contentRoot of contentRoots) {
-        const resolvedContentRoot = path.resolve(contentRoot)
-        if (isSameOrInside(resolvedOutputPath, resolvedContentRoot)) {
-            return `Output папка содержит папку контента, очистка небезопасна: ${resolvedOutputPath}`
-        }
-    }
-
-    return null
-}
-
-async function ensureCleanOutputDirectory(
-    outputPath: string,
-    contentRoots: string[],
-    vmfPath: string,
-): Promise<void> {
-    const resolvedOutputPath = path.resolve(outputPath)
-    const unsafeReason = getUnsafeOutputReason(resolvedOutputPath, contentRoots, vmfPath)
-
-    if (unsafeReason) {
-        throw new Error(unsafeReason)
-    }
-
-    try {
-        const stat = await fsp.stat(resolvedOutputPath)
-        if (!stat.isDirectory()) {
-            throw new Error(`outputPath указывает не на папку: ${resolvedOutputPath}`)
-        }
-    } catch (error) {
-        const err = error as NodeJS.ErrnoException
-        if (err.code !== 'ENOENT') throw error
-    }
-
-    await fsp.rm(resolvedOutputPath, { recursive: true, force: true })
-    await fsp.mkdir(resolvedOutputPath, { recursive: true })
-}
-
-async function ensureOutputDirectory(outputPath: string): Promise<boolean> {
-    const resolvedOutputPath = path.resolve(outputPath)
-
-    try {
-        const stat = await fsp.stat(resolvedOutputPath)
-        if (!stat.isDirectory()) {
-            throw new Error(`outputPath указывает не на папку: ${resolvedOutputPath}`)
-        }
-        return false
-    } catch (error) {
-        const err = error as NodeJS.ErrnoException
-        if (err.code !== 'ENOENT') throw error
-    }
-
-    await fsp.mkdir(resolvedOutputPath, { recursive: true })
-    return true
 }
 
 function buildExtsFindPaths(contentRoots: string[], exts: string[]): Record<string, SearchLocation[]> {
@@ -225,7 +131,7 @@ function buildExtsFindPaths(contentRoots: string[], exts: string[]): Record<stri
     const result: Record<string, SearchLocation[]> = {}
     for (const ext of exts) {
         const lower = ext.toLowerCase()
-        if (all.has(lower)) result[lower] = all.get(lower)!
+        if (all.has(lower)) result[lower] = all.get(lower) ?? []
     }
 
     return result
@@ -275,9 +181,10 @@ async function tryAddFileToList(
     for (const findPath of findPaths) {
         for (const pathCandidate of pathCandidates) {
             const absPath = path.resolve(findPath.searchPath, pathCandidate)
-            if (!isSameOrInside(findPath.searchPath, absPath)) continue
+            const relativeCheck = path.relative(findPath.searchPath, absPath)
+            if (relativeCheck.startsWith('..') || path.isAbsolute(relativeCheck)) continue
 
-            if (await fspExists(absPath)) {
+            if (await pathExists(absPath)) {
                 addResolvedAsset(list, absPath, findPath.rootPath)
                 return
             }
@@ -320,16 +227,16 @@ async function scanData(
 }
 
 async function getVmfFileList(
-    ents: any[],
-    worldData: any,
+    ents: Record<string, unknown>[],
+    worldData: Record<string, unknown>,
     extsRegex: RegExp,
     contentKeys: string[],
     extsFindPaths: Record<string, SearchLocation[]>,
 ): Promise<ResolvedAsset[]> {
     const list = new Map<string, ResolvedAsset>()
 
-    if (worldData.detailmaterial) {
-        await tryAddFileToList(list, `${String(worldData.detailmaterial).toLowerCase()}.vmt`, extsFindPaths)
+    if (typeof worldData.detailmaterial === 'string' && worldData.detailmaterial.trim()) {
+        await tryAddFileToList(list, `${worldData.detailmaterial.toLowerCase()}.vmt`, extsFindPaths)
     }
 
     await scanData(worldData, extsRegex, contentKeys, extsFindPaths, list)
@@ -339,20 +246,21 @@ async function getVmfFileList(
         : []
 
     for (const solid of worldSolids) {
+        if (typeof solid !== 'object' || solid === null) continue
+
         await scanData(solid, extsRegex, contentKeys, extsFindPaths, list)
 
-        const sides = solid.side
+        const sides = 'side' in solid && solid.side
             ? (Array.isArray(solid.side) ? solid.side : [solid.side])
             : []
 
         for (const side of sides) {
+            if (typeof side !== 'object' || side === null) continue
             await scanData(side, extsRegex, contentKeys, extsFindPaths, list)
         }
     }
 
     for (const data of ents) {
-        if (!data) continue
-
         await scanData(data, extsRegex, contentKeys, extsFindPaths, list)
 
         const solids = data.solid
@@ -360,13 +268,16 @@ async function getVmfFileList(
             : []
 
         for (const solid of solids) {
+            if (typeof solid !== 'object' || solid === null) continue
+
             await scanData(solid, extsRegex, contentKeys, extsFindPaths, list)
 
-            const sides = solid.side
+            const sides = 'side' in solid && solid.side
                 ? (Array.isArray(solid.side) ? solid.side : [solid.side])
                 : []
 
             for (const side of sides) {
+                if (typeof side !== 'object' || side === null) continue
                 await scanData(side, extsRegex, contentKeys, extsFindPaths, list)
             }
         }
@@ -376,7 +287,7 @@ async function getVmfFileList(
 }
 
 export async function runFindContent(
-    cfg: RunConfig,
+    cfg: VmfPackConfig,
     emit: (e: RunEvent) => void,
 ): Promise<void> {
     const startedAt = Date.now()
@@ -392,7 +303,7 @@ export async function runFindContent(
 
         const missingRoots: string[] = []
         for (const contentRoot of contentRoots) {
-            if (!await fspExists(contentRoot)) {
+            if (!await pathExists(contentRoot)) {
                 missingRoots.push(contentRoot)
             }
         }
@@ -407,34 +318,48 @@ export async function runFindContent(
             return
         }
 
-        if (!await fspExists(cfg.vmfPath)) {
-            emit({ type: 'error', stage: 'fatal', message: `vmf_path не существует: ${cfg.vmfPath}` })
+        if (!cfg.vmfPath.trim()) {
+            emit({ type: 'error', stage: 'fatal', message: 'Не выбран VMF файл' })
             emit({ type: 'done', processed: 0, execErrors: 0, copyErrors: 0 })
             return
         }
 
+        if (!await pathExists(cfg.vmfPath)) {
+            emit({ type: 'error', stage: 'fatal', message: `VMF файл не существует: ${cfg.vmfPath}` })
+            emit({ type: 'done', processed: 0, execErrors: 0, copyErrors: 0 })
+            return
+        }
+
+        emit({ type: 'info', message: 'Режим: vmf-pack' })
         emit({ type: 'info', message: `VMF: ${path.resolve(cfg.vmfPath)}` })
-        emit({ type: 'info', message: `Output: ${path.resolve(cfg.outputPath)}` })
-        emit({ type: 'info', message: `Content roots (${contentRoots.length}): ${contentRoots.join('; ')}` })
-        emit({ type: 'debug', tag: '[cfg]', message: `cleanOutput=${cfg.cleanOutput}; exts=${cfg.exts.join(', ')}; keys=${cfg.contentKeys.join(', ')}` })
+        emit({ type: 'info', message: `Выход: ${path.resolve(cfg.outputPath)}` })
+        emit({ type: 'info', message: `Папки контента (${contentRoots.length}): ${contentRoots.join('; ')}` })
+        emit({
+            type: 'debug',
+            tag: '[cfg]',
+            message: `cleanOutput=${cfg.cleanOutput}; расширения=${cfg.exts.join(', ')}; ключи=${cfg.contentKeys.join(', ')}`,
+        })
 
         if (cfg.cleanOutput) {
-            emit({ type: 'info', message: `Очищаю output папку: ${path.resolve(cfg.outputPath)}` })
-            await ensureCleanOutputDirectory(cfg.outputPath, contentRoots, cfg.vmfPath)
+            emit({ type: 'info', message: `Очищаю выходную папку: ${path.resolve(cfg.outputPath)}` })
+            await ensureCleanOutputDirectory(cfg.outputPath, [
+                { path: cfg.vmfPath, label: 'VMF файл' },
+                ...contentRoots.map(contentRoot => ({ path: contentRoot, label: 'папка контента' })),
+            ])
         } else {
             const outputWasCreated = await ensureOutputDirectory(cfg.outputPath)
             if (outputWasCreated) {
-                emit({ type: 'info', message: `Создаю output папку: ${path.resolve(cfg.outputPath)}` })
+                emit({ type: 'info', message: `Создана выходная папка: ${path.resolve(cfg.outputPath)}` })
             } else {
                 emit({ type: 'debug', tag: '[output]', message: 'Очистка output отключена, существующие файлы будут сохранены' })
             }
         }
 
-        emit({ type: 'scanning' })
+        emit({ type: 'scanning', message: 'Сканирую VMF...' })
 
         const extsLower = cfg.exts.map(e => e.toLowerCase().replace(/^\./, '')).filter(Boolean)
         if (extsLower.length === 0) {
-            emit({ type: 'error', stage: 'fatal', message: 'Не выбрано ни одного расширения для поиска' })
+            emit({ type: 'error', stage: 'fatal', message: 'Не выбрано ни одного расширения файла' })
             emit({ type: 'done', processed: 0, execErrors: 0, copyErrors: 0 })
             return
         }
@@ -445,12 +370,18 @@ export async function runFindContent(
         const vmfText = await fsp.readFile(cfg.vmfPath, { encoding: 'utf-8' })
         emit({ type: 'debug', tag: '[vmf]', message: `Прочитано ${(Buffer.byteLength(vmfText, 'utf-8') / 1024 / 1024).toFixed(2)} MB` })
 
-        const { entity, world } = parser(vmfText)
-        const ents = entity ? (Array.isArray(entity) ? entity : [entity]) : []
-        const worldData = world ?? {}
+        const parsedVmf = parser(vmfText) as { entity?: unknown; world?: unknown }
+        const ents = parsedVmf.entity
+            ? (Array.isArray(parsedVmf.entity) ? parsedVmf.entity : [parsedVmf.entity]).filter(
+                (item): item is Record<string, unknown> => typeof item === 'object' && item !== null,
+            )
+            : []
+        const worldData = typeof parsedVmf.world === 'object' && parsedVmf.world !== null
+            ? parsedVmf.world as Record<string, unknown>
+            : {}
         const entityCount = ents.length
         const solidCount = worldData.solid ? (Array.isArray(worldData.solid) ? worldData.solid.length : 1) : 0
-        emit({ type: 'debug', tag: '[vmf]', message: `Сущностей: ${entityCount}; world solids: ${solidCount}` })
+        emit({ type: 'debug', tag: '[vmf]', message: `Сущностей=${entityCount}; solid-объектов в world=${solidCount}` })
 
         const fileList = await getVmfFileList(ents, worldData, extsRegex, cfg.contentKeys, extsFindPaths)
         const total = fileList.length
@@ -461,7 +392,7 @@ export async function runFindContent(
         if (total === 0) {
             emit({
                 type: 'warn',
-                message: `Список файлов пуст. Проверь папки контента: ${contentRoots.join('; ')}`,
+                message: `Файлы не найдены. Проверь папки контента: ${contentRoots.join('; ')}`,
             })
         }
 
@@ -494,9 +425,9 @@ export async function runFindContent(
                         [asset.absPath, asset.rootPath, cfg.outputPath],
                         { maxBuffer: 10 * 1024 * 1024 },
                     )
-                    execProcessed++
+                    execProcessed += 1
                 } catch (error) {
-                    execErrors++
+                    execErrors += 1
                     const err = error as { message?: string; code?: number; stderr?: string }
                     const parts: string[] = []
                     if (err.code !== undefined) parts.push(`exit=${err.code}`)
@@ -507,7 +438,7 @@ export async function runFindContent(
                         type: 'error',
                         stage: 'exec',
                         file: asset.absPath,
-                        message: parts.join(' | ') || 'unknown error',
+                        message: parts.join(' | ') || 'неизвестная ошибка',
                     })
                 }
             } else {
@@ -518,13 +449,13 @@ export async function runFindContent(
 
                     await fsp.mkdir(outputDir, { recursive: true })
 
-                    if (await fspExists(asset.absPath)) {
+                    if (await pathExists(asset.absPath)) {
                         await fsp.copyFile(asset.absPath, outputFilePath)
-                        copyProcessed++
+                        copyProcessed += 1
                         emit({ type: 'debug', tag: '[copy]', message: `${relativePath} -> ${outputFilePath}` })
                     }
                 } catch (error) {
-                    copyErrors++
+                    copyErrors += 1
                     const err = error as NodeJS.ErrnoException
                     emit({
                         type: 'error',
@@ -535,14 +466,14 @@ export async function runFindContent(
                 }
             }
 
-            processed++
+            processed += 1
             emit({ type: 'progress', processed, total, file: asset.absPath })
         }
 
         const elapsedSeconds = ((Date.now() - startedAt) / 1000).toFixed(1)
         emit({
             type: 'info',
-            message: `Итог: найдено=${total}, exec=${execProcessed}, copy=${copyProcessed}, execErrors=${execErrors}, copyErrors=${copyErrors}, время=${elapsedSeconds}s`,
+            message: `Итог: найдено=${total}, через tracer=${execProcessed}, скопировано=${copyProcessed}, ошибок exec=${execErrors}, ошибок copy=${copyErrors}, время=${elapsedSeconds}с`,
         })
         emit({ type: 'done', processed, execErrors, copyErrors })
     } catch (error) {

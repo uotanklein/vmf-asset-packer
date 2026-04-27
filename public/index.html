@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VMF Asset Packer</title>
+    <title>Source Asset Toolkit</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
     <header class="topbar">
         <div class="brand">
             <span class="logo-dot"></span>
-            <h1>VMF Asset Packer</h1>
+            <h1>Source Asset Toolkit</h1>
         </div>
         <div class="status" id="status">готов</div>
     </header>
@@ -21,52 +22,154 @@
 
             <form id="run-form" autocomplete="off">
                 <label class="field">
-                    <span>VMF файл</span>
-                    <div class="picker-row">
-                        <input name="vmfPath" type="text" spellcheck="false" readonly placeholder="Выбери .vmf через проводник" required>
-                        <button type="button" id="pick-vmf-btn" class="ghost picker-btn">Выбрать</button>
-                    </div>
-                    <small>Файл читается локальным helper-сервером, без загрузки на удалённый сервер.</small>
+                    <span>Режим</span>
+                    <select id="mode-select" name="mode">
+                        <option value="vmf-pack">Упаковка ассетов VMF</option>
+                        <option value="content-pack">Объединение контента и дедупликация</option>
+                        <option value="content-split">Деление контента по размеру</option>
+                    </select>
+                    <small>Выбери, какой пайплайн нужно запустить.</small>
                 </label>
 
-                <label class="field">
-                    <span>Content roots</span>
-                    <div class="root-list" id="content-roots"></div>
-                    <div class="inline-actions">
-                        <button type="button" id="add-root-btn" class="ghost">Добавить папку контента</button>
+                <div class="mode-panel" data-mode-panel="vmf-pack">
+                    <label class="field">
+                        <span>VMF файл</span>
+                        <div class="picker-row">
+                            <input name="vmfPath" type="text" spellcheck="false" readonly placeholder="Выбери .vmf файл" required>
+                            <button type="button" id="pick-vmf-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <small>VMF читается локальным helper-сервером. Ничего никуда не загружается.</small>
+                    </label>
+
+                    <label class="field">
+                        <span>Папки контента</span>
+                        <div class="root-list" id="content-roots"></div>
+                        <div class="inline-actions">
+                            <button type="button" id="add-root-btn" class="ghost">Добавить папку контента</button>
+                        </div>
+                        <small>Добавь папки, где лежат <code>materials/</code>, <code>models/</code>, <code>sound/</code> и связанный loose-контент.</small>
+                    </label>
+
+                    <div class="row">
+                        <label class="field">
+                            <span>Расширения</span>
+                            <input name="exts" type="text" spellcheck="false" required>
+                            <small>Через запятую, например: <code>vmt, vtf, mp3</code>.</small>
+                        </label>
+
+                        <label class="field">
+                            <span>Ключи контента</span>
+                            <input name="contentKeys" type="text" spellcheck="false" required>
+                            <small>Ключи VMF, значения которых нужно трактовать как пути к ассетам.</small>
+                        </label>
                     </div>
-                    <small>Добавь все большие папки, где лежат <code>materials/</code>, <code>models/</code>, <code>sound/</code> и связанные данные.</small>
-                </label>
+                </div>
+
+                <div class="mode-panel" data-mode-panel="content-pack">
+                    <label class="field">
+                        <span>Папки контента</span>
+                        <div class="root-list" id="content-pack-dirs"></div>
+                        <div class="inline-actions">
+                            <button type="button" id="add-content-dir-btn" class="ghost">Добавить папку контента</button>
+                        </div>
+                        <small>Можно задать несколько источников: например, папку аддонов и loose-контент карты из результата `vmf-pack`. Инструмент обходит все выбранные пути, разрешает дубликаты по внутреннему пути и копирует победителей в итоговые группы.</small>
+                    </label>
+
+                    <div class="server-note mode-note">
+                        Настройка объединения теперь делается прямо в интерфейсе. JSON через UI больше не нужен.
+                    </div>
+
+                    <div class="field">
+                        <span>Группы вывода</span>
+                        <div class="editor-list" id="group-list"></div>
+                        <div class="inline-actions">
+                            <button type="button" id="add-group-btn" class="ghost">Добавить группу</button>
+                        </div>
+                        <small>Каждая группа задаёт логический id и папку внутри output, куда будут складываться победившие файлы.</small>
+                    </div>
+
+                    <div class="field">
+                        <span>Правила сопоставления аддонов</span>
+                        <div class="editor-list" id="rule-list"></div>
+                        <div class="inline-actions">
+                            <button type="button" id="add-rule-btn" class="ghost">Добавить правило</button>
+                        </div>
+                        <small>Правила проверяются сверху вниз. Можно матчить точное имя папки аддона или regex-паттерн.</small>
+                    </div>
+
+                    <div class="field">
+                        <span>Fallback для нераспознанных аддонов</span>
+                        <div id="unmatched-editor"></div>
+                        <small>Определи, что делать с аддонами, для которых не сработало ни одно правило.</small>
+                    </div>
+
+                    <div class="field">
+                        <span>Дополнительная пост-обработка</span>
+                        <label class="check-row">
+                            <input name="compressSounds" type="checkbox">
+                            <span>Пережимать аудиофайлы в выходной папке (`.wav`, `.mp3`, `.ogg`)</span>
+                        </label>
+                        <div class="picker-row">
+                            <input name="ffmpegPath" type="text" spellcheck="false" readonly placeholder="Необязательный путь к ffmpeg.exe">
+                            <button type="button" id="pick-ffmpeg-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <label class="check-row">
+                            <input name="compressVtf" type="checkbox">
+                            <span>Пережимать VTF-текстуры в выходной папке</span>
+                        </label>
+                        <div class="picker-row">
+                            <input name="vtfCmdPath" type="text" spellcheck="false" readonly placeholder="Необязательный путь к VTFCmd.exe">
+                            <button type="button" id="pick-vtfcmd-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <small>Если путь пустой, инструмент попробует env, проектную папку <code>bin/</code>, а затем системный <code>PATH</code>.</small>
+                    </div>
+
+                </div>
+
+                <div class="mode-panel" data-mode-panel="content-split">
+                    <label class="field">
+                        <span>Папка для деления</span>
+                        <div class="picker-row">
+                            <input name="splitInputPath" type="text" spellcheck="false" readonly placeholder="Папка с группами контента (output от content-pack)">
+                            <button type="button" id="pick-split-input-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <small>Инструмент сканирует вложенные папки групп (<code>01_core</code>, <code>02_optional</code> и т.д.) и делит каждую на части.</small>
+                    </label>
+
+                    <div class="field">
+                        <span>Параметры деления</span>
+                        <div class="editor-grid editor-grid-2">
+                            <label class="field compact">
+                                <span>Лимит на часть</span>
+                                <div class="number-unit-row">
+                                    <input name="splitLimitGb" type="number" min="0.1" step="0.1" value="2">
+                                    <span class="unit-label">ГБ</span>
+                                </div>
+                            </label>
+                        </div>
+                        <label class="check-row" style="margin-top:8px">
+                            <input name="cleanSourceGroups" type="checkbox" checked>
+                            <span>Удалять исходные папки групп после успешного деления</span>
+                        </label>
+                        <small>Папки не разрезаются — если папка не вписывается в текущую часть, она целиком переходит в следующую. Части именуются <code>01_core_part1</code>, <code>01_core_part2</code> и т.д.</small>
+                    </div>
+                </div>
 
                 <label class="field">
-                    <span>Output папка</span>
+                    <span>Выходная папка</span>
                     <div class="picker-row">
-                        <input name="outputPath" type="text" spellcheck="false" readonly placeholder="Куда копировать найденные ассеты" required>
+                        <input name="outputPath" type="text" spellcheck="false" readonly placeholder="Выбери, куда записывать итоговые файлы" required>
                         <button type="button" id="pick-output-btn" class="ghost picker-btn">Выбрать</button>
                     </div>
                     <label class="check-row">
                         <input name="cleanOutput" type="checkbox">
-                        <span>Очистить output перед запуском</span>
+                        <span>Очищать выходную папку перед каждым запуском</span>
                     </label>
-                    <small>Результат будет записан прямо на локальный диск, без промежуточного ZIP.</small>
+                    <small>Результат записывается прямо на локальный диск.</small>
                 </label>
 
                 <div class="server-note">
-                    Этот режим рассчитан на localhost: браузер даёт удобный UI, а helper-сервер работает с твоими локальными путями и большими библиотеками контента.
-                </div>
-
-                <div class="row">
-                    <label class="field">
-                        <span>Расширения</span>
-                        <input name="exts" type="text" spellcheck="false" required>
-                        <small>Через запятую: <code>vmt, vtf, mp3</code> и т.д.</small>
-                    </label>
-
-                    <label class="field">
-                        <span>Content keys</span>
-                        <input name="contentKeys" type="text" spellcheck="false" required>
-                        <small>Ключи VMF, чьи значения считаются путями к ассетам.</small>
-                    </label>
+                    Браузерный UI работает через localhost, а helper-сервер получает доступ к локальной файловой системе. Инструмент рассчитан на доверенное локальное использование.
                 </div>
 
                 <div class="actions">
@@ -82,7 +185,7 @@
             <div class="progress-wrap">
                 <div class="progress-bar"><div id="progress-fill"></div></div>
                 <div class="progress-meta">
-                    <span id="progress-text">—</span>
+                    <span id="progress-text">-</span>
                     <span id="progress-percent">0%</span>
                 </div>
                 <div class="progress-file" id="progress-file"></div>
@@ -91,17 +194,17 @@
             <div class="stats">
                 <div class="stat"><span class="stat-label">Обработано</span><span class="stat-value" id="stat-processed">0</span></div>
                 <div class="stat"><span class="stat-label">Всего</span><span class="stat-value" id="stat-total">0</span></div>
-                <div class="stat err"><span class="stat-label">Ошибок exec</span><span class="stat-value" id="stat-exec-err">0</span></div>
-                <div class="stat err"><span class="stat-label">Ошибок copy</span><span class="stat-value" id="stat-copy-err">0</span></div>
+                <div class="stat err"><span class="stat-label">Ошибки exec</span><span class="stat-value" id="stat-exec-err">0</span></div>
+                <div class="stat err"><span class="stat-label">Ошибки copy</span><span class="stat-value" id="stat-copy-err">0</span></div>
             </div>
 
             <h2 class="log-header">
                 Лог
                 <span class="log-filters">
                     <label><input type="checkbox" id="filter-progress" checked> прогресс</label>
-                    <label><input type="checkbox" id="filter-debug" checked> debug</label>
-                    <label><input type="checkbox" id="filter-warn" checked> warn</label>
-                    <label><input type="checkbox" id="filter-error" checked> error</label>
+                    <label><input type="checkbox" id="filter-debug" checked> отладка</label>
+                    <label><input type="checkbox" id="filter-warn" checked> предупреждения</label>
+                    <label><input type="checkbox" id="filter-error" checked> ошибки</label>
                 </span>
             </h2>
             <div class="log" id="log"></div>

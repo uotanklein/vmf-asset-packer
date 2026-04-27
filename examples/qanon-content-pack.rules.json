@@ -1,0 +1,584 @@
+{
+  "groups": [
+    {
+      "id": "LockedCoreArc9",
+      "folder": "01_locked_core_arc9",
+      "displayName": "ARC9 Locked Core"
+    },
+    {
+      "id": "CoreDependencies",
+      "folder": "02_core_dependencies",
+      "displayName": "Core Dependencies"
+    },
+    {
+      "id": "BspMaps",
+      "folder": "03_bsp_maps",
+      "displayName": "BSP Maps"
+    },
+    {
+      "id": "MapContent",
+      "folder": "04_map_content",
+      "displayName": "Map Content"
+    },
+    {
+      "id": "MetroMainContent",
+      "folder": "05_metro_main_content",
+      "displayName": "Metro Main Content"
+    },
+    {
+      "id": "NpcAndMutants",
+      "folder": "06_npc_and_mutants",
+      "displayName": "NPC and Mutants"
+    },
+    {
+      "id": "PropsItemsInteractions",
+      "folder": "07_props_items_interactions",
+      "displayName": "Props, Items and Interactions"
+    },
+    {
+      "id": "AiNavigation",
+      "folder": "08_ai_navigation",
+      "displayName": "AI and Navigation"
+    },
+    {
+      "id": "VManipClient",
+      "folder": "09_vmanip_client",
+      "displayName": "VManip Client"
+    },
+    {
+      "id": "ToolsBuilderDev",
+      "folder": "10_tools_builder_dev",
+      "displayName": "Tools / Builder / Dev"
+    },
+    {
+      "id": "AdminFixesUtility",
+      "folder": "11_admin_fixes_utility",
+      "displayName": "Admin / Fixes / Utility"
+    },
+    {
+      "id": "OptionalClientVisuals",
+      "folder": "12_optional_client_visuals",
+      "displayName": "Optional Client Visuals"
+    },
+    {
+      "id": "Unclassified",
+      "folder": "13_unclassified",
+      "displayName": "Unclassified"
+    }
+  ],
+  "unmatched": {
+    "action": "skip"
+  },
+  "rules": [
+    {
+      "match": {
+        "addonName": "arc9_weapon_base_2910505837"
+      },
+      "action": "pack",
+      "groupId": "LockedCoreArc9",
+      "priority": 1000
+    },
+    {
+      "match": {
+        "addonName": "arc9_eft_compressed_3541494731"
+      },
+      "action": "pack",
+      "groupId": "LockedCoreArc9",
+      "priority": 980
+    },
+    {
+      "match": {
+        "addonName": "arc9_eft_metro_ak_handguards_3238929928"
+      },
+      "action": "pack",
+      "groupId": "LockedCoreArc9",
+      "priority": 970
+    },
+    {
+      "match": {
+        "addonName": "niknaks_2861839844"
+      },
+      "action": "pack",
+      "groupId": "CoreDependencies",
+      "priority": 900
+    },
+    {
+      "match": {
+        "addonName": "zippy_s_library_3146473253"
+      },
+      "action": "pack",
+      "groupId": "CoreDependencies",
+      "priority": 890
+    },
+    {
+      "match": {
+        "addonName": "gshader_library_3542644649"
+      },
+      "action": "pack",
+      "groupId": "CoreDependencies",
+      "priority": 880
+    },
+    {
+      "match": {
+        "addonName": "qcontent_interface_3656852425"
+      },
+      "action": "pack",
+      "groupId": "BspMaps",
+      "priority": 850
+    },
+    {
+      "match": {
+        "addonName": "map_1_3647826457"
+      },
+      "action": "pack",
+      "groupId": "MapContent",
+      "priority": 840
+    },
+    {
+      "match": {
+        "addonName": "an_metro_rp_misc_pack_1_2474182491"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 820
+    },
+    {
+      "match": {
+        "addonName": "an_metro_rp_misc_pack_3_2969059922"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 819
+    },
+    {
+      "match": {
+        "addonName": "content_1_3370939525"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 810
+    },
+    {
+      "match": {
+        "addonName": "content_2_3477823478"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 809
+    },
+    {
+      "match": {
+        "addonName": "mdls_1_3519178927"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 808
+    },
+    {
+      "match": {
+        "addonName": "mdls_2_3607110156"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 807
+    },
+    {
+      "match": {
+        "addonName": "mats_3611770223"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 806
+    },
+    {
+      "match": {
+        "addonName": "sounds_3371466914"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 805
+    },
+    {
+      "match": {
+        "addonName": "effects_2944015646"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 804
+    },
+    {
+      "match": {
+        "addonName": "reborn_content_1_2894158307"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 830
+    },
+    {
+      "match": {
+        "addonName": "metro_custom_items_2583475760"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 825
+    },
+    {
+      "match": {
+        "addonName": "metro_redux_boxes_690565747"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 824
+    },
+    {
+      "match": {
+        "addonName": "ft_content_3650575096"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 803
+    },
+    {
+      "match": {
+        "addonName": "metro_shared_assets_3540423933"
+      },
+      "action": "pack",
+      "groupId": "NpcAndMutants",
+      "priority": 780
+    },
+    {
+      "match": {
+        "addonName": "cockroach_snpc_2967476563"
+      },
+      "action": "pack",
+      "groupId": "NpcAndMutants",
+      "priority": 770
+    },
+    {
+      "match": {
+        "addonName": "librarians_snpcs_3540644889"
+      },
+      "action": "pack",
+      "groupId": "NpcAndMutants",
+      "priority": 769
+    },
+    {
+      "match": {
+        "addonName": "nosalises_snpcs_3584952680"
+      },
+      "action": "pack",
+      "groupId": "NpcAndMutants",
+      "priority": 768
+    },
+    {
+      "match": {
+        "addonName": "watchmen_and_lurkers_snpcs_3559739917"
+      },
+      "action": "pack",
+      "groupId": "NpcAndMutants",
+      "priority": 767
+    },
+    {
+      "match": {
+        "addonName": "vegetables_891536965"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 730
+    },
+    {
+      "match": {
+        "addonName": "pig_1134119336"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 729
+    },
+    {
+      "match": {
+        "addonName": "crunchy_s_ultimate_item_pickups_2690914262"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 728
+    },
+    {
+      "match": {
+        "addonName": "pick_up_stick_3462267984"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 727
+    },
+    {
+      "match": {
+        "addonName": "placeable_particle_effects_1551310214"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 726
+    },
+    {
+      "match": {
+        "addonName": "contagion_gas_mask_2537878333"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 725
+    },
+    {
+      "match": {
+        "addonName": "warfare_items_1639165791"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 724
+    },
+    {
+      "match": {
+        "addonName": "metro_last_light_redux_flashlight_2878717144"
+      },
+      "action": "pack",
+      "groupId": "PropsItemsInteractions",
+      "priority": 723
+    },
+    {
+      "match": {
+        "addonName": "global_npc_hearing_system_3001759765"
+      },
+      "action": "pack",
+      "groupId": "AiNavigation",
+      "priority": 700
+    },
+    {
+      "match": {
+        "addonName": "hintnode_loader_3432853023"
+      },
+      "action": "pack",
+      "groupId": "AiNavigation",
+      "priority": 690
+    },
+    {
+      "match": {
+        "addonName": "nodegraph_editor_3387089606"
+      },
+      "action": "pack",
+      "groupId": "AiNavigation",
+      "priority": 680
+    },
+    {
+      "match": {
+        "addonName": "easy_navmesh_tool_527885257"
+      },
+      "action": "pack",
+      "groupId": "AiNavigation",
+      "priority": 670
+    },
+    {
+      "match": {
+        "addonName": "vmanip_door_interaction_animation_2973512530"
+      },
+      "action": "pack",
+      "groupId": "VManipClient",
+      "priority": 650
+    },
+    {
+      "match": {
+        "addonName": "vmanip_neosun_s_cooler_nightvision_3425531829"
+      },
+      "action": "pack",
+      "groupId": "VManipClient",
+      "priority": 640
+    },
+    {
+      "match": {
+        "addonName": "advanced_bone_tool_279079869"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 600
+    },
+    {
+      "match": {
+        "addonName": "easy_animation_tool_104604709"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 599
+    },
+    {
+      "match": {
+        "addonName": "easy_bodygroup_tool_104604943"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 598
+    },
+    {
+      "match": {
+        "addonName": "easy_bonemerge_tool_170917418"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 597
+    },
+    {
+      "match": {
+        "addonName": "extended_properties_104607712"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 596
+    },
+    {
+      "match": {
+        "addonName": "extended_spawnmenu_104603291"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 595
+    },
+    {
+      "match": {
+        "addonName": "overhauled_bone_tool_2896011208"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 594
+    },
+    {
+      "match": {
+        "addonName": "precision_tool_104482086"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 593
+    },
+    {
+      "match": {
+        "addonName": "sub_material_tool_405793043"
+      },
+      "action": "pack",
+      "groupId": "ToolsBuilderDev",
+      "priority": 592
+    },
+    {
+      "match": {
+        "addonName": "antiplayerstuck_149737736"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 550
+    },
+    {
+      "match": {
+        "addonName": "gmodadminsuite_1595332211"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 549
+    },
+    {
+      "match": {
+        "addonName": "door_removal_areaportal_fix_2558150898"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 548
+    },
+    {
+      "match": {
+        "addonName": "disabled_default_cubemap_3023019358"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 547
+    },
+    {
+      "match": {
+        "addonName": "extended_rende_fix_2041438148"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 546
+    },
+    {
+      "match": {
+        "addonName": "smooth_scroll_2556148920"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 545
+    },
+    {
+      "match": {
+        "addonName": "ultimate_workshop_downloader_2214712098"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 544
+    },
+    {
+      "match": {
+        "addonName": "fxaa_shader_3555378834"
+      },
+      "action": "pack",
+      "groupId": "OptionalClientVisuals",
+      "priority": 500
+    },
+    {
+      "match": {
+        "addonName": "physically_based_bloom_shader_3556046077"
+      },
+      "action": "pack",
+      "groupId": "OptionalClientVisuals",
+      "priority": 490
+    },
+    {
+      "match": {
+        "addonName": "sharpness_shader_3644677720"
+      },
+      "action": "pack",
+      "groupId": "OptionalClientVisuals",
+      "priority": 480
+    },
+    {
+      "match": {
+        "addonName": "apex_legends_holster_melee_swep_2792160770"
+      },
+      "action": "pack",
+      "groupId": "Unclassified",
+      "priority": 400
+    },
+    {
+      "match": {
+        "addonName": "invisible_material_576040807"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 543
+    },
+    {
+      "match": {
+        "addonName": "invisible_playermodel_1136617425"
+      },
+      "action": "pack",
+      "groupId": "AdminFixesUtility",
+      "priority": 542
+    },
+    {
+      "match": {
+        "addonName": "metro_cobalt_shared_1_1917485957"
+      },
+      "action": "pack",
+      "groupId": "MetroMainContent",
+      "priority": 802
+    },
+    {
+      "match": {
+        "addonName": "logs"
+      },
+      "action": "skip"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "vmf-asset-packer",
   "version": "1.0.0",
-  "description": "Local web utility for collecting Source Engine and Garry's Mod VMF assets into an output folder.",
+  "description": "Локальный веб-инструмент для упаковки ассетов Source Engine и Garry's Mod.",
   "license": "ISC",
   "author": "",
   "type": "module",
@@ -9,6 +9,7 @@
   "scripts": {
     "dev:cli": "tsx src/main.ts",
     "dev:web": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
