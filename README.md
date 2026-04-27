@@ -1,5 +1,12 @@
 # Source Asset Toolkit
 
+<h1 align="center">
+    GMDownloader
+</h1>
+<p align="center">
+    <img src="https://i.imgur.com/P9L5wrv.png" alt="Logo" style="width:50%; height:auto;">
+</p>
+
 Локальный Windows-инструмент для работы с ассетами Source / Garry's Mod.
 
 Поддерживает три режима:
