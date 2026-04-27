@@ -1,13 +1,9 @@
 # Dependencies
 node_modules/
 
-# Generated output and runtime state
-output/
-runtime/
-content/
-
-# Local map/content samples
-maps/
+# Generated workspace data and local test artifacts
+workspace/
+tmp/
 
 # Logs
 *.log
@@ -33,3 +29,5 @@ build/
 *.swo
 Thumbs.db
 Desktop.ini
+
+bin/ffmpeg.exe
