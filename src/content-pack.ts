@@ -751,7 +751,6 @@ export async function runContentPack(
             await precomputeHashes(entriesNeedingHash, hashCache, hashConcurrency)
         }
 
-        // Проход 1: выбор победителей + статистика конфликтов
         const winners: WinnerEntry[] = []
 
         for (const entries of state.byNormalizedInnerPath.values()) {
@@ -791,7 +790,6 @@ export async function runContentPack(
             winners.push({ innerPath: best.relativeInAddon, best })
         }
 
-        // Проход 2: копирование
         const total = winners.length
         let processed = 0
 

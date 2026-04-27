@@ -154,7 +154,6 @@ export async function runContentSplit(
 
         emit({ type: 'scanning', message: 'Сканирую папку для деления...' })
 
-        // Фиксируем список групп ДО создания частей (чтобы не подхватить _part1 от прошлого запуска)
         const topLevelEntries = await fsp.readdir(realSplitInputPath, { withFileTypes: true })
         const groupFolders = topLevelEntries
             .filter(e => e.isDirectory() && !/_part\d+$/i.test(e.name))
@@ -180,7 +179,6 @@ export async function runContentSplit(
         emit({ type: 'info', message: `Просканировано файлов: ${allFiles.length}` })
         emit({ type: 'scanned', total: allFiles.length })
 
-        // Вычисляем части для каждой группы
         const groupPartMaps = new Map<string, Map<string, number>>()
 
         for (const groupFolder of groupFolders) {
@@ -206,7 +204,6 @@ export async function runContentSplit(
             })
         }
 
-        // Копируем файлы по частям
         let processed = 0
         let copyErrors = 0
         const total = allFiles.length
@@ -236,12 +233,10 @@ export async function runContentSplit(
             emit({ type: 'progress', processed, total, file: file.fullPath })
         }
 
-        // Удаляем исходные папки групп после успешного копирования
         if (cfg.cleanSourceGroups && copyErrors === 0) {
             for (const groupFolder of groupFolders) {
                 const groupFolderPath = path.join(realSplitInputPath, groupFolder)
 
-                // Не удаляем, если выходная папка находится внутри этой группы
                 if (isSameOrInside(groupFolderPath, realOutputPath)) {
                     emit({
                         type: 'warn',
