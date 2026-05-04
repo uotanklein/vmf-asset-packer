@@ -19,12 +19,14 @@ const addContentDirBtn = $('#add-content-dir-btn')
 const pickFfmpegBtn = $('#pick-ffmpeg-btn')
 const pickVtfCmdBtn = $('#pick-vtfcmd-btn')
 const pickSplitInputBtn = $('#pick-split-input-btn')
+const addExcludeBtn = $('#add-exclude-btn')
 const addGroupBtn = $('#add-group-btn')
 const addRuleBtn = $('#add-rule-btn')
 
 const vmfPathsEl = $('#vmf-paths')
 const contentRootsEl = $('#content-roots')
 const contentPackDirsEl = $('#content-pack-dirs')
+const excludePathsEl = $('#exclude-paths')
 const groupListEl = $('#group-list')
 const ruleListEl = $('#rule-list')
 const unmatchedEditorEl = $('#unmatched-editor')
@@ -76,6 +78,7 @@ let currentConfig = {
     rulesConfig: createEmptyRulesConfig(),
     compressSounds: false,
     compressVtf: false,
+    excludePaths: [],
     ffmpegPath: '',
     vtfCmdPath: '',
     splitInputPath: '',
@@ -865,6 +868,7 @@ function readFormConfig() {
         rulesConfig: readRulesConfigFromUi(),
         compressSounds: form.compressSounds.checked,
         compressVtf: form.compressVtf.checked,
+        excludePaths: getExcludePaths(),
         ffmpegPath: form.ffmpegPath.value.trim(),
         vtfCmdPath: form.vtfCmdPath.value.trim(),
         splitInputPath: form.splitInputPath.value.trim(),
@@ -950,6 +954,17 @@ function renderContentRoots(roots) {
 function renderContentPackDirs(dirs) {
     const normalized = renderRootList(contentPackDirsEl, dirs, 'Пока не выбрано ни одной папки контента для объединения.')
     currentConfig.contentDirs = normalized
+}
+
+function getExcludePaths() {
+    return normalizeRoots(
+        [...excludePathsEl.querySelectorAll('.root-path')].map(input => input.value),
+    )
+}
+
+function renderExcludePaths(paths) {
+    const normalized = renderRootList(excludePathsEl, paths, 'Нет папок в исключениях.')
+    currentConfig.excludePaths = normalized
 }
 
 function getDefaultOutputPathForMode(mode) {
@@ -1201,6 +1216,25 @@ async function addContentPackDir(initialPath = '') {
     }
 }
 
+async function addExcludePath(initialPath = '') {
+    try {
+        const selectedPath = await callPicker('/api/pick-folder', {
+            title: 'Выбери папку для исключения из пост-обработки',
+            currentPath: initialPath,
+        })
+
+        if (selectedPath) {
+            const nextPaths = getExcludePaths()
+            nextPaths.push(selectedPath)
+            renderExcludePaths(nextPaths)
+            saveConfig()
+            appendLog('info', '[pick]', 'Исключение пост-обработки: ' + shorten(selectedPath, 120))
+        }
+    } catch (err) {
+        appendLog('error', '[pick]', err.message)
+    }
+}
+
 async function chooseFfmpegPath() {
     try {
         const selectedPath = await callPicker('/api/pick-file', {
@@ -1426,6 +1460,9 @@ async function loadDefaults() {
             compressVtf: typeof stored?.compressVtf === 'boolean'
                 ? stored.compressVtf
                 : Boolean(data.contentPack?.compressVtf),
+            excludePaths: Array.isArray(stored?.excludePaths)
+                ? normalizeRoots(stored.excludePaths)
+                : (Array.isArray(stored?.soundExcludePaths) ? normalizeRoots(stored.soundExcludePaths) : []),
             ffmpegPath: stored?.ffmpegPath || data.contentPack?.ffmpegPath || '',
             vtfCmdPath: stored?.vtfCmdPath || data.contentPack?.vtfCmdPath || '',
             splitInputPath: stored?.splitInputPath || data.contentSplit?.splitInputPath || '',
@@ -1450,6 +1487,7 @@ async function loadDefaults() {
         renderVmfPaths(initialConfig.vmfPaths)
         renderContentRoots(initialConfig.contentRoots)
         renderContentPackDirs(initialConfig.contentDirs)
+        renderExcludePaths(initialConfig.excludePaths)
         renderRulesConfig()
         setMode(initialConfig.mode)
         saveConfig()
@@ -1479,6 +1517,7 @@ addVmfBtn.addEventListener('click', () => addVmfPath())
 pickOutputBtn.addEventListener('click', chooseOutputPath)
 addRootBtn.addEventListener('click', () => addContentRoot())
 addContentDirBtn.addEventListener('click', () => addContentPackDir())
+addExcludeBtn.addEventListener('click', () => addExcludePath())
 pickFfmpegBtn.addEventListener('click', chooseFfmpegPath)
 pickVtfCmdBtn.addEventListener('click', chooseVtfCmdPath)
 pickSplitInputBtn.addEventListener('click', chooseSplitInputPath)
@@ -1598,6 +1637,42 @@ contentPackDirsEl.addEventListener('click', async (ev) => {
 
             dirs[index] = selectedPath
             renderContentPackDirs(dirs)
+            saveConfig()
+        } catch (err) {
+            appendLog('error', '[pick]', err.message)
+        }
+    }
+})
+
+excludePathsEl.addEventListener('click', async (ev) => {
+    const btn = ev.target.closest('button[data-action]')
+    if (!btn) return
+
+    const row = btn.closest('.root-row')
+    if (!row) return
+
+    const index = Number(row.dataset.index)
+    const paths = getExcludePaths()
+
+    if (btn.dataset.action === 'remove') {
+        paths.splice(index, 1)
+        renderExcludePaths(paths)
+        saveConfig()
+        return
+    }
+
+    if (btn.dataset.action === 'replace') {
+        const currentPath = paths[index] || ''
+        try {
+            const selectedPath = await callPicker('/api/pick-folder', {
+                title: 'Замени папку исключения',
+                currentPath,
+            })
+
+            if (!selectedPath) return
+
+            paths[index] = selectedPath
+            renderExcludePaths(paths)
             saveConfig()
         } catch (err) {
             appendLog('error', '[pick]', err.message)

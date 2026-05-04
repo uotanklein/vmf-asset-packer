@@ -397,6 +397,7 @@ app.get('/api/defaults', (_req, res) => {
             rulesConfig: DEFAULT_CONTENT_PACK_RULES_CONFIG,
             compressSounds: false,
             compressVtf: false,
+            excludePaths: [],
             ffmpegPath: process.env.FFMPEG_PATH ?? '',
             vtfCmdPath: process.env.VTFCMD_PATH ?? process.env.VTF_CMD_PATH ?? '',
         },
@@ -405,6 +406,7 @@ app.get('/api/defaults', (_req, res) => {
             outputPath: DEFAULT_CONTENT_SPLIT_OUTPUT_PATH,
             splitLimitGb: DEFAULT_SPLIT_LIMIT_BYTES / (1024 * 1024 * 1024),
             cleanSourceGroups: true,
+            cleanOutput: false,
         },
     })
 })
@@ -469,6 +471,10 @@ app.post('/api/run', (req: Request, res: Response) => {
             ? body.contentDirs.map((dir) => typeof dir === 'string' ? dir.trim() : '').filter(Boolean)
             : null
 
+        const excludePaths = Array.isArray(body.excludePaths)
+            ? body.excludePaths.map((p) => typeof p === 'string' ? p.trim() : '').filter(Boolean)
+            : []
+
         const cfg: ContentPackConfig = {
             contentDir: typeof body.contentDir === 'string' ? body.contentDir.trim() : '',
             ...(contentDirs ? { contentDirs } : {}),
@@ -476,6 +482,7 @@ app.post('/api/run', (req: Request, res: Response) => {
             cleanOutput: body.cleanOutput === true,
             compressSounds: body.compressSounds === true,
             compressVtf: body.compressVtf === true,
+            excludePaths,
             ffmpegPath: typeof body.ffmpegPath === 'string' ? body.ffmpegPath.trim() : '',
             vtfCmdPath: typeof body.vtfCmdPath === 'string' ? body.vtfCmdPath.trim() : '',
             ...(rulesPath ? { rulesPath } : {}),
@@ -529,6 +536,7 @@ app.post('/api/run', (req: Request, res: Response) => {
             outputPath: typeof body.outputPath === 'string' ? body.outputPath.trim() : '',
             splitLimitBytes: Math.round(rawLimitGb * 1024 * 1024 * 1024),
             cleanSourceGroups: body.cleanSourceGroups === true,
+            cleanOutput: body.cleanOutput === true,
         }
 
         if (!splitCfg.splitInputPath) {

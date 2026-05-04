@@ -16,7 +16,7 @@ export type RunEvent =
     | { type: 'scanning'; message: string }
     | { type: 'scanned'; total: number }
     | { type: 'progress'; processed: number; total: number; file: string }
-    | { type: 'warn'; message: string }
+    | { type: 'warn'; message: string; file?: string }
     | { type: 'error'; stage: 'exec' | 'copy' | 'fatal'; file?: string; message: string }
     | { type: 'done'; processed: number; execErrors: number; copyErrors: number }
 

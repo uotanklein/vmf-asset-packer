@@ -113,6 +113,7 @@ function buildContentSplitConfig(): ContentSplitConfig {
         outputPath: process.env.SPLIT_OUTPUT_PATH ?? process.env.SPLIT_INPUT_PATH ?? process.env.OUTPUT_PATH ?? DEFAULT_CONTENT_SPLIT_OUTPUT_PATH,
         splitLimitBytes: parseSplitLimitBytes(),
         cleanSourceGroups: process.env.CLEAN_SOURCE_GROUPS !== '0',
+        cleanOutput: process.env.CLEAN_OUTPUT === '1',
     }
 }
 

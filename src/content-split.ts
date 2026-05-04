@@ -3,6 +3,7 @@ import fsp from 'fs/promises'
 import {
     DEFAULT_CONTENT_PACK_OUTPUT_DIR,
     DEFAULT_CONTENT_SPLIT_OUTPUT_DIR,
+    ensureCleanOutputDirectory,
     ensureOutputDirectory,
     formatBytes,
     isSameOrInside,
@@ -20,6 +21,7 @@ export type ContentSplitConfig = {
     outputPath: string
     splitLimitBytes: number
     cleanSourceGroups: boolean
+    cleanOutput: boolean
 }
 
 type SplitFileEntry = {
@@ -147,10 +149,17 @@ export async function runContentSplit(
         emit({
             type: 'debug',
             tag: '[cfg]',
-            message: `cleanSourceGroups=${cfg.cleanSourceGroups}; inPlace=${inPlace}`,
+            message: `cleanSourceGroups=${cfg.cleanSourceGroups}; cleanOutput=${cfg.cleanOutput}; inPlace=${inPlace}`,
         })
 
-        await ensureOutputDirectory(realOutputPath)
+        if (cfg.cleanOutput && !inPlace) {
+            emit({ type: 'info', message: `Очищаю выходную папку: ${realOutputPath}` })
+            await ensureCleanOutputDirectory(realOutputPath, [
+                { path: realSplitInputPath, label: 'папка для деления' },
+            ])
+        } else {
+            await ensureOutputDirectory(realOutputPath)
+        }
 
         emit({ type: 'scanning', message: 'Сканирую папку для деления...' })
 

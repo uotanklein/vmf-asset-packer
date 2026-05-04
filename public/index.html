@@ -117,7 +117,7 @@
                             <input name="ffmpegPath" type="text" spellcheck="false" readonly placeholder="Необязательный путь к ffmpeg.exe">
                             <button type="button" id="pick-ffmpeg-btn" class="ghost picker-btn">Выбрать</button>
                         </div>
-                        <label class="check-row">
+                        <label class="check-row" style="margin-top:12px">
                             <input name="compressVtf" type="checkbox">
                             <span>Пережимать VTF-текстуры в выходной папке</span>
                         </label>
@@ -126,6 +126,11 @@
                             <button type="button" id="pick-vtfcmd-btn" class="ghost picker-btn">Выбрать</button>
                         </div>
                         <small>Если путь пустой, инструмент попробует env, проектную папку <code>bin/</code>, а затем системный <code>PATH</code>.</small>
+                        <div class="root-list" id="exclude-paths"></div>
+                        <div class="inline-actions">
+                            <button type="button" id="add-exclude-btn" class="ghost">Добавить папку в исключения</button>
+                        </div>
+                        <small>Папки, которые не нужно пережимать — ни звуки, ни VTF (например, музыка с фиксированным битрейтом или критичные по размеру текстуры).</small>
                     </div>
 
                 </div>

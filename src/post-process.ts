@@ -19,6 +19,42 @@ const DEFAULT_VTF_FORMAT = 'dxt1'
 const DEFAULT_VTF_ALPHA_FORMAT = 'dxt5'
 const DEFAULT_VTF_MAX_WIDTH = 1024
 const DEFAULT_VTF_MAX_HEIGHT = 1024
+const VTF_SIGNATURE = 'VTF\0'
+const VTF_HEADER_MIN_SIZE = 26
+const VTF_FRAMES_OFFSET = 24
+// Content-root markers: the first path segment with one of these names marks the
+// start of the content-relative portion of a path (e.g. "materials/models/foo").
+const CONTENT_ROOT_MARKERS = new Set([
+    'materials', 'models', 'sound', 'maps', 'particles', 'particle',
+    'scripts', 'lua', 'resource', 'cfg', 'data', 'gamemodes', 'fonts',
+])
+
+/** Extracts the content-relative path beginning at the first content-root marker segment.
+ *  Returns lowercase forward-slash path, e.g. "materials/models/menu_circle".
+ *  Returns null if no marker is found. */
+function getContentRelativePath(filePath: string): string | null {
+    const parts = filePath.replace(/\\/g, '/').split('/')
+    const idx = parts.findIndex(p => CONTENT_ROOT_MARKERS.has(p.toLowerCase()))
+    if (idx === -1) return null
+    return parts.slice(idx).join('/').toLowerCase()
+}
+
+/** Filters out files whose content-relative path starts with one of the excluded content-relative paths. */
+function filterByExcludePaths(allFiles: string[], excludePaths: string[]): string[] {
+    if (excludePaths.length === 0) return allFiles
+    const excludeContentPaths = excludePaths
+        .map(p => getContentRelativePath(p))
+        .filter((p): p is string => p !== null)
+    if (excludeContentPaths.length === 0) return allFiles
+    return allFiles.filter(f => {
+        const fileContentPath = getContentRelativePath(f)
+        if (!fileContentPath) return true
+        return !excludeContentPaths.some(exc =>
+            fileContentPath === exc || fileContentPath.startsWith(exc + '/'),
+        )
+    })
+}
+
 const DEFAULT_SOUND_TIMEOUT_MS = 60_000
 const DEFAULT_VTF_TIMEOUT_MS = 120_000
 const DEFAULT_SOUND_CONCURRENCY = Math.max(1, os.cpus().length)
@@ -59,6 +95,7 @@ async function runWorkerPool<T>(
 export type PostProcessConfig = {
     compressSounds: boolean
     compressVtf: boolean
+    excludePaths?: string[]
     ffmpegPath?: string
     vtfCmdPath?: string
 }
@@ -77,6 +114,13 @@ type SpawnResult = {
     stdout: string
     stderr: string
     timedOut: boolean
+}
+
+type CompressionResult = {
+    originalSize: number
+    finalSize: number
+    error?: string
+    skippedReason?: string
 }
 
 function trimOptionalPath(value: string | undefined): string | null {
@@ -194,7 +238,7 @@ async function runProcess(executable: string, args: string[], timeoutMs: number)
     })
 }
 
-async function compressAudioFile(filePath: string, ffmpegPath: string): Promise<{ originalSize: number; finalSize: number; error?: string }> {
+async function compressAudioFile(filePath: string, ffmpegPath: string): Promise<CompressionResult> {
     const ext = path.extname(filePath).toLowerCase()
     const encodeParams = AUDIO_ENCODE_PARAMS[ext]
 
@@ -247,6 +291,25 @@ async function exportVtfToTga(vtfCmdPath: string, inputVtfPath: string, outputDi
     )
 }
 
+async function readVtfFrameCount(filePath: string): Promise<number | null> {
+    const handle = await fsp.open(filePath, 'r')
+    try {
+        const buffer = Buffer.alloc(VTF_HEADER_MIN_SIZE)
+        const { bytesRead } = await handle.read(buffer, 0, buffer.length, 0)
+        if (bytesRead < buffer.length) {
+            return null
+        }
+
+        if (buffer.toString('ascii', 0, 4) !== VTF_SIGNATURE) {
+            return null
+        }
+
+        return buffer.readUInt16LE(VTF_FRAMES_OFFSET)
+    } finally {
+        await handle.close()
+    }
+}
+
 async function encodeTgaToVtf(vtfCmdPath: string, inputTgaPath: string, outputDir: string): Promise<SpawnResult> {
     return await runProcess(
         vtfCmdPath,
@@ -270,8 +333,17 @@ async function encodeTgaToVtf(vtfCmdPath: string, inputTgaPath: string, outputDi
     )
 }
 
-async function compressVtfFile(filePath: string, vtfCmdPath: string): Promise<{ originalSize: number; finalSize: number; error?: string }> {
+async function compressVtfFile(filePath: string, vtfCmdPath: string): Promise<CompressionResult> {
     const originalSize = (await fsp.stat(filePath)).size
+    const frameCount = await readVtfFrameCount(filePath)
+    if (frameCount !== null && frameCount > 1) {
+        return {
+            originalSize,
+            finalSize: originalSize,
+            skippedReason: `анимированный VTF (${frameCount} frames): VTFCmd export/import схлопывает его до одного кадра`,
+        }
+    }
+
     const baseName = path.basename(filePath, '.vtf')
     const tempDir = await fsp.mkdtemp(path.join(os.tmpdir(), 'sat-vtf-'))
     const workingVtfPath = path.join(tempDir, `${baseName}.vtf`)
@@ -336,9 +408,13 @@ async function runSoundCompression(
     emit: (event: RunEvent) => void,
 ): Promise<ProcessSummary> {
     const summary = makeEmptySummary()
-    const files = await findFiles(outputPath, (filePath) => AUDIO_EXTENSIONS.has(path.extname(filePath).toLowerCase()))
+    const allFiles = await findFiles(outputPath, (filePath) => AUDIO_EXTENSIONS.has(path.extname(filePath).toLowerCase()))
 
-    emit({ type: 'info', message: `Дополнительное сжатие звуков: найдено ${files.length} файл(ов)` })
+    const files = filterByExcludePaths(allFiles, cfg.excludePaths ?? [])
+
+    const excludedCount = allFiles.length - files.length
+    const excludedSuffix = excludedCount > 0 ? `, в исключениях ${excludedCount}` : ''
+    emit({ type: 'info', message: `Дополнительное сжатие звуков: найдено ${allFiles.length} файл(ов)${excludedSuffix}` })
     if (files.length === 0) {
         return summary
     }
@@ -392,9 +468,13 @@ async function runVtfCompression(
     emit: (event: RunEvent) => void,
 ): Promise<ProcessSummary> {
     const summary = makeEmptySummary()
-    const files = await findFiles(outputPath, (filePath) => path.extname(filePath).toLowerCase() === '.vtf')
+    const allFiles = await findFiles(outputPath, (filePath) => path.extname(filePath).toLowerCase() === '.vtf')
 
-    emit({ type: 'info', message: `Дополнительное сжатие VTF: найдено ${files.length} файл(ов)` })
+    const files = filterByExcludePaths(allFiles, cfg.excludePaths ?? [])
+
+    const excludedCount = allFiles.length - files.length
+    const excludedSuffix = excludedCount > 0 ? `, в исключениях ${excludedCount}` : ''
+    emit({ type: 'info', message: `Дополнительное сжатие VTF: найдено ${allFiles.length} файл(ов)${excludedSuffix}` })
     if (files.length === 0) {
         return summary
     }
@@ -416,6 +496,13 @@ async function runVtfCompression(
                 stage: 'exec',
                 file: filePath,
                 message: `Ошибка сжатия VTF: ${result.error}`,
+            })
+        } else if (result.skippedReason) {
+            summary.skipped += 1
+            emit({
+                type: 'warn',
+                file: filePath,
+                message: `Пропускаю сжатие VTF: ${result.skippedReason}`,
             })
         } else if (result.finalSize < result.originalSize) {
             summary.processed += 1
