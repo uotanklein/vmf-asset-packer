@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/eletric_heater/electric_heater_mesh"
+	"$translucent" 1
+}

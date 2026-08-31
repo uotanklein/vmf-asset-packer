@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"		"z-o-m-b-i-e/metro_2033/wall/wall_stancia3_dsc"
+	"$detail"		"z-o-m-b-i-e/metro_2033/det/det_concrete_2"
+	"$detailscale"		"6.000000"
+	"$detailblendfactor"		"1.000000"
+	"$detailblendmode"		"0"
+	"$model"		"1"
+}

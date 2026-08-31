@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/C2A/construction/entourage/pallet"
+	$alphatest 1
+}

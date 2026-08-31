@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/wood34/wood34_doski_old"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/wood34/wood34_doski_old_norm"
+	"$surfaceprop" "wood"
+}

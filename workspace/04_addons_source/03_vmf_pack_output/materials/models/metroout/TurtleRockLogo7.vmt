@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\metroout\flagskin7"
+	"$nocull" "1"
+	"$translucent" "1"
+	"$surfaceprop" "default"
+
+}

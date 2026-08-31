@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/HIGHDEF/METRO2033/DOOR/DOOR01.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/999_d/c-484_11913_-1186"
+	}
+}

@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"		"z-o-m-b-i-e/metro_2033/bricks/bricks_old_colored_dsc"
+	"$detail"		"z-o-m-b-i-e/STALKER/detail/detail_brick_det1"
+	"$detailscale"		"6.000000"
+	"$detailblendfactor"		"1.000000"
+	"$detailblendmode"		"0"
+	"$model"		"1"
+}

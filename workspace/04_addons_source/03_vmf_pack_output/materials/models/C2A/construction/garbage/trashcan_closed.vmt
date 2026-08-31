@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/C2A/construction/garbage/trashcan_closed"
+////	"$translucent" 1
+}

@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/bricks34/bricks34_mp2_tile"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/bricks34/bricks34_mp2_tile_norm"
+	"$surfaceprop" "brick"
+}

@@ -1,0 +1,11 @@
+"patch"
+{
+	"include"		"materials/NATURE/MUDFLOOR001A.vmt"
+	"replace"
+	{
+		"LightmappedGeneric_DX9"
+		{
+			"$envmap"		"maps/rp_metros/c704_-4195_64"
+		}
+	}
+}

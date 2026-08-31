@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/props34/props34_door_001"
+	////"$bumpmap" "z-o-m-b-i-e/metro_2033/props34/props34_door_001_disabled_nm"
+	"$surfaceprop" "metal"
+}

@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/grnd_fire_01_color"
+	"$bumpmap" "models/mosi/metro/misc/grnd_fire_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".2"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

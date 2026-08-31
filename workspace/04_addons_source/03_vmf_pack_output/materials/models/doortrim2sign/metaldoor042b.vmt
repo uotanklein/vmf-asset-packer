@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	// original shader: basetimeslightmap
+	"$basetexture" "metal/metaldoor042b"
+	"$surfaceprop" "metal"
+	"%keywords" "kraken"
+}

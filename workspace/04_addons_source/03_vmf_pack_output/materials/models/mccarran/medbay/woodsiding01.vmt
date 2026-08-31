@@ -1,0 +1,28 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mccarran/medbay/woodsiding01"
+	"$bumpmap" "models/mccarran/medbay/woodsiding01_n"
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"5"
+   	"$phongboost"               		"0.5"
+   	"$phongfresnelranges"       		"[0.5]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 1.1 0.9 0.7]"
+
+
+
+	"$detail" "models/mccarran/portrait/detail_paint"
+	"$detailscale" "10"
+	"$detailblendfactor" "3"
+	"$detailblendmode" "0"
+	"$lightwarptexture" "models/mccarran/portrait/lightwarp_paint"
+$color2 "[0.6 0.55 0.55]"
+
+
+	$alphatest		1
+
+	$alphatestreference	.5
+
+	$allowalphatocoverage	1
+}

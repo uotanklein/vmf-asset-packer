@@ -1,0 +1,8 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/snow/snow_block_snow"
+	"$baseTexture2" "z-o-m-b-i-e/metro_2033/grnd/grnd_sand_02"
+	"$surfaceprop" "snow"
+	"$surfaceprop2" "mud"
+	"%keywords" "rnl"
+}

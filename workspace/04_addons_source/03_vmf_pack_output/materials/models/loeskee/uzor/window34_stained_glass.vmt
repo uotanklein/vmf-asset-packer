@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/window34/window34_stained_glass"
+	"$nodecal" "1"
+	"$alphatest" "1"
+	"$surfaceprop" "glass"
+}

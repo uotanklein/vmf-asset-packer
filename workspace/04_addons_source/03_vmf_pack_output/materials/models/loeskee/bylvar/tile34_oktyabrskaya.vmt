@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/tile34/tile34_oktyabrskaya"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/tile34/tile34_oktyabrskaya_norm"
+	"$surfaceprop" "tile"
+}

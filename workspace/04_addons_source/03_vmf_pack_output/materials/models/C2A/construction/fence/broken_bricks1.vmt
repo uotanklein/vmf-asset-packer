@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/C2A/construction/fence/broken_bricks1"
+	$alphatest 1
+}

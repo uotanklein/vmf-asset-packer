@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	// original shader: cubicenvmapblendmaskedbasetimeslightmap
+	"$basealphaenvmapmask" 1
+	"$basetexture" "metal/metalwall056a"
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "metal"
+	"%keywords" "c17industrial,combine,wasteland"
+}

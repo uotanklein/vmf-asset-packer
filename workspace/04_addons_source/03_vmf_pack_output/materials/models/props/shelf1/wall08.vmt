@@ -1,0 +1,11 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "hostel/tile/wall08"
+	"$bumpmap" "hostel/tile/wall08_b"
+	"$surfaceprop" "tile"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$envmapcontrast" ".75"
+	"$envmapsaturation" ".7"
+}

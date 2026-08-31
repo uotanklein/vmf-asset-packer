@@ -1,0 +1,5 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/inventory/artefacts/artifact_mincer_meat"
+                $halflambert "1"
+}

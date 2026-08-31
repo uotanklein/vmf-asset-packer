@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$BaseTexture" 				"JohnSheppard44/Chernobylite/Weapons/Ammunition/t_en_ammopack_01_bc"
+	"$BumpMap" 				"JohnSheppard44/Chernobylite/Weapons/Ammunition/t_en_ammopack_01_n"
+
+	"$HalfLambert"	 			"0"
+	"$NoCull" 				"1"
+	"$SurfaceProp" 				"paper"
+
+	"$Phong" 					"1"
+	"$PhongExponent" 				"10"
+	"$PhongBoost" 				"0.10"
+	"$PhongFresnelRanges"			"[.3 .3 1]"
+}

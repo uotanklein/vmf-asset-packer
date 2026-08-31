@@ -1,0 +1,34 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mccarran/garbage/offrublpile01"
+	"$bumpmap" "models/mccarran/garbage/offrublpile01_n"
+	"$detail" "detail\noise_detail_01"
+	"$detailscale" "7.792"
+	"$detailblendfactor" .7
+	"$detailblendmode" 0
+
+	$alphatest 				"1"
+	$allowalphatocoverage	"0"
+	$halflambert 			"1"
+
+
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"6"
+   	"$phongboost"               		"8"
+   	"$phongfresnelranges"       		"[0.3 0.5 0.5]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 0.8 0.8 0.6]"
+
+   	"$rimlight"                 		"0"
+   	"$rimlightexponent"         		"10"   
+   	"$rimlightboost"            		"0.085"
+   	"$rimmask"                 		"1"
+ 
+    	"$envmap"                   		"env_cubemap"
+    	"$envmaptint"              		"[ 0.01 0.01 0.01]"	
+$normalmapalphaenvmapmask 1
+
+
+$color2 "[0.885 0.835 0.835]"
+}

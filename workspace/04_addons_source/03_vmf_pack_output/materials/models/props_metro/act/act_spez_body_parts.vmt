@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/act/act_spez_body_parts"
+    "$model" "1"
+}

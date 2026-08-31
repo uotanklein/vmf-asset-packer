@@ -1,0 +1,20 @@
+VertexLitGeneric
+{
+	$basetexture "models/loshara555/citymodels/metroentrance/metrosign_tex1"
+	$bumpmap "models/loshara555/citymodels/metroentrance/metrosign_tex1_nm"
+	$surfaceprop Glass
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.25 0.25 0.25]"
+
+	$phong 1
+	$phongfresnelranges "[0.2 0.5 0.2]"
+	$phongexponent 20
+	$phongboost 2
+
+	$selfillum 1
+	$selfillum_envmapmask_alpha 1
+
+	$model 1
+}

@@ -1,0 +1,8 @@
+"vertexlitgeneric"
+{
+	"$basetexture" 		"hostel/nature/leaves01"
+	"$surfaceprop" 		"grass"
+	"$bumpmap"		"hostel/nature/bump01"
+	"$bumpmap2"		"hostel/nature/bump01"
+	"%detailtype"		"canal_reeds2"
+}

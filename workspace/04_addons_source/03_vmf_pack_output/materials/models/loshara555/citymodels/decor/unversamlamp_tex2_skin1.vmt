@@ -1,0 +1,20 @@
+VertexLitGeneric
+{
+	$basetexture "models/loshara555/citymodels/decor/unversamlamp_tex2_skin1"
+	$bumpmap "models/loshara555/citymodels/decor/unversamlamp_tex2_nm"
+	$surfaceprop Glass
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.20 0.20 0.20]"
+
+	$phong 1
+	$phongfresnelranges "[0.2 0.5 0.2]"
+	$phongexponent 20
+	$phongboost 2
+
+	$selfillum 1
+	$selfillum_envmapmask_alpha 1
+
+	$model 1
+}

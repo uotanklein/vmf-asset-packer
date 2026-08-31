@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "metro_nexto/custom8"
+	"$surfaceprop" "concrete"
+                "$translucent" 1
+                "$decal" 1
+                "$decalscale" 1
+	
+}

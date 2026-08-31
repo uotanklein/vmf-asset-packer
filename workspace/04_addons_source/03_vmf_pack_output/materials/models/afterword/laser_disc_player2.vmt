@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/afterword/laser_disc_player2"
+	$bumpmap "models/afterword/laser_disc_player2_n"
+
+
+	$phong 1
+	$phongexponent   10
+    $phongboost    0.2
+	$phongfresnelranges  "[0.5 0.5 0.5]"
+
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\aoc_furniture/b1b"
+	"$bumpmap" "models\aoc_furniture/b1_norm"
+}

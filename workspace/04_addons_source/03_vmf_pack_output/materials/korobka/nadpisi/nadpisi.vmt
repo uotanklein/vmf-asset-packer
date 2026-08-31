@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "korobka/nadpisi/nadpisi"
+	"$surfaceprop" "Glass"
+	"$alphatest" 1
+}

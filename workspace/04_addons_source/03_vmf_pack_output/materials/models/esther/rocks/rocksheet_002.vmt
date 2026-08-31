@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 		"models/esther/rocks/rocksheet_001"
+	"$detail" 		"esther/detail/Rockdetail_01a"
+	"$vertexfog" "1"
+	
+//	"$detail" 		"esther/nature/rock/rocks_depth"
+	"$detailscale" 		"5"
+	"$detailtint"		"[1.95 1.95 1.95]" 
+	"$model" 		"1"
+	"$surfaceprop" 		"stone"
+}

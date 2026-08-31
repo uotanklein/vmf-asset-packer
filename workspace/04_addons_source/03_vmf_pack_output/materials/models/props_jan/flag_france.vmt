@@ -1,0 +1,8 @@
+"Vertexlitgeneric"
+{
+	"$basetexture" "models/props_jan/flag_france"
+	"$bumpmap" "models/props_jan/flag_material_normal"
+	"$normalmap" "models/props_jan/flag_material_normal"
+	"$nodecal" 1
+     "$model" 1
+}

@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "metro/props/deadbodies/wm_blood_1_1"
+		$alphatest 1
+	$allowalphatocoverage 1
+	$halflambert 1
+	$ambientocclusion 0
+
+
+
+}
+
+

@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "metro_urfim/militarybasesign"
+	"$surfaceprop" "metal"	
+}

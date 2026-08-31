@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/flag/mtl_p_rus_vork_wall_flag/soviet_flag"
+	"$envmap" "models/codbo1/flag/mtl_p_rus_vork_wall_flag/soviet_flag_spec"
+	"$normalmap" "models/codbo1/flag/mtl_p_rus_vork_wall_flag/soviet_flag_nrm"
+	"$nocull" 1
+	
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture"		"highdef/metro2033/concrete/concrete_beton_floor"
+	"$ssbump"		"1"
+	"%keywords"		"metro"
+	"$model"		"1"
+}

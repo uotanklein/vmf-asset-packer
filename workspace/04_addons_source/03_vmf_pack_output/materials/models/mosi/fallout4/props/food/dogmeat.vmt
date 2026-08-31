@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/fallout4/props/food/dogmeat"
+	"$bumpmap" "models/mosi/fallout4/props/food/dogmeat_n"
+	
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongalbedotint"	"1"
+	"$phongboost"	"0.1"
+	"$phongfresnelranges"	"[0.4 0.15 0]"
+}

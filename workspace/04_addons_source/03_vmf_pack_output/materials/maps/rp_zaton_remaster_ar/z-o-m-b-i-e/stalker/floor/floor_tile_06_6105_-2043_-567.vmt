@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/Z-O-M-B-I-E/STALKER/FLOOR/FLOOR_TILE_06.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/rp_zaton_remaster_ar/c6105_-2043_-567"
+	}
+}

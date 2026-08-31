@@ -1,0 +1,11 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/inventory/items/item_calibrate_tools"
+	"$bumpmap" "models/inventory/items/item_calibrate_tools_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponent"			"30"			
+	"$phongboost"				"0.2"
+	"$phongfresnelranges"		"[0.1 0.1 0.1]"
+}

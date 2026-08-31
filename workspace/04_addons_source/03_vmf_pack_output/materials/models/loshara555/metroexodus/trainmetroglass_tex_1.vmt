@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+	$basetexture "models/loshara555/metroexodus/trainmetroglass_tex_1"
+	$bumpmap "models/loshara555/metroexodus/trainmetroglass_tex_1_nm"
+	$surfaceprop Glass
+
+	$translucent 1
+	$nocull 1
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.40 0.40 0.40]"
+
+	$model 1
+}

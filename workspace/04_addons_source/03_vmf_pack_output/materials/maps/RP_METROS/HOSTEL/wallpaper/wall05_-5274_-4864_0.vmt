@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/HOSTEL/WALLPAPER/WALL05.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/rp_metros/c-5274_-4864_0"
+	}
+}

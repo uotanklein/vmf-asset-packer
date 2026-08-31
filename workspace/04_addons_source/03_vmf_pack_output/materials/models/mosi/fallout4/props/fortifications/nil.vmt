@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/fallout4/props/fortifications/nil"
+	"$alphatest" "1"
+}

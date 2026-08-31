@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/wall34/wall34_crackedceiling"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/wall34/wall34_crackedceiling_disabled_nm"
+	"$surfaceprop" "concrete"
+}

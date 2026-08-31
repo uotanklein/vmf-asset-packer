@@ -1,0 +1,12 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/door/door_1"
+	//////"$bumpmap" "z-o-m-b-i-e/metro_2033/door/door_1_disabled_nm"
+	"$surfaceprop" "metal"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_metal_rust_03"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}
+
+	

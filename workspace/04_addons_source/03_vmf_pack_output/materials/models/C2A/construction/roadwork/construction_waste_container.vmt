@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/C2A/construction/roadwork/construction_waste_container"
+//	"$translucent" 1
+}

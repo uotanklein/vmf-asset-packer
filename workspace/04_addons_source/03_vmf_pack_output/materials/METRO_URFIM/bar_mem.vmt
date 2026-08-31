@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+	$basetexture "metro_urfim/bar_mem"
+	"$surfaceprop" "concrete"
+                "$translucent" 1
+                "$decal" 1
+                "$decalscale" 1
+}

@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+//	"$baseTexture" 			"models/esther/caves/rocksheet_001"
+	"$baseTexture" 			"models/esther/rocks/rocksheet_001"
+	"$vertexfog" "1"
+	"$detail" "esther/detail/Rockdetail_01a"
+	"$detailscale" 3
+	"$model" 1
+	"$surfaceprop" "stone"
+
+
+
+//	"$envmap"			"env_cubemap"
+//	"$envmapcontrast"		".30"
+//	"$envmapsaturation"		".6"
+}

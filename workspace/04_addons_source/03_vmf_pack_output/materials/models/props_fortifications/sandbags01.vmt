@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+$baseTexture "models/props_fortifications/sandbags01"
+	"$translucent" 1
+	"$alphatest" 1
+}

@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "models/metro_props/railway_tex"
+	$bumpmap "models/metro_props/railway_tex_n"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.81 0.81 0.81]"
+	$envmapcontrast 1
+	$envmapsaturation 0.89
+	$envmapfresnel 0.96
+
+	$bumpscale 0.6
+}

@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "krot/ps_lift_door"
+                ////"$bumpmap" "krot/ps_lift_door_norm"
+	"$surfaceprop"	"metal"
+	"$detailscale" "1"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/fallout4/props/fortifications/whwoodtile01"
+	"$bumpmap" "models/mosi/fallout4/props/fortifications/whwoodtile01_n"
+
+	"$phong"	"1"
+	"$phongexponent"	"5"
+	"$phongalbedotint"	"1"
+	"$phongboost"	".4"
+	"$phongfresnelranges"	"[.8 .25 0]"
+}

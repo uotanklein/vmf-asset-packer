@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "models/les2/kreslecho"
+	$bumpmap "models/les2/kreslecho_n"
+
+	
+
+	$envmap "env_cubemap"
+	$envmaptint "[0.12 0.12 0.12]"
+}

@@ -1,0 +1,11 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/flaymi/stalker/anomaly/dynamics/repair_cleaning_kit_r7"
+	"$bumpmap" "models/flaymi/stalker/anomaly/dynamics/repair_cleaning_kit_r7_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponent"			"20"			
+	"$phongboost"				"0.1"
+	"$phongfresnelranges"		"[0.1 0.1 0.1]"
+}

@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/bruh/nazipics/part/hit"
+	"$surfaceprop"	"Metal"
+	"$bumpmap"	"models/bruh/nazipics/hit_normal"
+
+	//phong properties
+	"$phong"	"1"
+	"$phongboost"	"5"
+	"$phongfresnelranges"	"[1 1.5 2]"
+
+	"LightmappedGeneric_HDR_DX9"
+	{
+		"$envmap"	"env_cubemap"
+	}
+
+	"LightmappedGeneric_DX9"
+	{
+		"$envmap"	"env_cubemap"
+	}
+	
+}

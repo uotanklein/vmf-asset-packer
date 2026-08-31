@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/wall/wall_stancia2_dsc"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/wall/wall_stancia2_dsc_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_2"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}
+
+	

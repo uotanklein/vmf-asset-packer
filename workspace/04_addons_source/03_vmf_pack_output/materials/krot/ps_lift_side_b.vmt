@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "krot/ps_lift_side_b"
+                "$bumpmap" "krot/ps_lift_side_b_norm"
+	"$surfaceprop"	"metal"
+	"$detailscale" "1"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/misc/desk_wooden"
+    "$model" 1
+}

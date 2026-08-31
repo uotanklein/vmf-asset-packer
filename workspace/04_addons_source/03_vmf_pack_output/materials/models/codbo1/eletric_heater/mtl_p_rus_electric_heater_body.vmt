@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/eletric_heater/electric_heater_body"
+	"$normalmap" "models/codbo1/eletric_heater/electric_heater_body_n"
+	"$surfaceprop" "Metal"
+}

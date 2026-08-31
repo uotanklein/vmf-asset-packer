@@ -1,0 +1,17 @@
+VertexLitGeneric
+{
+	$basetexture "models/loshara555/metroexodus/trainmetro_tex_0_e"
+	$bumpmap "models/loshara555/metroexodus/trainmetro_tex_0_e_nm"
+	$surfaceprop Metal
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.20 0.20 0.20]"
+
+	$phong 1
+	$phongfresnelranges "[0.2 0.5 0.2]"
+	$phongexponent 20
+	$phongboost 2
+
+	$model 1
+}

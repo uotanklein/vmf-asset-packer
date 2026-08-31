@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/metal/metal_armotura01"
+    "$model" "1"
+}

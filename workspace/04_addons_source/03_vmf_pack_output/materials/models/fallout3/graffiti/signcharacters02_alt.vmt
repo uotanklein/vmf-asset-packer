@@ -1,0 +1,35 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/fallout3/graffiti/signcharacters02"
+	"$bumpmap" "models/fallout3/graffiti/signcharacters02_n"
+
+
+
+	"$detail" "detail\noise_detail_01"
+	"$detailscale" "7.792"
+	"$detailblendfactor" .7
+	"$detailblendmode" 0
+
+	$alphatest 				"1"
+	$allowalphatocoverage	"1"
+	$halflambert 			"1"
+
+
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"35s"
+   	"$phongboost"               		"1"
+   	"$phongfresnelranges"       		"[0.3 0.5 0.5]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 0.95 0.725 0.6]"
+
+   	"$rimlight"                 		"0"
+   	"$rimlightexponent"         		"10"   
+   	"$rimlightboost"            		"0.085"
+   	"$rimmask"                 		"1"
+ 
+    	"$envmap"                   		"env_cubemap"
+    	"$envmaptint"              		"[ 0.02 0.018 0.014]"
+$normalmapalphaenvmapmask 1
+$color2 "[1 0.85 0.625]"
+}

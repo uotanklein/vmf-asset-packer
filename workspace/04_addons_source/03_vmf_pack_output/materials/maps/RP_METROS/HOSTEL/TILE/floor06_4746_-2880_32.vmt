@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/HOSTEL/TILE/FLOOR06.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/rp_metros/c4746_-2880_32"
+	}
+}

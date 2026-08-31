@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/custom_prop/nazibanner/models_modules_roswell_addons_textures_large_flags_01_row_c"
+	"$bumpmap" "models/custom_prop/nazibanner/models_modules_roswell_addons_textures_large_flags_01_row_n"
+	"$nocull" "1"
+	"$alphatest" "1"
+
+	"$model" "1"
+	"$phong" "1"
+	"$phongexponent" "8"
+	"$phongboost" "0.05"
+	"$phongalbedotint" "1"
+	"$phongtint" "[1 .95 .95]"
+	"$phongfresnelranges"	"[0.5 4 8]"
+
+	"$rimlight" "1"				
+	"$rimlightexponent" "80"             
+ 	"$rimlightboost" ".1"	
+
+}

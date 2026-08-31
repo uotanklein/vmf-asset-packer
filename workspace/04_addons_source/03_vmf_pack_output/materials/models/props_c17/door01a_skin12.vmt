@@ -1,0 +1,24 @@
+// envmaptint_fix
+"vertexlitGeneric"
+{
+	// Original shader: BaseTexture
+	"$basetexture" "models/props_c17/door01a_skin12"
+	"$surfaceprop" "wood"
+	"%keywords" "c17downtown"
+
+	"$detail" "detail\plaster_detail_01"
+	"$detailscale" "5.545"
+	"$detailblendfactor" .6
+	"$detailblendmode" 0
+}
+
+
+
+
+
+
+
+
+
+
+

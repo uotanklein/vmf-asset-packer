@@ -1,0 +1,5 @@
+LightmappedGeneric
+{
+	$basetexture "metro_urfim/bar_red"
+	"$surfaceprop" "concrete"
+}

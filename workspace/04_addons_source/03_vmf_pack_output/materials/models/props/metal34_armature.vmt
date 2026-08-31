@@ -1,0 +1,8 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/metal34/metal34_armature"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/metal34/metal34_armature_disabled_nm"
+	"$surfaceprop" "metal"
+	"$nodecal" "1"
+	"$translucent" "1"
+}

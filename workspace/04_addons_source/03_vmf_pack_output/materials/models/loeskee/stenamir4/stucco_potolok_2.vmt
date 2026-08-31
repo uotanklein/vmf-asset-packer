@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/stucco/stucco_potolok_2"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/stucco/stucco_potolok_21_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/stalker/detail/detail_tile_det2"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

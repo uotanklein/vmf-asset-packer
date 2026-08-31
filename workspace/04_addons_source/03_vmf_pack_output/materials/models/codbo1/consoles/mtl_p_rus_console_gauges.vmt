@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/consoles/mtl_p_rus_console_gauges/console_guage"
+	$selfillum 1
+}

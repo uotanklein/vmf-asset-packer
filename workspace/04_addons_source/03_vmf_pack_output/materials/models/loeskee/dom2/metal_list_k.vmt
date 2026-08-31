@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "highdef/metro2033/metal/metal_list_k"
+	"$bumpmap" "highdef/metro2033/metal/metal_list_k_ssbump"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "metal"
+	"%keywords" "metro"
+}

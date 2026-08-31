@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mccarran/garbage/offrmwall01"
+	"$bumpmap" "models/mccarran/garbage/offrmwall01_n"
+}

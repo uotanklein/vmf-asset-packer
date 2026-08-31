@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "models/amogugu/koverchki2"
+      $bumpmap "models/amogugu/koverchkinorm"
+	
+}

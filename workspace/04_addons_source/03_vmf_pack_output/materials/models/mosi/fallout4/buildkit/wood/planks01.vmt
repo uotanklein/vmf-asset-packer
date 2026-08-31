@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/fallout4/buildkit/wood/planks01_d"
+	"$bumpmap" "models/mosi/fallout4/buildkit/wood/planks01_n"
+
+	"$phong"	"1"
+	"$phongexponent"	"8"
+	"$phongalbedotint"	"1"
+	"$phongboost"	".25"
+	"$phongfresnelranges"	"[.8 .3 0]"
+}

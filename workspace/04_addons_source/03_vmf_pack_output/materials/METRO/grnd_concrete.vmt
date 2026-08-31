@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "metro/grnd_concrete"
+	"$surfaceprop" "concrete"
+}

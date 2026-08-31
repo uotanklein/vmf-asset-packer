@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mus/subwaystation/metro_dynamic_sign"
+	"$selfillum" 1
+}

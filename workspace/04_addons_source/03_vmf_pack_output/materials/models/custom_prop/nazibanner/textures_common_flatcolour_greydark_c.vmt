@@ -1,0 +1,20 @@
+
+"VertexLitGeneric"
+{
+    "$baseTexture" "models/custom_prop/nazibanner/textures_common_flatcolour_greydark_c"
+    
+   $nocull "1"
+     
+	"$halflambert" 1
+
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost" "0.5"
+	"$phongfresnelranges" "[0.1 0.2 0.5]"
+
+	"$envmap" "models/custom_prop/nazibanner/fallout4cube_dithered_grey"
+	"$normalmapalphaenvmapmask"		"1"
+	"$envmapfresnel"	"1"
+
+}
+        

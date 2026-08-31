@@ -1,0 +1,29 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/fallout3/clutter/posters/schoolart01"
+	"$bumpmap" "models/fallout3/clutter/posters/schoolart01_n"
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"45"
+   	"$phongboost"               		"0.35"
+   	"$phongfresnelranges"       		"[0.5]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 1.1 1.1 0.55]"
+
+
+
+	"$detail" "models/mccarran/portrait/detail_paint"
+	"$detailscale" "1.75"
+	"$detailblendfactor" "4.5"
+	"$detailblendmode" "0"
+	"$lightwarptexture" "models/mccarran/portrait/lightwarp_paint"
+$color2 "[0.5 0.5 0.5]"
+
+
+	$alphatest		1
+
+	$alphatestreference	.25
+
+	$allowalphatocoverage	1
+}
+

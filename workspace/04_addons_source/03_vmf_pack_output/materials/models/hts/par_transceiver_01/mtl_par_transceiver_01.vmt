@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "models/hts/par_transceiver_01/mtl_par_transceiver_01"
+	$bumpmap "models/hts/par_transceiver_01/mtl_par_transceiver_01_n"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.45 0.45 0.45]"
+
+	$phong 1
+	$phongfresnelranges "[1 1 1]"
+	$phongexponent 7
+	$phongboost 8
+}

@@ -1,0 +1,30 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/FourthReich/FourthReich"
+        "$bumpmap"     "models/FourthReich/FourthReich_n"
+
+        "$alphatest" 1
+
+	"$phong"				"1"
+	"$phongboost"			".316"
+	"$phongexponent"		"6"
+	"$lightwarptexture"		"models\FourthReich\warp"
+	"$phongtint"			"[.85 .85 1]"
+	"$phongfresnelranges"	"[.2 .5 5]"
+	"$ambientocclusion"		"1"
+
+	"$halflambert" 1
+
+	"$rimlight" "1"				
+	"$rimlightexponent" "80"             
+ 	"$rimlightboost" ".1"	
+        "$translucent" "1"
+        "$surfaceprop" "carpet"
+
+	"$nocull" "1"
+
+	"$detail" "models/FourthReich/detail/dt_carpet1"
+	"$detailscale" "16"
+	"$detailblendfactor" 2
+	"$detailblendmode" 0
+}

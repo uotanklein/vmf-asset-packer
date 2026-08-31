@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/kartooshka/kartooshka_ruined"
+	"$bumpmap" "models/Gmodflasgs/banner_n"
+	"$nocull" "1"
+	"$alphatest" "1"
+
+	"$phong" "1"
+	"$phongexponent" "7"
+	"$phongboost" ".015"
+	"$phongfresnelranges"	"[.8 .2 0]"
+}

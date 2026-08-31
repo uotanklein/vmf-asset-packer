@@ -1,0 +1,7 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "highdef/metro2033/concrete/concrete_opalubka_uniq"
+	"$bumpmap" "highdef/metro2033/concrete/concrete_opalubka_uniq_ssbump"
+	"$surfaceprop" "concrete"
+	"%keywords" "metro"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "korobka/gf/gf"
+	"$surfaceprop" "Glass"
+	"$alphatest" 1
+}

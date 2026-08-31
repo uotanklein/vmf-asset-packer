@@ -1,0 +1,35 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/fallout3/anchorage/dlcanchexplosivecharge01_off"
+	"$bumpmap" "models/fallout3/anchorage/dlcanchexplosivecharge01_n"
+	"$detail" "detail\noise_detail_01"
+	"$detailscale" "7.792"
+	"$detailblendfactor" .7
+	"$detailblendmode" 0
+
+	$alphatest 				"1"
+	$allowalphatocoverage	"0"
+	$halflambert 			"1"
+
+
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"5"
+   	"$phongboost"               		"2.5"
+   	"$phongfresnelranges"       		"[0.5 0.5 0.5]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 0.8 0.75 0.7]"
+
+
+   	"$rimlight"                 		"1"
+   	"$rimlightexponent"         		"10"   
+   	"$rimlightboost"            		"0.085"
+   	"$rimmask"                 		"1"
+ 
+    	"$envmap"                   		"env_cubemap"
+    	"$envmaptint"              		"[ 0.185 0.12 0.12]"	
+$normalmapalphaenvmapmask 1
+
+
+$color2 "[0.945 0.9 0.9]"
+}

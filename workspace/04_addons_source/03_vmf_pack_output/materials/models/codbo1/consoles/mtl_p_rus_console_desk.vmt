@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/consoles/mtl_p_rus_console_desk/console_dest"
+	"$normalmap" "models/codbo1/consoles/mtl_p_rus_console_desk/console_dest_nrm"
+}

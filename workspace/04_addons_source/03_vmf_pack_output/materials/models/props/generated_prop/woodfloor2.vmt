@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "wilderness/woodfloor2"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$basealphaenvmapmask" 1
+	//"$envmapcontrast" .6
+	"$surfaceprop" "wood"
+}

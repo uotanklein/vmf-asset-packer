@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/metal/roadsign_novosib2"
+    "$model" "1"
+}

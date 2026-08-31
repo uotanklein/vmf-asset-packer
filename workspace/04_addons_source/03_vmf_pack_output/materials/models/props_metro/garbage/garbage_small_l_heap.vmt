@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/garbage/garbage_small_l_heap"
+    "$model" 1
+}

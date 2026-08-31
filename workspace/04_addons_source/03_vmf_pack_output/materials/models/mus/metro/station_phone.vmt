@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+ "$basetexture" "models/mus/metro/station_phone"
+ "$bumpmap" "models/mus/metro/station_phone_norm"
+  $phong 1
+  $phongexponent   20
+  $phongboost    0.5
+  $phongfresnelranges  "[0.5 0.5 0.5]"
+
+}

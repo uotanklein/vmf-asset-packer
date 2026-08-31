@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/Z-O-M-B-I-E/STALKER/FLOOR/FLOOR_TILE_02.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/999_d/c-2586_14202_-1753"
+	}
+}

@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"		"z-o-m-b-i-e/STALKER/mtl/mtl_truba_ql02"
+	"$detail"		"z-o-m-b-i-e/STALKER/detail/detail_metall_det2_v2"
+	"$detailscale"		"6.000000"
+	"$detailblendfactor"		"1.000000"
+	"$detailblendmode"		"0"
+	"$model"		"1"
+}

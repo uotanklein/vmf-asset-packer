@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/small_items/mtl_p_rus_emblem/rus_emblem"
+	"$bumpmap" "models/codbo1/small_items/mtl_p_rus_emblem/rus_emblem_nrm"
+}

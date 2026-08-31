@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mus/metro/station_hatch_1c"
+	"$bumpmap" "models/mus/metro/station_hatch_1_norm"
+	$phong 1
+	$phongexponent   20
+	$phongboost    0.5
+	$phongfresnelranges  "[0.5 0.5 0.5]"
+}

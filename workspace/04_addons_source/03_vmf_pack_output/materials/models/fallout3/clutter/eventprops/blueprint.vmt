@@ -1,0 +1,28 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/fallout3/clutter/eventprops/blueprint"
+	"$bumpmap" "models/fallout3/clutter/eventprops/blueprint_n"
+   	"$phong"                    		"1"
+   	"$phongexponent"            		"2"
+   	"$phongboost"               		"3.55"
+   	"$phongfresnelranges"       		"[1]"
+    	"$phongalbedotint"          		"1"
+    	"$phongalbedoboost"         		"48"
+$phongtint "[ 1 1.1 1.5]"
+
+
+
+	"$detail" "models/mccarran/portrait/detail_paint"
+	"$detailscale" "10"
+	"$detailblendfactor" "2.5"
+	"$detailblendmode" "0"
+	"$lightwarptexture" "models/mccarran/portrait/lightwarp_paint"
+$color2 "[0.6125 0.6 0.6]"
+
+
+	$alphatest		1
+
+	$alphatestreference	.5
+
+	$allowalphatocoverage	1
+}

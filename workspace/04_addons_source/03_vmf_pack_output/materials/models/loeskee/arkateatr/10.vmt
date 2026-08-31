@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "hostel/concrete/10"
+	"$surfaceprop" "concrete"
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/codbo1/consoles/mtl_p_rus_console_buttons_lit/buttons_lit"
+	$selfillum 1
+}

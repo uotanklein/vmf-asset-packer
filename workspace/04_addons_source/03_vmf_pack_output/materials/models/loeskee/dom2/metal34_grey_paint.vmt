@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/metal34/metal34_grey_paint"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/metal34/metal34_grey_paint_norm"
+	"$surfaceprop" "metal"
+}

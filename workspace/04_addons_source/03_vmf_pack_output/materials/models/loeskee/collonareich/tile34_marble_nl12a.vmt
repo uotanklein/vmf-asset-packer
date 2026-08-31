@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/metro_2033/tile34/tile34_marble_nl12a"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/tile34/tile34_marble_nl12a_norm"
+	"$surfaceprop" "tile"
+}
