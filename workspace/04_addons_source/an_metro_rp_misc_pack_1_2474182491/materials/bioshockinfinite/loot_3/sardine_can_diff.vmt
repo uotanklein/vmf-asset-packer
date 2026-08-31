@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot_3/Sardine_Can_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot_3/Sardine_Can_NORM"
+	"$surfaceprop" "Metal"
+}

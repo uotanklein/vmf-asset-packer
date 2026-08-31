@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "eft_paca_armor/paca"
+	"$normalmap"   "eft_paca_armor/paca_nrm"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot_3/LuggageBundle_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot_3/LuggageBundle_NRM"
+	"$surfaceprop" "Default"
+}

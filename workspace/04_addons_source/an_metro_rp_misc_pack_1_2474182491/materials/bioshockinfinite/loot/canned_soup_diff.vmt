@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot/Canned_Soup_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot/Canned_Soup_NORM"
+	"$surfaceprop" "Metal"
+}

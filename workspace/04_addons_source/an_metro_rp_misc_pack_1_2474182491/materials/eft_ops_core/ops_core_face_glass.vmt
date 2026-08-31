@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{	
+	"$basetexture" "eft_ops_core/ops_core_face_glass"
+	"$surfaceprop" "glass"
+	"$translucent" 1
+}

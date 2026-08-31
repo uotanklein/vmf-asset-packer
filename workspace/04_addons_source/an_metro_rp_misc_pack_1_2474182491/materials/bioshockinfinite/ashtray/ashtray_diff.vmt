@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Ashtray/Ashtray_DIFF"
+	"$bumpmap" "BioshockInfinite/Ashtray/Ashtray_NORM"
+	"$surfaceprop" "Concrete"
+}

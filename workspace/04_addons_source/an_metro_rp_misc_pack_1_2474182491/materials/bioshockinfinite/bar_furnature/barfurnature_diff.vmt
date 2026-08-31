@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Bar_Furnature/BarFurnature_DIFF"
+	"$bumpmap" "BioshockInfinite/Bar_Furnature/BarFurnature_NORM"
+	"$surfaceprop" "Wood_Furniture"
+}

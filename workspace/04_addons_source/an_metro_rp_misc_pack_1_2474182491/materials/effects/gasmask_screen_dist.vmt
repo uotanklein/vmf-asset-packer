@@ -1,0 +1,11 @@
+"Refract"
+{
+	"$normalmap" "effects/gasmask/gasmask_screen_dist"
+	"$dudvmap" "effects/gasmask/gasmask_screen_dist"
+	"$translucent" "1"
+	"$additive" "1"
+	$forcerefract 1
+	$refracttint "[1 1 1]"
+	$refractamount .1
+	$bluramount .1
+}

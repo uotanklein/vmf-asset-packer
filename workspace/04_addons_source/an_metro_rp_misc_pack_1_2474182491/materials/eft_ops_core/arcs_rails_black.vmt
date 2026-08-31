@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "eft_ops_core/arcs_rails_black"
+	"$normalmap" "eft_ops_core/arcs_rails_nrm"
+}
