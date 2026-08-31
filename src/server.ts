@@ -1,7 +1,8 @@
 import express from 'express'
 import type { Request, Response } from 'express'
 import path from 'path'
-import { readFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
+import { readdir } from 'fs/promises'
 import { execFile } from 'child_process'
 import { randomUUID } from 'crypto'
 import {
@@ -31,6 +32,15 @@ import {
     DEFAULT_SPLIT_LIMIT_BYTES,
     type ContentSplitConfig,
 } from './content-split.js'
+import {
+    runContentPublish,
+    DEFAULT_PUBLISH_INPUT_PATH,
+    DEFAULT_PUBLISH_CHANGELOG,
+    DEFAULT_PUBLISH_ADDON_TYPE,
+    DEFAULT_PUBLISH_ITEMS,
+    type ContentPublishConfig,
+    type PublishItem,
+} from './content-publish.js'
 import { DEFAULT_RUN_MODE, normalizeRunMode, type RunMode } from './run-mode.js'
 
 const PORT = Number(process.env.PORT ?? 5781)
@@ -38,6 +48,76 @@ const HOST = '127.0.0.1'
 const RUN_RETENTION_MS = Number(process.env.RUN_RETENTION_MS ?? 15 * 60 * 1000)
 const PROGRESS_BROADCAST_INTERVAL_MS = Math.max(50, Number(process.env.PROGRESS_BROADCAST_INTERVAL_MS ?? 120))
 const DEFAULT_CONTENT_PACK_RULES_EXAMPLE_PATH = path.resolve('examples', 'qanon-content-pack.rules.json')
+const PUBLISH_CONFIG_PATH = path.resolve('publish.config.json')
+
+type PublishDefaults = {
+    splitOutputPath: string
+    gmodPath: string
+    changelog: string
+    addonType: string
+    items: PublishItem[]
+    dryRun: boolean
+    onlyChanged: boolean
+    createMissing: boolean
+    iconPath: string
+}
+
+function normalizePublishItems(value: unknown): PublishItem[] {
+    if (!Array.isArray(value)) return []
+    return value.flatMap((entry) => {
+        if (!isPlainObject(entry)) return []
+        const folder = trimOptionalString(entry.folder) ?? ''
+        const id = trimOptionalString(entry.id) ?? ''
+        const title = trimOptionalString(entry.title)
+        if (!folder && !id) return []
+        return [{ folder, id, ...(title ? { title } : {}) }]
+    })
+}
+
+function loadPublishDefaults(): PublishDefaults {
+    const base: PublishDefaults = {
+        splitOutputPath: DEFAULT_PUBLISH_INPUT_PATH,
+        gmodPath: process.env.GMOD_PATH ?? '',
+        changelog: DEFAULT_PUBLISH_CHANGELOG,
+        addonType: DEFAULT_PUBLISH_ADDON_TYPE,
+        items: [],
+        dryRun: true,
+        onlyChanged: true,
+        createMissing: false,
+        iconPath: '',
+    }
+
+    try {
+        const parsed = JSON.parse(readFileSync(PUBLISH_CONFIG_PATH, 'utf8')) as unknown
+        if (!isPlainObject(parsed)) return { ...base, items: DEFAULT_PUBLISH_ITEMS }
+        const configItems = normalizePublishItems(parsed.items)
+        // если в конфиге нет ни одного id — берём встроенный дефолтный маппинг
+        const items = configItems.some((it) => it.id) ? configItems : DEFAULT_PUBLISH_ITEMS
+        return {
+            splitOutputPath: trimOptionalString(parsed.splitOutputPath) ?? base.splitOutputPath,
+            gmodPath: trimOptionalString(parsed.gmodPath) ?? base.gmodPath,
+            changelog: typeof parsed.changelog === 'string' ? parsed.changelog : base.changelog,
+            addonType: trimOptionalString(parsed.addonType) ?? base.addonType,
+            items,
+            dryRun: typeof parsed.dryRun === 'boolean' ? parsed.dryRun : base.dryRun,
+            onlyChanged: typeof parsed.onlyChanged === 'boolean' ? parsed.onlyChanged : base.onlyChanged,
+            createMissing: typeof parsed.createMissing === 'boolean' ? parsed.createMissing : base.createMissing,
+            iconPath: trimOptionalString(parsed.iconPath) ?? base.iconPath,
+        }
+    } catch {
+        return { ...base, items: DEFAULT_PUBLISH_ITEMS }
+    }
+}
+
+// folder -> {id,title}: конфиг (если есть id) поверх встроенного дефолта
+function publishItemLookup(): Map<string, PublishItem> {
+    const map = new Map<string, PublishItem>()
+    for (const it of DEFAULT_PUBLISH_ITEMS) map.set(it.folder, it)
+    for (const it of DEFAULT_PUBLISH_CONFIG.items) {
+        if (it.id) map.set(it.folder, it)
+    }
+    return map
+}
 
 type RunState = {
     events: RunEvent[]
@@ -172,6 +252,7 @@ function loadDefaultContentPackRulesConfig(): ContentPackRulesInput {
 }
 
 const DEFAULT_CONTENT_PACK_RULES_CONFIG = loadDefaultContentPackRulesConfig()
+const DEFAULT_PUBLISH_CONFIG = loadPublishDefaults()
 
 function parseList(value: unknown, fallback: string[]): string[] {
     if (Array.isArray(value)) {
@@ -408,6 +489,7 @@ app.get('/api/defaults', (_req, res) => {
             cleanSourceGroups: true,
             cleanOutput: false,
         },
+        publish: DEFAULT_PUBLISH_CONFIG,
     })
 })
 
@@ -572,6 +654,61 @@ app.post('/api/run', (req: Request, res: Response) => {
         return
     }
 
+    if (mode === 'publish') {
+        const items = normalizePublishItems(body.items)
+        const publishCfg: ContentPublishConfig = {
+            splitOutputPath: typeof body.splitOutputPath === 'string' ? body.splitOutputPath.trim() : '',
+            gmodPath: typeof body.gmodPath === 'string' ? body.gmodPath.trim() : '',
+            items,
+            changelog: typeof body.changelog === 'string' ? body.changelog : '',
+            onlyChanged: body.onlyChanged !== false,
+            dryRun: body.dryRun !== false,
+            addonType: typeof body.addonType === 'string' && body.addonType.trim()
+                ? body.addonType.trim()
+                : DEFAULT_PUBLISH_ADDON_TYPE,
+            createMissing: body.createMissing === true,
+            iconPath: typeof body.iconPath === 'string' ? body.iconPath.trim() : '',
+            configPath: PUBLISH_CONFIG_PATH,
+        }
+
+        if (!publishCfg.splitOutputPath) {
+            res.status(400).json({ error: 'Не выбрана папка сплита (06_content_split)' })
+            return
+        }
+        if (!publishCfg.gmodPath) {
+            res.status(400).json({ error: 'Не указан путь к GarrysMod' })
+            return
+        }
+        const withId = publishCfg.items.filter((it) => it.folder && it.id).length
+        const withFolder = publishCfg.items.filter((it) => it.folder).length
+        if (withId === 0 && !(publishCfg.createMissing && withFolder > 0)) {
+            res.status(400).json({ error: 'Нет частей с workshop id (впиши id или включи «создавать недостающие айтемы»)' })
+            return
+        }
+
+        const runId = randomUUID()
+        const state: RunState = {
+            events: [],
+            subscribers: new Set(),
+            finished: false,
+        }
+
+        runs.set(runId, state)
+        activeRunId = runId
+
+        const publishRunner = runContentPublish(publishCfg, (event) => {
+            broadcast(runId, event)
+        })
+
+        publishRunner.catch((error) => {
+            broadcast(runId, { type: 'error', stage: 'fatal', message: errorMessage(error) })
+            broadcast(runId, { type: 'done', processed: 0, execErrors: 0, copyErrors: 0 })
+        })
+
+        res.json({ runId })
+        return
+    }
+
     const contentRoots = parseList(body.contentRoots, DEFAULT_CONTENT_ROOTS)
     const vmfPaths = Array.isArray(body.vmfPaths)
         ? body.vmfPaths.map((vmfPath) => typeof vmfPath === 'string' ? vmfPath.trim() : '').filter(Boolean)
@@ -621,6 +758,57 @@ app.post('/api/run', (req: Request, res: Response) => {
     })
 
     res.json({ runId })
+})
+
+// список папок-частей в сплите (для авто-сидинга таблицы; клиент ФС не видит)
+app.post('/api/publish-parts', async (req: Request, res: Response) => {
+    try {
+        const body = req.body as { splitOutputPath?: unknown }
+        const splitPath = typeof body.splitOutputPath === 'string' && body.splitOutputPath.trim()
+            ? path.resolve(body.splitOutputPath.trim())
+            : path.resolve(DEFAULT_PUBLISH_INPUT_PATH)
+
+        const entries = await readdir(splitPath, { withFileTypes: true })
+        const lookup = publishItemLookup()
+        const parts = entries
+            .filter((e) => e.isDirectory() && !e.name.startsWith('_'))
+            .map((e) => e.name)
+            .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+            .map((folder) => {
+                const known = lookup.get(folder)
+                return { folder, id: known?.id ?? '', title: known?.title ?? '' }
+            })
+
+        // folders — для обратной совместимости; parts — с id/title из дефолтного маппинга
+        res.json({ folders: parts.map((p) => p.folder), parts })
+    } catch (error) {
+        res.status(500).json({ error: errorMessage(error) })
+    }
+})
+
+// сохранить маппинг folder->id на диск (publish.config.json), чтобы переживал чистку localStorage
+app.post('/api/save-publish-config', (req: Request, res: Response) => {
+    try {
+        const body = req.body as Record<string, unknown>
+        const config = {
+            splitOutputPath: typeof body.splitOutputPath === 'string' ? body.splitOutputPath.trim() : '',
+            gmodPath: typeof body.gmodPath === 'string' ? body.gmodPath.trim() : '',
+            changelog: typeof body.changelog === 'string' ? body.changelog : '',
+            addonType: typeof body.addonType === 'string' && body.addonType.trim()
+                ? body.addonType.trim()
+                : DEFAULT_PUBLISH_ADDON_TYPE,
+            dryRun: body.dryRun !== false,
+            onlyChanged: body.onlyChanged !== false,
+            createMissing: body.createMissing === true,
+            iconPath: typeof body.iconPath === 'string' ? body.iconPath.trim() : '',
+            items: normalizePublishItems(body.items),
+        }
+
+        writeFileSync(PUBLISH_CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8')
+        res.json({ ok: true, path: PUBLISH_CONFIG_PATH })
+    } catch (error) {
+        res.status(500).json({ error: errorMessage(error) })
+    }
 })
 
 app.get('/api/events/:runId', (req: Request, res: Response) => {

@@ -24,6 +24,15 @@ import {
     DEFAULT_SPLIT_LIMIT_BYTES,
     type ContentSplitConfig,
 } from './content-split.js'
+import {
+    runContentPublish,
+    DEFAULT_PUBLISH_INPUT_PATH,
+    DEFAULT_PUBLISH_ADDON_TYPE,
+    type ContentPublishConfig,
+    type PublishItem,
+} from './content-publish.js'
+import { readFileSync } from 'fs'
+import path from 'path'
 import { normalizeRunMode } from './run-mode.js'
 
 const envContentRoots = (process.env.CONTENT_ROOTS ?? '')
@@ -117,6 +126,39 @@ function buildContentSplitConfig(): ContentSplitConfig {
     }
 }
 
+function loadPublishItemsFromFile(): PublishItem[] {
+    try {
+        const parsed = JSON.parse(readFileSync(path.resolve('publish.config.json'), 'utf8')) as { items?: unknown }
+        if (!Array.isArray(parsed.items)) return []
+        return parsed.items.flatMap((entry) => {
+            if (typeof entry !== 'object' || entry === null) return []
+            const e = entry as Record<string, unknown>
+            const folder = typeof e.folder === 'string' ? e.folder.trim() : ''
+            const id = typeof e.id === 'string' ? e.id.trim() : ''
+            const title = typeof e.title === 'string' ? e.title.trim() : undefined
+            if (!folder) return []
+            return [{ folder, id, ...(title ? { title } : {}) }]
+        })
+    } catch {
+        return []
+    }
+}
+
+function buildContentPublishConfig(): ContentPublishConfig {
+    return {
+        splitOutputPath: process.env.PUBLISH_INPUT_PATH ?? process.env.SPLIT_OUTPUT_PATH ?? DEFAULT_PUBLISH_INPUT_PATH,
+        gmodPath: process.env.GMOD_PATH ?? '',
+        items: loadPublishItemsFromFile(),
+        changelog: process.env.PUBLISH_CHANGELOG ?? '',
+        onlyChanged: process.env.PUBLISH_ALL !== '1',
+        dryRun: process.env.PUBLISH_DRY_RUN === '1',
+        addonType: process.env.PUBLISH_ADDON_TYPE ?? DEFAULT_PUBLISH_ADDON_TYPE,
+        createMissing: process.env.PUBLISH_CREATE === '1',
+        iconPath: process.env.PUBLISH_ICON ?? '',
+        configPath: path.resolve('publish.config.json'),
+    }
+}
+
 const mode = normalizeRunMode(process.env.RUN_MODE ?? process.env.MODE)
 if (!mode) {
     console.error(`Неизвестный RUN_MODE: ${process.env.RUN_MODE ?? process.env.MODE ?? ''}`)
@@ -140,6 +182,10 @@ if (mode === 'content-pack') {
     })
 } else if (mode === 'content-split') {
     await runContentSplit(buildContentSplitConfig(), (event) => {
+        emitCliEvent(progressBar, state, event)
+    })
+} else if (mode === 'publish') {
+    await runContentPublish(buildContentPublishConfig(), (event) => {
         emitCliEvent(progressBar, state, event)
     })
 } else {

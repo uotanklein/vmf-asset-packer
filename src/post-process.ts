@@ -8,11 +8,12 @@ import { formatBytes, pathExists, type RunEvent } from './shared.js'
 
 const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
-const AUDIO_EXTENSIONS = new Set(['.wav', '.mp3', '.ogg'])
+// .ogg намеренно исключён из сжатия: исходник уже сжат Vorbis, перекодирование
+// в q:a 3 почти никогда не уменьшает размер, поэтому ogg копируется как есть.
+const AUDIO_EXTENSIONS = new Set(['.wav', '.mp3'])
 const AUDIO_ENCODE_PARAMS: Record<string, string[]> = {
     '.wav': ['-c:a', 'adpcm_ms'],
     '.mp3': ['-c:a', 'libmp3lame', '-b:a', '96k'],
-    '.ogg': ['-c:a', 'libvorbis', '-q:a', '3'],
 }
 
 const DEFAULT_VTF_FORMAT = 'dxt1'
@@ -20,8 +21,18 @@ const DEFAULT_VTF_ALPHA_FORMAT = 'dxt5'
 const DEFAULT_VTF_MAX_WIDTH = 1024
 const DEFAULT_VTF_MAX_HEIGHT = 1024
 const VTF_SIGNATURE = 'VTF\0'
-const VTF_HEADER_MIN_SIZE = 26
+const VTF_HEADER_MIN_SIZE = 65
+const VTF_WIDTH_OFFSET = 16
+const VTF_HEIGHT_OFFSET = 18
+const VTF_FLAGS_OFFSET = 20
 const VTF_FRAMES_OFFSET = 24
+const VTF_HIGH_FORMAT_OFFSET = 52
+const VTF_MIP_COUNT_OFFSET = 56
+const VTF_LOW_FORMAT_OFFSET = 57
+const VTF_LOW_WIDTH_OFFSET = 61
+const VTF_LOW_HEIGHT_OFFSET = 62
+const VTF_DEPTH_OFFSET = 63
+const VTF_FLAG_NOMIP = 0x00000100
 // Content-root markers: the first path segment with one of these names marks the
 // start of the content-relative portion of a path (e.g. "materials/models/foo").
 const CONTENT_ROOT_MARKERS = new Set([
@@ -55,10 +66,62 @@ function filterByExcludePaths(allFiles: string[], excludePaths: string[]): strin
     })
 }
 
+function isParticleMaterialVtf(filePath: string): boolean {
+    const contentPath = getContentRelativePath(filePath)
+    if (!contentPath) return false
+
+    return contentPath.startsWith('materials/particle/')
+        || contentPath.startsWith('materials/particles/')
+}
+
 const DEFAULT_SOUND_TIMEOUT_MS = 60_000
 const DEFAULT_VTF_TIMEOUT_MS = 120_000
 const DEFAULT_SOUND_CONCURRENCY = Math.max(1, os.cpus().length)
 const DEFAULT_VTF_CONCURRENCY = Math.max(1, os.cpus().length)
+
+const VTF_IMAGE_FORMAT_NAMES: Record<number, string> = {
+    0: 'rgba8888',
+    1: 'abgr8888',
+    2: 'rgb888',
+    3: 'bgr888',
+    4: 'rgb565',
+    5: 'i8',
+    6: 'ia88',
+    7: 'p8',
+    8: 'a8',
+    9: 'rgb888_bluescreen',
+    10: 'bgr888_bluescreen',
+    11: 'argb8888',
+    12: 'bgra8888',
+    13: 'dxt1',
+    14: 'dxt3',
+    15: 'dxt5',
+    16: 'bgrx8888',
+    17: 'bgr565',
+    18: 'bgrx5551',
+    19: 'bgra4444',
+    20: 'dxt1_onebitalpha',
+    21: 'bgra5551',
+    22: 'uv88',
+    23: 'uvwq8888',
+    24: 'rgba16161616f',
+    25: 'rgba16161616',
+    26: 'uvlx8888',
+}
+
+type VtfMetadata = {
+    width: number
+    height: number
+    flags: number
+    frames: number
+    highFormat: number
+    highFormatName: string | null
+    mipCount: number
+    lowFormat: number
+    lowWidth: number
+    lowHeight: number
+    depth: number
+}
 
 function readConcurrencyEnv(envName: string, fallback: number): number {
     const raw = process.env[envName]
@@ -66,6 +129,14 @@ function readConcurrencyEnv(envName: string, fallback: number): number {
     const parsed = Number(raw)
     if (!Number.isFinite(parsed)) return fallback
     return Math.max(1, Math.trunc(parsed))
+}
+
+function readOptionalPositiveIntEnv(envName: string): number | null {
+    const raw = process.env[envName]
+    if (raw === undefined || raw.trim() === '') return null
+    const parsed = Number(raw)
+    if (!Number.isFinite(parsed) || parsed <= 0) return null
+    return Math.trunc(parsed)
 }
 
 async function runWorkerPool<T>(
@@ -291,7 +362,7 @@ async function exportVtfToTga(vtfCmdPath: string, inputVtfPath: string, outputDi
     )
 }
 
-async function readVtfFrameCount(filePath: string): Promise<number | null> {
+async function readVtfMetadata(filePath: string): Promise<VtfMetadata | null> {
     const handle = await fsp.open(filePath, 'r')
     try {
         const buffer = Buffer.alloc(VTF_HEADER_MIN_SIZE)
@@ -304,43 +375,82 @@ async function readVtfFrameCount(filePath: string): Promise<number | null> {
             return null
         }
 
-        return buffer.readUInt16LE(VTF_FRAMES_OFFSET)
+        const highFormat = buffer.readUInt32LE(VTF_HIGH_FORMAT_OFFSET)
+        return {
+            width: buffer.readUInt16LE(VTF_WIDTH_OFFSET),
+            height: buffer.readUInt16LE(VTF_HEIGHT_OFFSET),
+            flags: buffer.readUInt32LE(VTF_FLAGS_OFFSET),
+            frames: buffer.readUInt16LE(VTF_FRAMES_OFFSET),
+            highFormat,
+            highFormatName: VTF_IMAGE_FORMAT_NAMES[highFormat] ?? null,
+            mipCount: buffer.readUInt8(VTF_MIP_COUNT_OFFSET),
+            lowFormat: buffer.readUInt32LE(VTF_LOW_FORMAT_OFFSET),
+            lowWidth: buffer.readUInt8(VTF_LOW_WIDTH_OFFSET),
+            lowHeight: buffer.readUInt8(VTF_LOW_HEIGHT_OFFSET),
+            depth: buffer.readUInt16LE(VTF_DEPTH_OFFSET),
+        }
     } finally {
         await handle.close()
     }
 }
 
-async function encodeTgaToVtf(vtfCmdPath: string, inputTgaPath: string, outputDir: string): Promise<SpawnResult> {
+async function encodeTgaToVtf(vtfCmdPath: string, inputTgaPath: string, outputDir: string, meta: VtfMetadata | null): Promise<SpawnResult> {
+    const formatOverride = process.env.VTF_FORMAT?.trim()
+    const alphaFormatOverride = process.env.VTF_ALPHA_FORMAT?.trim()
+    const targetFormat = formatOverride || meta?.highFormatName || DEFAULT_VTF_FORMAT
+    const clampWidth = readOptionalPositiveIntEnv('VTF_MAX_WIDTH') ?? meta?.width ?? DEFAULT_VTF_MAX_WIDTH
+    const clampHeight = readOptionalPositiveIntEnv('VTF_MAX_HEIGHT') ?? meta?.height ?? DEFAULT_VTF_MAX_HEIGHT
+
+    const args = [
+        '-file',
+        inputTgaPath,
+        '-output',
+        outputDir,
+        '-format',
+        targetFormat,
+    ]
+
+    if (alphaFormatOverride) {
+        args.push('-alphaformat', alphaFormatOverride)
+    }
+
+    if ((meta?.mipCount ?? 1) <= 1 || Boolean(meta && (meta.flags & VTF_FLAG_NOMIP))) {
+        args.push('-nomipmaps')
+    }
+
+    args.push(
+        '-resize',
+        '-rclampwidth',
+        String(clampWidth),
+        '-rclampheight',
+        String(clampHeight),
+        '-silent',
+    )
+
     return await runProcess(
         vtfCmdPath,
-        [
-            '-file',
-            inputTgaPath,
-            '-output',
-            outputDir,
-            '-format',
-            process.env.VTF_FORMAT?.trim() || DEFAULT_VTF_FORMAT,
-            '-alphaformat',
-            process.env.VTF_ALPHA_FORMAT?.trim() || DEFAULT_VTF_ALPHA_FORMAT,
-            '-resize',
-            '-rclampwidth',
-            String(Number(process.env.VTF_MAX_WIDTH ?? DEFAULT_VTF_MAX_WIDTH)),
-            '-rclampheight',
-            String(Number(process.env.VTF_MAX_HEIGHT ?? DEFAULT_VTF_MAX_HEIGHT)),
-            '-silent',
-        ],
+        args,
         DEFAULT_VTF_TIMEOUT_MS,
     )
 }
 
 async function compressVtfFile(filePath: string, vtfCmdPath: string): Promise<CompressionResult> {
     const originalSize = (await fsp.stat(filePath)).size
-    const frameCount = await readVtfFrameCount(filePath)
-    if (frameCount !== null && frameCount > 1) {
+
+    if (isParticleMaterialVtf(filePath)) {
         return {
             originalSize,
             finalSize: originalSize,
-            skippedReason: `анимированный VTF (${frameCount} frames): VTFCmd export/import схлопывает его до одного кадра`,
+            skippedReason: 'particle VTF: export/import через VTFCmd ломает формат/альфу у партиклов',
+        }
+    }
+
+    const meta = await readVtfMetadata(filePath)
+    if (meta !== null && meta.frames > 1) {
+        return {
+            originalSize,
+            finalSize: originalSize,
+            skippedReason: `анимированный VTF (${meta.frames} frames): VTFCmd export/import схлопывает его до одного кадра`,
         }
     }
 
@@ -365,7 +475,7 @@ async function compressVtfFile(filePath: string, vtfCmdPath: string): Promise<Co
 
         await fsp.rm(workingVtfPath, { force: true })
 
-        const encodeResult = await encodeTgaToVtf(vtfCmdPath, exportedTgaPath, tempDir)
+        const encodeResult = await encodeTgaToVtf(vtfCmdPath, exportedTgaPath, tempDir, meta)
         if (!await pathExists(workingVtfPath)) {
             return {
                 originalSize,
@@ -529,19 +639,125 @@ async function runVtfCompression(
     return summary
 }
 
+// ---------------------------------------------------------------------------
+// Model-material shader guard
+//
+// LightmappedGeneric (and the other lightmap-based world shaders) sample the
+// BSP lightmap — which brush geometry has and models do NOT. When such a shader
+// lands on a material under materials/models/** — e.g. a brush VMT gets
+// mispackaged into a model's material path, or a propper-converted prop keeps
+// its original world shader — the prop renders INVISIBLE in-engine: no error,
+// no pink checkerboard, the shader simply draws nothing (collision still works,
+// so you walk into an invisible wall). Rewriting the shader to VertexLitGeneric
+// (the model equivalent) makes the prop render again.
+// ---------------------------------------------------------------------------
+const BRUSH_ONLY_SHADERS = new Set([
+    'lightmappedgeneric',
+    'lightmapped_4wayblend',
+    'worldvertextransition',
+    'worldtwotextureblend',
+])
+const MODEL_SHADER_REPLACEMENT = 'VertexLitGeneric'
+
+type LeadingShaderToken = { name: string; tokenStart: number; tokenEnd: number }
+
+/** Locates the shader name in a VMT: the first token that isn't blank or a //
+ *  comment. Returns the name plus the character range of just the name, so any
+ *  surrounding quotes are preserved on rewrite. Null if none is found. */
+function findLeadingShaderToken(text: string): LeadingShaderToken | null {
+    let offset = 0
+    for (const rawLine of text.split('\n')) {
+        const lineStart = offset
+        offset += rawLine.length + 1 // account for the '\n' consumed by split
+        const trimmed = rawLine.trim()
+        if (trimmed === '' || trimmed.startsWith('//')) continue
+
+        const match = rawLine.match(/^(\s*)("?)([A-Za-z_][A-Za-z0-9_]*)/)
+        if (!match) return null
+        const leading = match[1] ?? ''
+        const quote = match[2] ?? ''
+        const name = match[3] ?? ''
+        const tokenStart = lineStart + leading.length + quote.length
+        return { name, tokenStart, tokenEnd: tokenStart + name.length }
+    }
+    return null
+}
+
+/** Rewrites brush-only shaders found on materials/models/** VMTs to the model
+ *  shader. VMTs are read/written as latin1 so non-UTF-8 bytes (Windows-1252)
+ *  pass through untouched; the shader token itself is pure ASCII. */
+export async function fixModelMaterialShaders(
+    outputPath: string,
+    emit: (event: RunEvent) => void,
+): Promise<{ fixed: number; scanned: number }> {
+    const vmtFiles = await findFiles(outputPath, (filePath) => {
+        if (path.extname(filePath).toLowerCase() !== '.vmt') return false
+        const relative = getContentRelativePath(filePath)
+        return relative !== null && relative.startsWith('materials/models/')
+    })
+
+    let fixed = 0
+    for (const filePath of vmtFiles) {
+        let text: string
+        try {
+            text = await fsp.readFile(filePath, 'latin1')
+        } catch (error) {
+            emit({ type: 'warn', file: filePath, message: `Не удалось прочитать VMT для проверки шейдера: ${(error as Error).message}` })
+            continue
+        }
+
+        const shader = findLeadingShaderToken(text)
+        if (!shader || !BRUSH_ONLY_SHADERS.has(shader.name.toLowerCase())) continue
+
+        const rewritten = text.slice(0, shader.tokenStart) + MODEL_SHADER_REPLACEMENT + text.slice(shader.tokenEnd)
+        try {
+            await fsp.writeFile(filePath, rewritten, 'latin1')
+            fixed += 1
+            emit({
+                type: 'warn',
+                file: filePath,
+                message: `Браш-шейдер ${shader.name} на материале модели → ${MODEL_SHADER_REPLACEMENT} (иначе проп невидим в игре)`,
+            })
+        } catch (error) {
+            emit({ type: 'error', stage: 'copy', file: filePath, message: `Не удалось переписать шейдер: ${(error as Error).message}` })
+        }
+    }
+
+    if (vmtFiles.length > 0) {
+        emit({
+            type: 'info',
+            message: `Проверка шейдеров моделей: VMT под materials/models/ — ${vmtFiles.length}, исправлено браш-шейдеров — ${fixed}`,
+        })
+    }
+
+    return { fixed, scanned: vmtFiles.length }
+}
+
 export async function runOptionalPostProcess(
     outputPath: string,
     cfg: PostProcessConfig,
     emit: (event: RunEvent) => void,
 ): Promise<{ execErrors: number; copyErrors: number }> {
+    let execErrors = 0
+    let copyErrors = 0
+
+    // Always guard model materials against brush-only shaders (they render props
+    // invisible). Runs independently of the optional audio/VTF compression below;
+    // disable with FIX_MODEL_SHADERS=0.
+    if (process.env.FIX_MODEL_SHADERS !== '0') {
+        try {
+            await fixModelMaterialShaders(outputPath, emit)
+        } catch (error) {
+            execErrors += 1
+            emit({ type: 'error', stage: 'exec', message: `Проверка шейдеров моделей не удалась: ${(error as Error).message}` })
+        }
+    }
+
     if (!cfg.compressSounds && !cfg.compressVtf) {
-        return { execErrors: 0, copyErrors: 0 }
+        return { execErrors, copyErrors }
     }
 
     emit({ type: 'info', message: 'Запускаю дополнительную пост-обработку...' })
-
-    let execErrors = 0
-    let copyErrors = 0
 
     if (cfg.compressSounds) {
         try {

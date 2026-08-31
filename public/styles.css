@@ -145,6 +145,11 @@ html, body {
     margin-bottom: 14px;
 }
 
+/* display:flex у .field перебивает атрибут hidden — возвращаем скрытие */
+.field[hidden] {
+    display: none;
+}
+
 .field span {
     font-size: 12px;
     font-weight: 500;

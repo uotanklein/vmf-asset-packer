@@ -22,6 +22,13 @@ const pickSplitInputBtn = $('#pick-split-input-btn')
 const addExcludeBtn = $('#add-exclude-btn')
 const addGroupBtn = $('#add-group-btn')
 const addRuleBtn = $('#add-rule-btn')
+const pickPublishSplitBtn = $('#pick-publish-split-btn')
+const pickGmodBtn = $('#pick-gmod-btn')
+const pickIconBtn = $('#pick-icon-btn')
+const seedPublishItemsBtn = $('#seed-publish-items-btn')
+const addPublishItemBtn = $('#add-publish-item-btn')
+const publishItemListEl = $('#publish-item-list')
+const outputField = $('#output-field')
 
 const vmfPathsEl = $('#vmf-paths')
 const contentRootsEl = $('#content-roots')
@@ -84,6 +91,17 @@ let currentConfig = {
     splitInputPath: '',
     splitLimitGb: 2,
     cleanSourceGroups: true,
+    publish: {
+        splitOutputPath: '',
+        gmodPath: '',
+        changelog: '',
+        addonType: 'servercontent',
+        dryRun: true,
+        onlyChanged: true,
+        createMissing: false,
+        iconPath: '',
+        items: [],
+    },
 }
 
 function createEmptyRulesConfig() {
@@ -874,6 +892,183 @@ function readFormConfig() {
         splitInputPath: form.splitInputPath.value.trim(),
         splitLimitGb: Number.isFinite(splitLimitGb) && splitLimitGb > 0 ? splitLimitGb : 2,
         cleanSourceGroups: form.cleanSourceGroups.checked,
+        publish: {
+            splitOutputPath: form.splitOutputPath ? form.splitOutputPath.value.trim() : '',
+            gmodPath: form.gmodPath ? form.gmodPath.value.trim() : '',
+            changelog: form.changelog ? form.changelog.value : '',
+            addonType: form.addonType ? form.addonType.value.trim() : 'servercontent',
+            dryRun: form.publishDryRun ? form.publishDryRun.checked : true,
+            onlyChanged: form.publishOnlyChanged ? form.publishOnlyChanged.checked : true,
+            createMissing: form.publishCreateMissing ? form.publishCreateMissing.checked : false,
+            iconPath: form.iconPath ? form.iconPath.value.trim() : '',
+            items: readPublishItemsFromUi(),
+        },
+    }
+}
+
+// Встроенный маппinг «часть → workshop id» (выверен по содержимому GMA).
+// Работает независимо от сервера: пустые id добиваются прямо в браузере при обновлении.
+// 04_map_content_part4 — id пуст: айтема «Map Content #4» ещё нет.
+const PUBLISH_DEFAULT_ITEMS = [
+    { folder: '01_locked_core_arc9_part1', id: '3712206853', title: 'QP: Metro 2033 - Weapon #1' },
+    // Строки part2 тут не было вовсе, из-за чего часть не публиковалась: в ней
+    // лежат ВСЕ модели оружия arc9 и все 8 shaders/fxc/*.vcs. Без
+    // arc9_vm_dof_ps30.vcs материал effects/arc9/vm_dof не компилируется - магента
+    // при прицеливании и краш в cl_rendertarget.lua.
+    { folder: '01_locked_core_arc9_part2', id: '3739096810', title: 'QP: Metro 2033 - Weapon #2' },
+    { folder: '02_core_dependencies_part1', id: '3712210769', title: 'QP: Metro 2033 - Core' },
+    { folder: '03_bsp_maps_part1', id: '3712211196', title: 'QP: Metro 2033 - UI' },
+    { folder: '04_map_content_part1', id: '3712211783', title: 'QP: Metro 2033 - Map Content #1' },
+    { folder: '04_map_content_part2', id: '3713089565', title: 'QP: Metro 2033 - Map Content #2' },
+    { folder: '04_map_content_part3', id: '3728032834', title: 'QP: Metro 2033 - Map Content #3' },
+    // id был пуст, хотя айтем давно создан - fillDefaultPublishIds не мог добить
+    // пустое значение и часть уезжала бы в createMissing новым айтемом.
+    { folder: '04_map_content_part4', id: '3752201854', title: 'QP: Metro 2033 - Map Content #4' },
+    { folder: '05_metro_main_content_part1', id: '3712218317', title: 'QP: Metro 2033 - Content #1' },
+    { folder: '05_metro_main_content_part2', id: '3712219706', title: 'QP: Metro 2033 - Content #2' },
+    { folder: '05_metro_main_content_part3', id: '3713092095', title: 'QP: Metro 2033 - Content #3' },
+    { folder: '05_metro_main_content_part4', id: '3728304766', title: 'QP: Metro 2033 - Content #4' },
+    { folder: '06_npc_and_mutants_part1', id: '3712220852', title: 'QP: Metro 2033 - NPCs' },
+    { folder: '07_props_items_interactions_part1', id: '3712221743', title: 'QP: Metro 2033 - Props' },
+    { folder: '08_ai_navigation_part1', id: '3712223688', title: 'QP: Metro 2033 - AI' },
+    { folder: '09_vmanip_client_part1', id: '3712224064', title: 'QP: Metro 2033 - VManip' },
+    { folder: '10_tools_builder_dev_part1', id: '3712224371', title: 'QP: Metro 2033 - Tools' },
+    { folder: '11_admin_fixes_utility_part1', id: '3712224748', title: 'QP: Metro 2033 - Utility' },
+    { folder: '12_optional_client_visuals_part1', id: '3712225020', title: 'QP: Metro 2033 - Visuals' },
+    { folder: '13_unclassified_part1', id: '3712225280', title: 'QP: Metro 2033 - Extra' },
+]
+const PUBLISH_DEFAULT_BY_FOLDER = new Map(PUBLISH_DEFAULT_ITEMS.map((it) => [it.folder, it]))
+
+// добивает пустые id/title из встроенного маппинга (по имени папки)
+function fillDefaultPublishIds(items) {
+    for (const it of items || []) {
+        if (!it.id) {
+            const d = PUBLISH_DEFAULT_BY_FOLDER.get(it.folder)
+            if (d && d.id) it.id = d.id
+            if (d && d.title && !it.title) it.title = d.title
+        }
+    }
+    return items
+}
+
+// ── редактор «части → workshop id» (мини-копия редактора групп) ──────────────
+function readPublishItemsFromUi() {
+    if (!publishItemListEl) return []
+    return [...publishItemListEl.querySelectorAll('.editor-card[data-kind="publish"]')].map((card) => {
+        const folder = card.querySelector('[data-field="folder"]')?.value.trim() || ''
+        const id = card.querySelector('[data-field="id"]')?.value.trim() || ''
+        const title = card.querySelector('[data-field="title"]')?.value.trim() || ''
+        return { folder, id, ...(title ? { title } : {}) }
+    })
+}
+
+function renderPublishItems() {
+    if (!publishItemListEl) return
+    const items = (currentConfig.publish && currentConfig.publish.items) || []
+
+    if (!items.length) {
+        publishItemListEl.innerHTML = '<div class="editor-empty">Нет частей. Нажми «Подтянуть части из 06» или «Добавить строку».</div>'
+        return
+    }
+
+    publishItemListEl.innerHTML = items.map((item, index) => `
+        <div class="editor-card" data-kind="publish" data-index="${index}">
+            <div class="editor-card-head">
+                <div class="editor-card-title">Часть ${index + 1}</div>
+                <div class="editor-card-tools">
+                    <div class="mini-actions">
+                        <button type="button" class="ghost small-btn danger-btn" data-action="remove">Удалить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="editor-grid editor-grid-3">
+                <label class="field compact">
+                    <span>Папка части</span>
+                    <input type="text" data-field="folder" value="${escapeHtml(item.folder || '')}" spellcheck="false" placeholder="04_map_content_part4">
+                </label>
+                <label class="field compact">
+                    <span>Workshop ID</span>
+                    <input type="text" data-field="id" value="${escapeHtml(item.id || '')}" spellcheck="false" placeholder="3728304766">
+                </label>
+                <label class="field compact">
+                    <span>Название (addon.json)</span>
+                    <input type="text" data-field="title" value="${escapeHtml(item.title || '')}" spellcheck="false" placeholder="QP: Metro 2033 - …">
+                </label>
+            </div>
+        </div>
+    `).join('')
+}
+
+let savePublishConfigTimer = 0
+function savePublishConfigToDisk() {
+    clearTimeout(savePublishConfigTimer)
+    savePublishConfigTimer = setTimeout(() => {
+        const p = currentConfig.publish || {}
+        fetch('/api/save-publish-config', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+                splitOutputPath: p.splitOutputPath || '',
+                gmodPath: p.gmodPath || '',
+                changelog: p.changelog || '',
+                addonType: p.addonType || 'servercontent',
+                dryRun: p.dryRun !== false,
+                onlyChanged: p.onlyChanged !== false,
+                createMissing: p.createMissing === true,
+                iconPath: p.iconPath || '',
+                items: p.items || [],
+            }),
+        }).catch(() => {})
+    }, 600)
+}
+
+function syncPublishFromUi() {
+    currentConfig.publish = readFormConfig().publish
+}
+
+async function seedPublishItemsFrom06() {
+    try {
+        const splitPath = form.splitOutputPath ? form.splitOutputPath.value.trim() : ''
+        const res = await fetch('/api/publish-parts', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ splitOutputPath: splitPath }),
+        })
+        const data = await res.json().catch(() => ({}))
+        if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status))
+
+        syncPublishFromUi()
+        const items = currentConfig.publish.items || []
+        const byFolder = new Map(items.map((it) => [it.folder, it]))
+        const parts = Array.isArray(data.parts)
+            ? data.parts
+            : (data.folders || []).map((f) => ({ folder: f, id: '', title: '' }))
+
+        let added = 0
+        let filledId = 0
+        for (const part of parts) {
+            const existing = byFolder.get(part.folder)
+            if (!existing) {
+                const row = { folder: part.folder, id: part.id || '', title: part.title || '' }
+                items.push(row)
+                byFolder.set(part.folder, row)
+                added += 1
+            } else {
+                // подставляем id/название из дефолтного маппинга, не затирая уже введённое
+                if (!existing.id && part.id) { existing.id = part.id; filledId += 1 }
+                if (!existing.title && part.title) existing.title = part.title
+            }
+        }
+
+        fillDefaultPublishIds(items)   // добиваем id из встроенного маппинга, если сервер не дал
+        const totalWithId = items.filter((it) => it.id).length
+        currentConfig.publish.items = items
+        renderPublishItems()
+        saveConfig()
+        savePublishConfigToDisk()
+        appendLog('info', '[publish]', `Частей: ${parts.length}; добавлено строк: ${added}; с id: ${totalWithId}/${items.length}`)
+    } catch (err) {
+        appendLog('error', '[publish]', err.message)
     }
 }
 
@@ -1103,9 +1298,16 @@ function setMode(mode) {
         ? 'content-pack'
         : mode === 'content-split'
             ? 'content-split'
-            : 'vmf-pack'
+            : mode === 'publish'
+                ? 'publish'
+                : 'vmf-pack'
 
-    if (shouldAdoptModeDefaultPath(form.outputPath.value, previousMode)) {
+    // у режима публикации нет выходной папки — прячем общее поле и снимаем required
+    const isPublish = normalizedMode === 'publish'
+    if (outputField) outputField.hidden = isPublish
+    if (form.outputPath) form.outputPath.required = !isPublish
+
+    if (!isPublish && shouldAdoptModeDefaultPath(form.outputPath.value, previousMode)) {
         const defaultOutputPath = getDefaultOutputPathForMode(normalizedMode)
         if (defaultOutputPath) {
             form.outputPath.value = defaultOutputPath
@@ -1468,6 +1670,42 @@ async function loadDefaults() {
             splitInputPath: stored?.splitInputPath || data.contentSplit?.splitInputPath || '',
             splitLimitGb,
             cleanSourceGroups,
+            publish: (() => {
+                const dp = data.publish || {}
+                const sp = (stored && typeof stored.publish === 'object' && stored.publish) || {}
+                // если сервер не дал список — берём встроенный маппинг, чтобы таблица не была пустой
+                const dpItems = Array.isArray(dp.items) && dp.items.length ? dp.items : PUBLISH_DEFAULT_ITEMS
+                const spItems = Array.isArray(sp.items) ? sp.items : []
+                const spByFolder = new Map(spItems.map((it) => [it.folder, it]))
+                // База — дефолты сервера (там верные id). Из localStorage накладываем
+                // ТОЛЬКО непустые id/title, чтобы пустой кэш не затирал правильные значения.
+                const items = dpItems.map((it) => {
+                    const s = spByFolder.get(it.folder)
+                    return {
+                        folder: it.folder,
+                        id: (s && s.id) ? s.id : (it.id || ''),
+                        title: it.title || (s && s.title) || '',
+                    }
+                })
+                // папки, которые есть только в localStorage (не в дефолтах) — добавляем как есть
+                for (const s of spItems) {
+                    if (!items.some((it) => it.folder === s.folder)) {
+                        items.push({ folder: s.folder, id: s.id || '', title: s.title || '' })
+                    }
+                }
+                fillDefaultPublishIds(items)   // id из встроенного маппинга, не завися от сервера
+                return {
+                    splitOutputPath: sp.splitOutputPath || dp.splitOutputPath || '',
+                    gmodPath: sp.gmodPath || dp.gmodPath || '',
+                    changelog: typeof sp.changelog === 'string' ? sp.changelog : (dp.changelog || ''),
+                    addonType: sp.addonType || dp.addonType || 'servercontent',
+                    dryRun: typeof sp.dryRun === 'boolean' ? sp.dryRun : (dp.dryRun !== false),
+                    onlyChanged: typeof sp.onlyChanged === 'boolean' ? sp.onlyChanged : (dp.onlyChanged !== false),
+                    createMissing: typeof sp.createMissing === 'boolean' ? sp.createMissing : (dp.createMissing === true),
+                    iconPath: sp.iconPath || dp.iconPath || '',
+                    items,
+                }
+            })(),
         }
 
         currentConfig = initialConfig
@@ -1483,6 +1721,17 @@ async function loadDefaults() {
         form.splitInputPath.value = initialConfig.splitInputPath
         form.splitLimitGb.value = String(initialConfig.splitLimitGb)
         form.cleanSourceGroups.checked = initialConfig.cleanSourceGroups
+
+        const pub = initialConfig.publish || {}
+        if (form.splitOutputPath) form.splitOutputPath.value = pub.splitOutputPath || ''
+        if (form.gmodPath) form.gmodPath.value = pub.gmodPath || ''
+        if (form.changelog) form.changelog.value = pub.changelog || ''
+        if (form.addonType) form.addonType.value = pub.addonType || 'servercontent'
+        if (form.publishDryRun) form.publishDryRun.checked = pub.dryRun !== false
+        if (form.publishOnlyChanged) form.publishOnlyChanged.checked = pub.onlyChanged !== false
+        if (form.publishCreateMissing) form.publishCreateMissing.checked = pub.createMissing === true
+        if (form.iconPath) form.iconPath.value = pub.iconPath || ''
+        renderPublishItems()
 
         renderVmfPaths(initialConfig.vmfPaths)
         renderContentRoots(initialConfig.contentRoots)
@@ -1521,6 +1770,60 @@ addExcludeBtn.addEventListener('click', () => addExcludePath())
 pickFfmpegBtn.addEventListener('click', chooseFfmpegPath)
 pickVtfCmdBtn.addEventListener('click', chooseVtfCmdPath)
 pickSplitInputBtn.addEventListener('click', chooseSplitInputPath)
+
+async function choosePublishFolder(field, title) {
+    try {
+        const selectedPath = await callPicker('/api/pick-folder', {
+            title,
+            currentPath: form[field] ? form[field].value.trim() : '',
+        })
+        if (selectedPath && form[field]) {
+            form[field].value = selectedPath
+            syncPublishFromUi()
+            saveConfig()
+            savePublishConfigToDisk()
+            appendLog('info', '[pick]', `${title}: ${shorten(selectedPath, 120)}`)
+        }
+    } catch (err) {
+        appendLog('error', '[pick]', err.message)
+    }
+}
+
+if (pickPublishSplitBtn) pickPublishSplitBtn.addEventListener('click', () => choosePublishFolder('splitOutputPath', 'Папка сплита (06_content_split)'))
+if (pickGmodBtn) pickGmodBtn.addEventListener('click', () => choosePublishFolder('gmodPath', 'Папка GarrysMod'))
+if (pickIconBtn) pickIconBtn.addEventListener('click', async () => {
+    try {
+        const p = await callPicker('/api/pick-file', { title: 'Иконка айтема (512×512 jpg)', currentPath: form.iconPath.value.trim(), kind: 'any' })
+        if (p) { form.iconPath.value = p; syncPublishFromUi(); saveConfig(); savePublishConfigToDisk(); appendLog('info', '[pick]', 'Иконка: ' + shorten(p, 120)) }
+    } catch (err) { appendLog('error', '[pick]', err.message) }
+})
+if (seedPublishItemsBtn) seedPublishItemsBtn.addEventListener('click', seedPublishItemsFrom06)
+if (addPublishItemBtn) addPublishItemBtn.addEventListener('click', () => {
+    syncPublishFromUi()
+    currentConfig.publish.items.push({ folder: '', id: '', title: '' })
+    renderPublishItems()
+    saveConfig()
+    savePublishConfigToDisk()
+})
+if (publishItemListEl) {
+    publishItemListEl.addEventListener('click', (ev) => {
+        const btn = ev.target.closest('button[data-action="remove"]')
+        if (!btn) return
+        const card = btn.closest('.editor-card[data-kind="publish"]')
+        if (!card) return
+        const index = Number(card.dataset.index)
+        syncPublishFromUi()
+        currentConfig.publish.items.splice(index, 1)
+        renderPublishItems()
+        saveConfig()
+        savePublishConfigToDisk()
+    })
+    publishItemListEl.addEventListener('change', () => {
+        syncPublishFromUi()
+        saveConfig()
+        savePublishConfigToDisk()
+    })
+}
 
 addGroupBtn.addEventListener('click', () => {
     updateRulesConfig((rulesConfig) => {
@@ -1745,18 +2048,44 @@ form.compressVtf.addEventListener('change', saveConfig)
 form.splitLimitGb.addEventListener('change', saveConfig)
 form.cleanSourceGroups.addEventListener('change', saveConfig)
 
+for (const publishFieldName of ['changelog', 'addonType', 'publishDryRun', 'publishOnlyChanged', 'publishCreateMissing']) {
+    if (form[publishFieldName]) {
+        form[publishFieldName].addEventListener('change', () => {
+            syncPublishFromUi()
+            saveConfig()
+            savePublishConfigToDisk()
+        })
+    }
+}
+
 form.addEventListener('submit', async (ev) => {
     ev.preventDefault()
     if (eventSource) return
 
     const cfg = readFormConfig()
 
-    if (!cfg.outputPath) {
+    if (cfg.mode !== 'publish' && !cfg.outputPath) {
         appendLog('error', '[form]', 'Выбери выходную папку перед запуском.')
         return
     }
 
-    if (cfg.mode === 'content-pack') {
+    if (cfg.mode === 'publish') {
+        const p = cfg.publish
+        if (!p.splitOutputPath) {
+            appendLog('error', '[form]', 'Укажи папку сплита (06_content_split) перед публикацией.')
+            return
+        }
+        if (!p.gmodPath) {
+            appendLog('error', '[form]', 'Укажи путь к GarrysMod (там gmad.exe/gmpublish.exe).')
+            return
+        }
+        const hasWork = p.items.some((it) => it.folder && it.id) ||
+            (p.createMissing && p.items.some((it) => it.folder))
+        if (!hasWork) {
+            appendLog('error', '[form]', 'Заполни хотя бы одну пару «папка → workshop id» (или включи создание недостающих).')
+            return
+        }
+    } else if (cfg.mode === 'content-pack') {
         if (!cfg.contentDirs || cfg.contentDirs.length === 0) {
             appendLog('error', '[form]', 'Выбери папку контента перед запуском.')
             return
@@ -1794,19 +2123,24 @@ form.addEventListener('submit', async (ev) => {
     runBtn.disabled = true
     runBtn.textContent = 'Запущено...'
     setStatus('запуск...', 'running')
-    const runMsg = cfg.mode === 'content-pack'
-        ? 'Запускаю режим объединения контента...'
-        : cfg.mode === 'content-split'
-            ? `Запускаю деление контента (лимит ${cfg.splitLimitGb} ГБ)...`
-            : `Запускаю упаковку ассетов по ${cfg.vmfPaths.length} VMF и ${cfg.contentRoots.length} папке(ам) контента...`
+    const runMsg = cfg.mode === 'publish'
+        ? `${cfg.publish.dryRun ? 'Dry run' : 'Публикация'}: ${cfg.publish.items.filter((it) => it.folder && it.id).length} часть(ей)...`
+        : cfg.mode === 'content-pack'
+            ? 'Запускаю режим объединения контента...'
+            : cfg.mode === 'content-split'
+                ? `Запускаю деление контента (лимит ${cfg.splitLimitGb} ГБ)...`
+                : `Запускаю упаковку ассетов по ${cfg.vmfPaths.length} VMF и ${cfg.contentRoots.length} папке(ам) контента...`
     appendLog('info', '[run]', runMsg)
+
+    // для publish сервер читает поля на верхнем уровне body — разворачиваем cfg.publish
+    const requestBody = cfg.mode === 'publish' ? { mode: 'publish', ...cfg.publish } : cfg
 
     let runId
     try {
         const res = await fetch('/api/run', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(cfg),
+            body: JSON.stringify(requestBody),
         })
 
         if (!res.ok) {

@@ -3,6 +3,9 @@ node_modules/
 
 # Generated workspace data and local test artifacts
 workspace/
+!workspace/01_vmf_maps/
+!workspace/04_addons_source/
+
 tmp/
 
 # Logs

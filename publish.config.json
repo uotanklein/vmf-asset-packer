@@ -1,0 +1,112 @@
+{
+  "splitOutputPath": "workspace/06_content_split",
+  "gmodPath": "F:/Steam/steamapps/common/GarrysMod",
+  "changelog": "",
+  "addonType": "servercontent",
+  "dryRun": false,
+  "onlyChanged": true,
+  "createMissing": true,
+  "iconPath": "",
+  "items": [
+    {
+      "folder": "01_locked_core_arc9_part1",
+      "id": "3712206853",
+      "title": "QP: Metro 2033 - Weapon #1"
+    },
+    {
+      "folder": "01_locked_core_arc9_part2",
+      "id": "3739096810",
+      "title": "QP: Metro 2033 - Weapon #2"
+    },
+    {
+      "folder": "02_core_dependencies_part1",
+      "id": "3712210769",
+      "title": "QP: Metro 2033 - Core"
+    },
+    {
+      "folder": "03_bsp_maps_part1",
+      "id": "3712211196",
+      "title": "QP: Metro 2033 - UI"
+    },
+    {
+      "folder": "04_map_content_part1",
+      "id": "3712211783",
+      "title": "QP: Metro 2033 - Map Content #1"
+    },
+    {
+      "folder": "04_map_content_part2",
+      "id": "3713089565",
+      "title": "QP: Metro 2033 - Map Content #2"
+    },
+    {
+      "folder": "04_map_content_part3",
+      "id": "3728032834",
+      "title": "QP: Metro 2033 - Map Content #3"
+    },
+    {
+      "folder": "04_map_content_part4",
+      "id": "3752201854",
+      "title": "QP: Metro 2033 - Map Content #4"
+    },
+    {
+      "folder": "05_metro_main_content_part1",
+      "id": "3712218317",
+      "title": "QP: Metro 2033 - Content #1"
+    },
+    {
+      "folder": "05_metro_main_content_part2",
+      "id": "3712219706",
+      "title": "QP: Metro 2033 - Content #2"
+    },
+    {
+      "folder": "05_metro_main_content_part3",
+      "id": "3713092095",
+      "title": "QP: Metro 2033 - Content #3"
+    },
+    {
+      "folder": "05_metro_main_content_part4",
+      "id": "3728304766",
+      "title": "QP: Metro 2033 - Content #4"
+    },
+    {
+      "folder": "06_npc_and_mutants_part1",
+      "id": "3712220852",
+      "title": "QP: Metro 2033 - NPCs"
+    },
+    {
+      "folder": "07_props_items_interactions_part1",
+      "id": "3712221743",
+      "title": "QP: Metro 2033 - Props"
+    },
+    {
+      "folder": "08_ai_navigation_part1",
+      "id": "3712223688",
+      "title": "QP: Metro 2033 - AI"
+    },
+    {
+      "folder": "09_vmanip_client_part1",
+      "id": "3712224064",
+      "title": "QP: Metro 2033 - VManip"
+    },
+    {
+      "folder": "10_tools_builder_dev_part1",
+      "id": "3712224371",
+      "title": "QP: Metro 2033 - Tools"
+    },
+    {
+      "folder": "11_admin_fixes_utility_part1",
+      "id": "3712224748",
+      "title": "QP: Metro 2033 - Utility"
+    },
+    {
+      "folder": "12_optional_client_visuals_part1",
+      "id": "3712225020",
+      "title": "QP: Metro 2033 - Visuals"
+    },
+    {
+      "folder": "13_unclassified_part1",
+      "id": "3712225280",
+      "title": "QP: Metro 2033 - Extra"
+    }
+  ]
+}

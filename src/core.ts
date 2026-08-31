@@ -223,6 +223,7 @@ async function checkAndAddFile(
     if (path.extname(filePath)) {
         await tryAddFileToList(list, filePath, extsFindPaths)
     } else {
+        await tryAddFileToList(list, `${filePath}.mdl`, extsFindPaths)
         await tryAddFileToList(list, `${filePath}.vmt`, extsFindPaths)
         await tryAddFileToList(list, `${filePath}.vtf`, extsFindPaths)
     }

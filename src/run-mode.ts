@@ -1,4 +1,4 @@
-export const RUN_MODES = ['vmf-pack', 'content-pack', 'content-split'] as const
+export const RUN_MODES = ['vmf-pack', 'content-pack', 'content-split', 'publish'] as const
 
 export type RunMode = (typeof RUN_MODES)[number]
 
@@ -11,6 +11,7 @@ export function normalizeRunMode(value: string | null | undefined): RunMode | nu
     if (normalized === 'vmf-pack' || normalized === 'vmf') return 'vmf-pack'
     if (normalized === 'content-pack' || normalized === 'content') return 'content-pack'
     if (normalized === 'content-split' || normalized === 'split') return 'content-split'
+    if (normalized === 'publish' || normalized === 'publish-content') return 'publish'
 
     return null
 }

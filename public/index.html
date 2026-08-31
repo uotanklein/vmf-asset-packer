@@ -27,6 +27,7 @@
                         <option value="vmf-pack">Упаковка ассетов VMF</option>
                         <option value="content-pack">Объединение контента и дедупликация</option>
                         <option value="content-split">Деление контента по размеру</option>
+                        <option value="publish">Публикация в воркшоп</option>
                     </select>
                     <small>Выбери, какой пайплайн нужно запустить.</small>
                 </label>
@@ -164,7 +165,76 @@
                     </div>
                 </div>
 
-                <label class="field">
+                <div class="mode-panel" data-mode-panel="publish">
+                    <label class="field">
+                        <span>Папка сплита (06_content_split)</span>
+                        <div class="picker-row">
+                            <input name="splitOutputPath" type="text" spellcheck="false" readonly placeholder="Папка с частями-аддонами (output от content-split)">
+                            <button type="button" id="pick-publish-split-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <small>Откуда брать готовые части для сборки GMA. Пайплайн (vmf-pack → merge → split) запускается отдельно.</small>
+                    </label>
+
+                    <label class="field">
+                        <span>Путь к GarrysMod</span>
+                        <div class="picker-row">
+                            <input name="gmodPath" type="text" spellcheck="false" readonly placeholder="...\steamapps\common\GarrysMod">
+                            <button type="button" id="pick-gmod-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                        <small>Внутри ищутся <code>bin/gmad.exe</code> и <code>bin/gmpublish.exe</code>.</small>
+                    </label>
+
+                    <div class="row">
+                        <label class="field">
+                            <span>Тип аддона (addon.json)</span>
+                            <input name="addonType" type="text" spellcheck="false" placeholder="servercontent">
+                            <small>Категория для воркшопа. Для смешанного контента — <code>servercontent</code>.</small>
+                        </label>
+                        <label class="field">
+                            <span>Комментарий к обновлению</span>
+                            <input name="changelog" type="text" spellcheck="false" placeholder="например: обновление контента карты">
+                            <small>Текст для <code>gmpublish -changes</code> (необязательно).</small>
+                        </label>
+                    </div>
+
+                    <label class="check-row">
+                        <input name="publishDryRun" type="checkbox" checked>
+                        <span>Dry run — собрать GMA, но НЕ заливать в воркшоп</span>
+                    </label>
+                    <label class="check-row" style="margin-top:8px">
+                        <input name="publishOnlyChanged" type="checkbox" checked>
+                        <span>Заливать только изменившиеся части (по хешу содержимого)</span>
+                    </label>
+                    <label class="check-row" style="margin-top:8px">
+                        <input name="publishCreateMissing" type="checkbox">
+                        <span>Создавать новые воркшоп-айтемы для строк без id (gmpublish create)</span>
+                    </label>
+                    <label class="field" style="margin-top:8px">
+                        <span>Иконка для новых айтемов (512×512 jpg)</span>
+                        <div class="picker-row">
+                            <input name="iconPath" type="text" spellcheck="false" readonly placeholder="по умолчанию bin/publish_icon.jpg">
+                            <button type="button" id="pick-icon-btn" class="ghost picker-btn">Выбрать</button>
+                        </div>
+                    </label>
+
+                    <div class="field">
+                        <span>Части → workshop id</span>
+                        <div class="editor-scroll editor-scroll-rules">
+                            <div class="editor-list" id="publish-item-list"></div>
+                        </div>
+                        <div class="inline-actions">
+                            <button type="button" id="seed-publish-items-btn" class="ghost">Подтянуть части из 06</button>
+                            <button type="button" id="add-publish-item-btn" class="ghost">Добавить строку</button>
+                        </div>
+                        <small>Для каждой части укажи id воркшоп-айтема (число из ссылки <code>?id=…</code>). Строки без id или без папки пропускаются.</small>
+                    </div>
+
+                    <div class="server-note mode-note">
+                        Реальная заливка требует запущенный Steam с логином в аккаунт-владелец айтемов. По умолчанию включён Dry run — сними галку осознанно.
+                    </div>
+                </div>
+
+                <label class="field" id="output-field">
                     <span>Выходная папка</span>
                     <div class="picker-row">
                         <input name="outputPath" type="text" spellcheck="false" readonly placeholder="Выбери, куда записывать итоговые файлы" required>
