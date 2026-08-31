@@ -1,0 +1,23 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\custom\Guitar\Martin_d-45_diff"
+	//"$envmapmask"  "models/Custom/Guitar/Martin_d-45_Spec"
+       	"$envmap" "env_cubemap"
+	
+	"$halflambert" 1
+	
+
+	"$phong" "1"
+	"$phongexponent" "80"
+	"$phongboost"	"3"
+//	"$phongexponent "20"
+	"$phongfresnelranges"	"[.3 .6 4]"
+	//$phongexponenttexture
+	$basealphaenvmapmask 1
+	$basemapalphaphongmask 1
+
+	// Rim lighting parameters
+	"$rimlight" "2"												// To enable rim lighting (requires phong)
+	"$rimlightexponent" "12"										// Exponent for phong component of rim lighting	
+	"$rimlightboost" ".4"	
+}

@@ -1,0 +1,17 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/underhell/pg_bandage"
+	"$bumpmap" "models/underhell/pg_bandage_bump"
+	"$normalmapalphaenvmapmask" "1"
+	"$model" "1"
+	"$nocull" "1"
+
+	"$phong"     "1"
+	"$phongexponent"  "12"
+	"$phongboost"   "0.7"
+	"$phongfresnelranges"   "[1 9 3]"
+	"$phongalbedotint" "1"
+	"$halflambert" "1"
+	
+
+}

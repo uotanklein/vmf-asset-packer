@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/static/nmrih_grocery_food1/nmrih_grocery_food1"
+}
+
+//Had to use an uncompressed .vtf as the dxt1/dxt5 versions caused to many artifacts - kan3

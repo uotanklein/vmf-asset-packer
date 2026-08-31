@@ -1,0 +1,6 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/flaymi/stalker/anomaly/v_items/drinks/voda_paper"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+}

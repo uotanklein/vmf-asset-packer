@@ -1,0 +1,6 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/flaymi/stalker/anomaly/v_items/tabletki/Yadulin_color"
+    	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+}

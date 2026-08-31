@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/metro2033/objects/tile_pautina_01"
+	"$translucent" 1
+
+}

@@ -1,0 +1,11 @@
+{
+  "title": "HintNode Loader",
+  "type": "tool",
+  "tags": [
+    "build"
+  ],
+  "ignore": [
+    "sound/saysounds/__disable/*",
+    ".ignore/*"
+  ]
+}

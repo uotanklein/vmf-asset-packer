@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_radio/radio_01_dials"
+	"$nodecal" 1
+}

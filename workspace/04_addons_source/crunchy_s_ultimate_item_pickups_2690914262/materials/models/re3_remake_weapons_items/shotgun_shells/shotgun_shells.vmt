@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/re3_remake_weapons_items/shotgun_shells/shotgun_shells_d"
+	"$bumpmap" "models/re3_remake_weapons_items/shotgun_shells/shotgun_shells_n"
+	"$color2" "[0.9 0.9 0.9]"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"
+
+	"$phong" "1"
+	"$phongboost" "1"
+	//"$phongexponent" "20"
+	"$phongfresnelranges"	"[2 4 6]"
+	"$phongexponenttexture" "models/re3_remake_weapons_items/shotgun_shells/shotgun_shells_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.008 0.008 0.008]"		
+	//"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$PhongAlbedoTint" "1"		
+	
+	"$ambientocclusion" "1"
+}

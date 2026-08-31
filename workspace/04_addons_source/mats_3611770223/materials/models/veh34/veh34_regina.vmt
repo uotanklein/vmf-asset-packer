@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{	
+	"$bumpmap" "models/veh34/veh34_regina_normal"
+	"$model" "1"
+
+	"$phong" "1"
+	"$phongboost" "10"
+	
+	"$phongexponenttexture" "models/veh34/veh34_regina_roughness"
+	"$phongalbedotint" "0"										
+	"$phongfresnelranges"	"[.1 .2  10]"
+
+	"$basetexture" "models/veh34/veh34_regina"
+}
+

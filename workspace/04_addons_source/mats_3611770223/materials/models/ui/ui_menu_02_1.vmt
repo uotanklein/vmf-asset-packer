@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{	
+	"$bumpmap" "models/ui/ui_menu_02_1_normal"
+	"$model" "1"
+
+	"$phong" "1"
+	"$phongboost" "10"
+	
+	"$phongexponenttexture" "models/ui/ui_menu_02_1_roughness"
+	"$phongalbedotint" "0"										
+	"$phongfresnelranges"	"[.1 .5  1]"
+
+	"$basetexture" "models/ui/ui_menu_02_1"
+}

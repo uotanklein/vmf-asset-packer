@@ -1,0 +1,7 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/flaymi/stalker/anomaly/weapons/pda/item_pda2_glass"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+	"$translucent" "1"
+}

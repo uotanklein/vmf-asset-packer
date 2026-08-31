@@ -1,0 +1,36 @@
+"VertexLitGeneric" // (Shader) Detemines what parameters can be used by your material.
+{
+// Any parameters beginning with "//" will be ignored by the material. This is useful for deprecating something you may want to use later on, or revert back to, as well as for making comments like this one for organization and learning.
+
+// Base Parameters
+
+	"$basetexture" 			"models/weapons/osnova_diff"		// (Texture) Determines which texture is used for your meshes surface. 
+	"$bumpmap" 			"models/weapons/osnova_nrm"		// (Texture) Determines which texture is used for fake depth and shadowing. Disables per vertex lighting for static props in all games but CS:GO.
+
+	"$model" 				"1"				// (Boolean) Neccessary for some parameters to function, and tells Hammer not to display this for map brush textures.
+
+// Detail Textures, adds high resolution detail over your mesh to improve upclose detail.
+
+	"$detail"  				"detail\noise_detail_01"		// (Texture) Determines which texture is used for detailing.
+	"$detailscale" 			"7.74"				// (Float) Controls scale of the detail texture. Higher number means larger tiles.
+	"$detailblendfactor"  		".8"				// (Float) Controls the intensity of the detail overlay. 
+	"$detailblendmode" 		"0"				// (Integer) Determines the blend mode the overlay texture uses. Most cases use 0. Useful values are from 0 - 8.
+
+// Environment Map Reflections, adds reflections to the mesh using the envmap texture. Can cause shine issues in dark areas. For less shiny objects, it is recommended you remove this section and only use Phong Shading.
+
+	"$envmap"			"env_cubemap"			// (Texture) Determines the texture the envmap uses for reflections. Env_cubemap means it uses a maps cubemaps for accurate reflections of the surroundings.
+	"$envmaptint"			"[.15 .15 .15]"			// (RGB Matrix) Determines the intensity of each corresponding color channel for the reflections. Higher in slot 1 means more red reflections, 2 in green, 3 in blue. Equal values in all changes overall reflectivity.
+	"$normalmapalphaenvmapmask"	"1"				// (Boolean) Uses the normal maps alpha channel to determine reflectivity.
+
+// Phong Shading, provides realistic diffuse reflections, but requires a bumpmap with an alpha channel controlling reflectivity. Remove this section if you do not have a bumpmap.
+
+	"$phong"				"0"				// (Boolean) Simply enables Phong shading.
+	"$phongboost"			"0"				// (Float) Controls the overall brightness of the phong reflections. 
+	"$phongexponent"			"0"				// (Float) Controls the "tightness" of the phong reflections, higher values providing smaller, but harsher edges (Smoother surface). Most cases value is negligible.
+	"$phongfresnelranges"		"[.5 .5 .5]"
+
+	"$rimlight"			"1"				// (Boolean) Adds a shine to the backfaces of the mesh. Not neccessarily realistic, but is visually appealing and good for creatures and metallic objects.
+	"$rimlightexponent"       		"1"				// (Float) Controls the "tightness" of the rimlight, higher values providing smaller, but harsher edges (Smoother surface). May be negligible.
+	"$rimlightboost"          		"3"				// (Float) Controls the overall brightness of the rimlight. Higher values more useful for metallic items. 
+
+}

@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/re3_remake_weapons_items/assault_rifle_ammo/assault_rifle_ammo_bullets_d"
+	"$bumpmap" "models/re3_remake_weapons_items/assault_rifle_ammo/assault_rifle_ammo_bullets_n"
+	"$color2" "[0.35 0.35 0.35]"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"
+
+	"$phong" "1"
+	//"$phongboost" "1"
+	"$phongboost" "10"
+	"$phongexponent" "30"
+	"$phongfresnelranges"	"[2 4 6]"
+	"$phongexponenttexture" "models/re3_remake_weapons_items/assault_rifle_ammo/assault_rifle_ammo_bullets_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.2 0.2 0.2]"		
+	//"$phongtint" 			"[1 1 1]"			
+	"$PhongAlbedoTint" "1"		
+	
+	"$ambientocclusion" "1"
+}

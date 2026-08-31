@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\underhell\water_bottle1"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models\underhell\water_bottle_ref"
+
+}

@@ -1,0 +1,11 @@
+{
+  "title": "FT CONTENT",
+  "type": "ServerContent",
+  "tags": [
+    "realism",
+    "roleplay"
+  ],
+  "ignore": [
+    "wav"
+  ]
+}

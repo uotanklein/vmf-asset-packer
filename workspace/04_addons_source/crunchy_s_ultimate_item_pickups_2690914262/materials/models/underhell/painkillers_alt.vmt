@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Models/underhell/painkillers_alt"
+	"$surfaceprop" "cardboard"
+}

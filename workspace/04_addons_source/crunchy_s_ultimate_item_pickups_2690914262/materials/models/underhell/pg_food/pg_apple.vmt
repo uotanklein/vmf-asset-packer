@@ -1,0 +1,18 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\underhell\pg_food/pg_apple"
+	"$bumpmap" "models\underhell\pg_food/pg_apple_bump"
+	"$model" "1"
+
+	"$phong"     "1"
+	"$phongexponent"  "3"
+	"$phongboost"   "0.1"
+	"$phongfresnelranges"   "[1 2 4]"
+	"$phongalbedotint" "1"
+	"$halflambert" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "3"
+	"$rimlightboost" "0.1"
+	
+}

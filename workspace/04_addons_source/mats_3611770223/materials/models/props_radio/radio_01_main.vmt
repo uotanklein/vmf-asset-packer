@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_radio/radio_01_main"
+	"$normalmap" "models/props_radio/radio_01_main_n"
+	"$envmap"	"env_cubemap"
+	"$envmapmask"	"models/props_radio/radio_01_main_env3"
+	"$surfaceprop" "Metal_Box" 	
+	"$selfillum" "1"
+    	"$selfillummask" "models/props_radio/radio_01_main_illum"
+}

@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models/re_items/0_idm004"
+"$bumpmap" "models/re_items/0_idm004_n"
+"$surfaceprop" "Cardboard"
+"$nocull" 1
+"$halflambert" 1
+"$phong" "1"
+"$phongexponent" "20"
+"$phongboost" "1"
+"$phongfresnelranges" "[.3 1 7]"
+}

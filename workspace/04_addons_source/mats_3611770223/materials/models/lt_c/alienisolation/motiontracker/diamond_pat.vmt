@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Lt_C\AlienIsolation\motiontracker\tracker"
+	"$bumpmap" 	"models\Lt_C\AlienIsolation\motiontracker\tracker_n"
+	"$halflambert" "1"
+
+
+	"$phong" "1"
+//	"$phongexponenttexture" "models/lt_c/sci_fi/chairs/chair_body_exp"
+	"$phongexponent" 5
+	"$phongboost" ".2"
+	"$phongfresnelranges"	"[ .3 1.2 8]"
+}

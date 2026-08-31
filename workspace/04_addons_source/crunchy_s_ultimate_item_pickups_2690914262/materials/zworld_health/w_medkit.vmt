@@ -1,0 +1,5 @@
+"vertexlitGeneric"
+{
+$basetexture "zworld_health/w_medkit"
+	"$surfaceprop" "metal"
+}

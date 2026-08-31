@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{	
+	"$bumpmap" "models/floor/floor_shpala_beton_normal"
+	"$model" "1"
+
+	"$phong" "1"
+	"$phongboost" "1"
+	
+	"$phongexponenttexture" "models/floor/floor_shpala_beton_roughness"
+	"$phongalbedotint" "0"										
+	"$phongfresnelranges"	"[.1 .5  1]"
+
+	"$basetexture" "models/floor/floor_shpala_beton"
+}

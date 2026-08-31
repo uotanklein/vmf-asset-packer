@@ -1,0 +1,13 @@
+"SDK_VertexLitGeneric"
+{
+	"$basetexture" "models/props_radio/radio_01_glass"
+	"$envmap" "env_cubemap"
+	"$translucent" "1"
+
+	"$phong"  				"1"
+	"$phongexponent" 		"100"
+	"$phongboost" 			"0.1"
+	"$phongfresnelranges"	"[1 2 3]"
+	"$phongtint" 			"[0.6 0.8 1]"
+	"$phongalbedotint" 		"1"
+}

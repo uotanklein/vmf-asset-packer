@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/re8_village_weapons_miscs/first_aid_med/med_d"
+	"$bumpmap" "models/re8_village_weapons_miscs/first_aid_med/med_n"
+	"$color2" "[0.8 0.8 0.8]"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"
+
+	"$phong" "1"
+	"$phongboost" "10"
+	//"$phongexponent" "10"
+	"$phongfresnelranges"	"[0.8 1.5 2]"
+	"$phongexponenttexture" "models/re8_village_weapons_miscs/first_aid_med/med_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.001 0.001 0.001]"		
+	//"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$PhongAlbedoTint" "1"		
+
+}
+

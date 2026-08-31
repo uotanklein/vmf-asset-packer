@@ -1,0 +1,27 @@
+VertexlitGeneric
+{
+	$basetexture "models\weapons\charger\metro_dynamo"
+	$bumpmap "models\weapons\charger\metro_dynamo_b"
+	$phongexponenttexture "models\weapons\charger\metro_dynamo_b"
+
+
+    //"$color2" "[.3 .3 .3]"                           
+    "$color2" "[.7 .7 .7]"                           
+    "$blendtintbybasealpha" "1"                           
+
+    "$phong" "1"
+    "$phongboost" "1.5"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "15"                                
+    "$phongfresnelranges" "[.15 0.1 0.5]"
+
+    "$rimlight" "0"
+    "$rimlightexponent" "75"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+
+	$detail   "models\weapons\charger\metro_dynamo_illum3"
+	$detailscale 1
+	$detailblendmode 5
+	$detailblendfactor 0
+}

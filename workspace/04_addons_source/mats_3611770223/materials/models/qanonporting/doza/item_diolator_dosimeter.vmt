@@ -1,0 +1,44 @@
+
+"VertexLitGeneric"
+{
+    "$basetexture" "models\qanonporting\doza\item_diolator_dosimeter"
+    "$model" "1"
+"$bumpmap" "models\qanonporting\doza\item_diolator_dosimeter_n"
+		"$surfaceprop" "metal"
+	"$phong" "1"
+	"$phongboost" "2"
+    	"$phongexponent" "55"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[.2 .5 1]"
+        "$phongexponent" "12"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[.18 .4 1]"
+	"$rimlight" "1"				// To enable rim lighting (requires phong)
+	"$rimlightexponent" "20"             // Exponent for phong component of rim lighting
+	"$rimlightboost" "0.5"	               // Boost for ambient cube component of rim lighting
+	$detail "detail/metal_detail_01.vtf"
+	$detailscale 3
+	$detailblendfactor 0.5
+	$detailblendmode 0
+	$selfillum "0"
+"$selfillummask" "models\qanonporting\doza\item_diolator_dosimeter_si"
+$selfillumtint "{125 70 0}"
+ 	"$emissiveBlendEnabled" 	"1"
+	"$emissiveBlendTint" 	"{200 255 210}"
+ 	"$emissiveBlendTexture" 	"vgui/white.vtf"
+	"$emissiveBlendBaseTexture" "models\qanonporting\doza\item_diolator_dosimeter_si"
+	
+	"$emissiveBlendFlowTexture" "vgui/lamphalo.vtf" //Can use a flow mask that scrolls to create disruptive patterns. Use white for just basic glow.
+    	"$emissiveBlendStrength" 	0 //Strength of glow. Can be controlled via proxy for variable glow.
+    	"$emissiveBlendScrollVector" "[0 0.1 0]" 
+	"Proxies"
+	{
+		ModelDetailFx
+		{
+		}
+		DosimeterScreenGlowValue
+		{
+			resultVar $emissiveBlendStrength
+		}
+	}
+}

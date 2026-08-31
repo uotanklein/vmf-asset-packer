@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props/props_setka_rza"
+	"$alphatest" 1
+}

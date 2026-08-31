@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{	
+	"$bumpmap" "models/ui/ui_menu_monik_normal"
+	"$model" "1"
+
+	"$phong" "1"
+	"$phongboost" "5"
+	
+	"$phongexponenttexture" "models/ui/ui_menu_monik_roughness"
+	"$phongalbedotint" "0"										
+	"$phongfresnelranges"	"[.1 .5  1]"
+
+	"$basetexture" "models/ui/ui_menu_monik"
+
+	"$selfillummask" 	"models/ui/ui_menu_monik_selfillum_mask"
+	"$selfillum" "1"
+	"$selfillumtint" "[1 1 1]"
+}

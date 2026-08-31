@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_radio/radio_01_dials"
+	"$nodecal" 1
+	"$selfillum" "1"
+    	"$selfillummask" "models/props_radio/radio_01_dials_illum"
+}

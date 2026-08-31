@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/re3_remake_weapons_items/explosives/explosives_a_b_d"
+	"$bumpmap" "models/re3_remake_weapons_items/explosives/explosives_a_b_n"
+	"$color2" "[0.75 0.75 0.75]"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"
+
+	"$phong" "1"
+	"$phongboost" "1"
+	//"$phongexponent" "30"
+	"$phongfresnelranges"	"[1 2 3]"
+	"$phongexponenttexture" "models/re3_remake_weapons_items/explosives/explosives_a_b_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.03 0.03 0.03]"		
+	//"$phongtint" 			"[0.5 0.5 0.5]"			
+	"$PhongAlbedoTint" "1"
+
+	"$ambientocclusion" "1"	
+}

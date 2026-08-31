@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/eft/nvgs/mats/nvg_alfa_pnv-10t_d"
+	"$bumpmap" "models/eft/nvgs/mats/nvg_alfa_pnv-10t_n"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/eft/nvgs/mats/nvg_alfa_pnv-10t_g"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+
+
+
+}

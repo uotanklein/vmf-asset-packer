@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Lt_C\AlienIsolation\motiontracker\tracker_decals"
+	"$bumpmap" "models\Lt_C\AlienIsolation\motiontracker\glass_n"	
+	"$halflambert" "1"
+	"$translucent" 1
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$envmapFresnel" "1"
+
+	"$phong" "1"
+	"$phongexponent" 50
+	"$phongboost" "2"
+	"$phongfresnelranges"	"[ .3 1.2 8]"
+}

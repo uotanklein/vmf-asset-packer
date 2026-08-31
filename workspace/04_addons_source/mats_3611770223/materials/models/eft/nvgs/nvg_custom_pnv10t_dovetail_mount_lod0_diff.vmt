@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/eft/nvgs/mats/nvg_custom_pnv10t_dovetail_mount_d"
+	"$bumpmap" "models/eft/nvgs/mats/nvg_custom_pnv10t_dovetail_mount_n"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/eft/nvgs/mats/nvg_custom_pnv10t_dovetail_mount_g"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+
+
+
+}

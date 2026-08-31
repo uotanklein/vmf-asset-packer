@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/w_pillbottle"
+	"$surfaceprop" "plastic"
+	"$bumpmap" "models/w_pillbottle_norm"
+	//phong parameters
+	"$phong"     "1"
+
+	"$phongexponent"   "10"
+	"$phongboost"   "0.4"
+	"$phongfresnelranges"   "[0.4 5 1]"
+	
+	//rimlight parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "20"
+	"$rimlightboost" "0.3"
+
+
+	"$blink" 0.0
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar"	"$blink"
+			"sineperiod"	1
+			"sinemin"		0
+			"sinemax"	1
+		}
+
+		"HighlightWeapon"
+		{
+			"resultVar"	"$selfillumtint"
+			"blinkVar"	"$blink"
+		}
+	}
+}

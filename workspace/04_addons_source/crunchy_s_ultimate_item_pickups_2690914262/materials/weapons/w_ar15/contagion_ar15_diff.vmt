@@ -1,0 +1,56 @@
+VertexLitGeneric
+{
+    $basetexture                "weapons\w_ar15\contagion_ar15_diff"
+    $bumpmap                    "weapons\w_ar15\contagion_ar15_norm"
+//    $normalmapalphaenvmapmask   "1"
+ //   $envmap                     env_cubemap
+//    $envmaptint                 "[0.5 0.5 0.5]"
+
+    $phong                      "1"
+    $phongfresnelranges         "[1 1 1]"
+    $phongboost                 "0"
+    $phongexponent              "0"
+    $phongtint                  "[1 1 1]"
+    $selfillum                  "0"
+    $selfillummask              "white"
+    $selfillumtint              "[1 1 1]"
+    $outline                    "0"
+    $outline_alpha              "1"
+    $outline_colour             "[1 1 1]"
+    Proxies
+    {
+        OutlineItem
+        {
+            Disabled
+            {
+                "outline_alpha"     "0"
+                "phong_tint"        "1 1 1"
+                "phong_boost"       "4"
+                "phong_exponent"    "16"
+                "phong_fresnel"     "0.3 0.5 1"
+            }
+            HighlightEmpty
+            {
+                "outline"           "0.1"
+                "outline_alpha"     "0.8"
+                "outline_colour"    "0.8 0 0"
+                "outline_tint"      "1.5 0.2 0"
+                "phong_tint"        "4 1 0"
+                "phong_boost"       "0.2"
+                "phong_exponent"    "8"
+                "phong_fresnel"     "0.6 0.9 3"
+            }
+            Highlight
+            {
+                "outline"           "0.12"
+                "outline_alpha"     "0.5"
+                "outline_colour"    "1 0.7 0"
+                "outline_tint"      "2 1.5 0.5"
+                "phong_tint"        "4 3 0"
+                "phong_boost"       "0.9"
+                "phong_exponent"    "8"
+                "phong_fresnel"     "0.6 0.9 3"
+            }
+        }
+    }
+}

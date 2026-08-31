@@ -1,0 +1,11 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "models/flaymi/stalker/anomaly/v_items/aptechka/aptechka_army_diffuse"
+    	"$bumpmap" "models/flaymi/stalker/anomaly/v_items/aptechka/aptechka_basic_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponent"			"40"			
+	"$phongboost"				"1.0"
+	"$phongfresnelranges"		"[0 0.7 0.4]"
+}

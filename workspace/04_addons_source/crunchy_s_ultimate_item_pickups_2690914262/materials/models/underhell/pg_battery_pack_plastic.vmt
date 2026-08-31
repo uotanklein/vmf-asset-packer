@@ -1,0 +1,28 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\underhell/pg_battery_pack_plastic"
+	"$bumpmap" "models\underhell/pg_battery_pack_plastic_bump"
+	"$model" "1"
+	"$translucent" "1"
+
+	"$phong"     "1"
+	"$phongexponent"  "10"
+	"$phongboost"   "1.5"
+	"$phongfresnelranges"   "[1 9 3]"
+	"$phongalbedotint" "1"
+	"$halflambert" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "30"
+	"$rimlightboost" "1.1"
+	
+	
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[ 0.95 0.95 0.95 ]"
+
+
+
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/source/hands/act_arm_cloak_leather.vtf"
+	"$bumpmap"  "models/weapons/source/hands/act_arm_cloak_leather_bump.vtf"
+	"$nocull" "1"
+}
