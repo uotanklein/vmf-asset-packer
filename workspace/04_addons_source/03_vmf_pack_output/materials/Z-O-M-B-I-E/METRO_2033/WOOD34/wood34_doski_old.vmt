@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wood34/wood34_doski_old"
+	//"$bumpmap" "Z-O-M-B-I-E/metro_2033/wood34/wood34_doski_old_norm"
+	"$surfaceprop" "wood"
+}

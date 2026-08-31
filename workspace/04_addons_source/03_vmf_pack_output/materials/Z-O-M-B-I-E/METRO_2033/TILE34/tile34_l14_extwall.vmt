@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/tile34/tile34_l14_extwall"
+	//"$bumpmap" "Z-O-M-B-I-E/metro_2033/tile34/tile34_l14_extwall_norm"
+	"$surfaceprop" "tile"
+}

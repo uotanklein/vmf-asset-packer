@@ -1,0 +1,10 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/stucco/stucco_pot_biblioteka_tile_01"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/stucco/stucco_pot_biblioteka_tile_01_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_tile_det2"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,10 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/wall/wall_beton_water"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/wall/wall_beton_water_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_2"
+	"$detailscale" "9.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

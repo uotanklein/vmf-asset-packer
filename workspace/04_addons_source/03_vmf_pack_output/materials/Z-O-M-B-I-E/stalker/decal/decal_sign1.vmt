@@ -1,0 +1,9 @@
+LightmappedGeneric
+{
+$baseTexture "z-o-m-b-i-e/stalker/decal/decal_sign1"
+$translucent 1
+$decal 1
+$decalscale "0.250000"
+$vertexcolor 1
+$vertexalpha 1
+}

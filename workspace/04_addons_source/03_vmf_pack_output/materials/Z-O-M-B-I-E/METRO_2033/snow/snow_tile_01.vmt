@@ -1,0 +1,10 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/snow/snow_tile_01"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/snow/snow_tile_01_norm"
+	"$surfaceprop" "snow"
+	"$detail" "z-o-m-b-i-e/metro_2033/snow/snow_det_1"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "0.8"
+	"$detailblendmode" "0"
+}

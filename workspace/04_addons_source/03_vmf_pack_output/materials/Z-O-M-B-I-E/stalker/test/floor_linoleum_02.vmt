@@ -1,0 +1,6 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/test/floor_linoleum_02"
+	"$bumpmap" "z-o-m-b-i-e/STALKER/test/floor_linoleum_02_norm"
+	"$surfaceprop" "tile"
+}

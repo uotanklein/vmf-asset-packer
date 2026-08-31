@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wall34/wall34_crackedceiling"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wall34/wall34_crackedceiling_norm"
+	"$surfaceprop" "concrete"
+}

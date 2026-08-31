@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/grnd/grnd_dry_j02"
+	"$bumpmap" "z-o-m-b-i-e/STALKER/grnd/grnd_dry_j02_norm"
+	"$surfaceprop" "concrete"
+}
