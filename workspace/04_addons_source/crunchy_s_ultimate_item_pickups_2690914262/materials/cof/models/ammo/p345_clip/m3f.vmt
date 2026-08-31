@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+"$basetexture" "cof\models\ammo\p345_clip\m3f"
+"$nocull" "1"
+"$halflambert" "1"
+}

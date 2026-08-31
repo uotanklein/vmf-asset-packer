@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\items\vest\police_vest"
+	"$phongexponenttexture" "models\items\vest\police_vest"
+    "$phongfresnelranges" "[0.15 1 0.5]"
+
+}

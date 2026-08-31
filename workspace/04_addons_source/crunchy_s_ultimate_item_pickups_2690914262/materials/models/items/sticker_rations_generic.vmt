@@ -1,0 +1,7 @@
+UnlitGeneric
+{
+	$baseTexture	"models/items/crates/sticker_rationsgeneric_bc"
+//	$mraotexture	"models/items/crates/sticker_ammogeneric_mrao"
+	$model			1
+	$translucent	1
+}

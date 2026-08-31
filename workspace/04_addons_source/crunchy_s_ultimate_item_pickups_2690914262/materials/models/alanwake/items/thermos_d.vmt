@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+$basetexture "models/AlanWake/Items/thermos_d"
+$bumpmap "models/AlanWake/Items/thermos_n"
+$ambientocclusion "1"
+$phong "1"
+$phongexponent ".75"
+//$phongboost ".75"
+$phongboost ".3"
+$lightwarptexture "models/AlanWake/lightwarp_hair"
+$phongfresnelranges	"[1 2 1]"
+$phongtint "[1 1 1.2]"
+$phongwarptexture "models/AlanWake/phongwarp_hair"
+$rimlight "0"
+$rimlightexponent "6"
+$rimlightboost "10"
+$rimmask "1"
+}

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "helmet_ulach_black/item_equipment_helmet_ULACH_LOD0"
+	$bumpmap "helmet_ulach_black/item_equipment_helmet_ULACH_nrm"
+
+    "$phong" "1"
+    "$phongexponent" "4"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+}

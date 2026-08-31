@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/pouches/Pouch_Shotgun_Shells"
+	"$bumpmap" "models/pouches/Pouch_Handgun_Bullets_n"
+	"$surfaceprop" "cardboard"
+}

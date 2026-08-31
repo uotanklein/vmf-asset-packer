@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+"$basetexture" "cof\models\ammo\ammo_m16\magazine"
+"$nocull" "1"
+"$halflambert" "1"
+}

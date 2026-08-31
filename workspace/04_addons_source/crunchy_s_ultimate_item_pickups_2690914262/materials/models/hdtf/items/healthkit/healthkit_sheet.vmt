@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models/hdtf/items/healthkit/healthkit_sheet_d"
+	$bumpmap	"models/hdtf/items/healthkit/healthkit_sheet_n"
+
+	$model		1
+
+	$envmap		"env_cubemap"
+	$envmaptint	"[ .06 .04 .04 ]"
+        $nodecal 1
+
+	$phong			1
+	$phongexponent		5
+	$phongboost		0
+	$phongfresnelranges	"[0.08 0.65 1]"
+}

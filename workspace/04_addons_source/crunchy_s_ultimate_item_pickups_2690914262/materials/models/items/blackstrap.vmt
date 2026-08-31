@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/items/blackstrap"
+		"$model" "1"
+}

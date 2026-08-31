@@ -1,0 +1,10 @@
+{
+  "title": "CONTENT #2",
+  "type": "ServerContent",
+  "tags": [
+    "realism"
+  ],
+  "ignore": [
+    "wav"
+  ]
+}

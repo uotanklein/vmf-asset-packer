@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+
+{
+	"$basetexture" "models/items/ammo_crate/ammocrate"
+	"$model" 1
+} 

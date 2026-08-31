@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/mosi/fnv/props/gore/greengorearmparts"
+    "$bumpmap"     "models/mosi/fnv/props/gore/gorearmparts_n"
+
+	"$phong" "1"
+	"$phongexponent" "3"
+	"$phongboost" ".1"
+	"$phongfresnelranges"	"[.5 .25 0]"
+	"$phongtint" "[.75 1 .75]"
+}

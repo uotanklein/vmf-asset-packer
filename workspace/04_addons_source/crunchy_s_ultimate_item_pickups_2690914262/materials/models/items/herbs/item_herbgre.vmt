@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+
+	 $model "1"
+	 $basetexture "models/items/herbs/item_herbgre_diff"
+}

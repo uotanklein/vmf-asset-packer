@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+    $basetexture                "models\props_downtown\large_crate_diff"
+    $bumpmap                    "models\props_downtown\large_crate_norm"
+    $phong                      "1"
+//    $normalmapalphaenvmapmask   "1"
+    $phongexponent              "10"
+    $phongboost                 "2"
+    $phongfresnelranges         "[.8 3 5]"
+//    $envmap                     env_cubemap
+ //   $envmaptint                 "[0.3 0.3 0.3]"
+//    $envmapsaturation           "0"
+}

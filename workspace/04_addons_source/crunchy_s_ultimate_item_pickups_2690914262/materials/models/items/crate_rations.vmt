@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$baseTexture	"models/items/crates/rations_bc"
+	$bumpmap		"models/items/crates/ammo_n"
+//	$mraotexture	"models/items/crates/ammo_mrao"
+	$model			1
+}

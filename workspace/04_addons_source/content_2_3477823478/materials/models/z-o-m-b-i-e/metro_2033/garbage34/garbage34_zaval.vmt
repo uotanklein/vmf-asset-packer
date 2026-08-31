@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/garbage34/garbage34_zaval"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/garbage34/garbage34_zaval_norm"
+	"$surfaceprop" "dirt"
+}

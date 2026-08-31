@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "models\hlvr\props\bottles\medicine_bottle_2_2_d"
+	"$bumpMap" "models\hlvr\props\bottles\medicine_bottle_2_0_n"
+	"$ambientOcclusion" "0.36"
+	"$normalMapAlphaEnvMapMask" "1"
+	"$phong" "1"
+	"$phongBoost" ".5"
+	"$phongexponent" "5"
+	"$NoCull" "1"
+	"$phongFresnelRanges" "[1 1.75 5.25]"
+	"$phongDisableHalfLambert" "1"
+}
+

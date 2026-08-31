@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wm/wm_kabel_tonnel"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wm/wm_kabel_tonnel_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

@@ -1,0 +1,10 @@
+ENT.Base = "base_ai"
+ENT.Type = "ai"
+ENT.PrintName = "Cockroach"
+ENT.Category = "Cockroach"
+ENT.Author = "SMOK"
+ENT.Contact = "https://steamcommunity.com/id/dany990011"
+ENT.Purpose = ""
+ENT.Instructions = ""
+ENT.Spawnable = true 
+ENT.AdminOnly = false 

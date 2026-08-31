@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+    $basetexture "models\props_harvest\haystack_diff"
+    $bumpmap "models\props_harvest\haystack_norm"
+    
+    $phong "1"
+    $phongtint "[.1 .1 .1]"
+    $phongexponent "1"
+    $phongboost "1"
+    $phongfresnelranges "[.5 2 5]"
+}

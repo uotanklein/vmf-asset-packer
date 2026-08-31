@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot_2/Health_Pack_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot_2/Health_Pack_NORM"
+	"$surfaceprop" "Default"
+}

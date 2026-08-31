@@ -1,0 +1,12 @@
+"vertexlitgeneric"
+{
+
+	"$baseTexture" "models\PG_props\pg_army/pg_army_backpack"
+	"$bumpmap" "models\PG_props\pg_army/pg_army_backpack_bump"
+        "$surfaceprop" "wood"
+	"$model" 1
+
+
+
+}
+

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/mailer/bl2_props/dahlammocrate/dahl_ammo_dif_rations"
+
+	"$phong" 1
+
+	"$bumpmap" "models/mailer/bl2_props/dahlammocrate/Dahl_Ammo_n"
+	"$basemapalphaphongmask" 1
+
+	$detail "models/mailer/bl2_props/dahlammocrate/Dahl_Ammo_emis"
+	$detailscale 1
+	$detailblendfactor "1"
+	$detailblendmode 5
+}

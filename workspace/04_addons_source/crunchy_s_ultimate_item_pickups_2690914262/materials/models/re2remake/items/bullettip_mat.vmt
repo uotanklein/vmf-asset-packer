@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\RE2Remake\items\sm70_102_AssaultRifleBullet01A_A_Mat"
+"$bumpmap" "models\RE2Remake\items\sm70_102_AssaultRifleBullet01A_A_Mat_n"
+
+	"$phong" "1"
+	"$phongboost" "3.5"
+	"$phongexponent" "10"
+	"$phongfresnelranges" "[2 1.2 8]"
+	"$phongalbedotint" "1"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$phongexponenttexture" "models/RE2Remake\exponent"
+
+
+	"$cloakPassEnabled" 		"1"				
+	"$nocull" "1"
+
+
+}

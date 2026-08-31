@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot/Baked_Beans_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot/Bag_Of_Chips_NORM"
+	"$surfaceprop" "Metal"
+}

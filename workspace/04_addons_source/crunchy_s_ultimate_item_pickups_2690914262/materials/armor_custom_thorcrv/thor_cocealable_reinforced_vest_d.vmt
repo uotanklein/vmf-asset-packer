@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "armor_custom_thorcrv/thor_cocealable_reinforced_vest_d"
+	$bumpmap "armor_custom_thorcrv/thor_cocealable_reinforced_vest_n"
+
+    "$phong" "1"
+    "$phongexponent" "4"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+}

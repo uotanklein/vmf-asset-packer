@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/f2_health/hypodermic_health"
+                "$selfillum" 1
+                "$selfillummask" "models/f2_health/hypodermic_health_emission"
+}

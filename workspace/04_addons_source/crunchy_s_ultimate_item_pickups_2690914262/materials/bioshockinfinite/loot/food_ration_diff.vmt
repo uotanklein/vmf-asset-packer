@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "BioshockInfinite/Loot/Food_Ration_DIFF"
+	"$bumpmap" "BioshockInfinite/Loot/Food_Ration_NORM"
+	"$surfaceprop" "Metal"
+}

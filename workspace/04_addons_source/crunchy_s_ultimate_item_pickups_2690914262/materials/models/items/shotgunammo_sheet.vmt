@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{             
+    "$basetexture" "/models/items/shotgunammo_sheet"
+    "$normalmap" "/models/items/shotgunammo_spec" 
+    "$envmap" "env_cubemap"
+    "$normalmapalphaenvmapmask" 1
+    "$envmaptint" "[.23 .22 .23]"
+
+	"$blink" 0.0
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar"	"$blink"
+			"sineperiod"	1
+			"sinemin"		0
+			"sinemax"	1
+		}
+
+		"HighlightWeapon"
+		{
+			"resultVar"	"$selfillumtint"
+			"blinkVar"	"$blink"
+		}
+	}
+}

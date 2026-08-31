@@ -1,0 +1,30 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/medkit"
+
+	"$bumpmap" "models/medkit_normal"
+
+	"$phong"     "1"
+
+	"$phongexponent"   "10"
+	"$phongboost"   ".2"
+	"$phongfresnelranges"   "[0.05 .5 1]"
+
+	"$blink" 0.0
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar"	"$blink"
+			"sineperiod"	1
+			"sinemin"		0
+			"sinemax"	1
+		}
+
+		"HighlightWeapon"
+		{
+			"resultVar"	"$selfillumtint"
+			"blinkVar"	"$blink"
+		}
+	}
+}
