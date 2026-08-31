@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wood34/wood34_wallconstr_01"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wood34/wood34_wallconstr_01_norm"
+	"$surfaceprop" "wood"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

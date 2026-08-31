@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/snow/snow_icicle_wall"
+	"$surfaceprop" "ice"
+	"$detail" "z-o-m-b-i-e/metro_2033/snow/snow_det_1"
+	"$detailscale" "9.00"
+	"$detailblendfactor" "0.8"
+	"$detailblendmode" "0"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}
+	

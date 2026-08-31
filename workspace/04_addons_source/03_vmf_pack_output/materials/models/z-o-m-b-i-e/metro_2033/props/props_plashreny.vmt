@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_plashreny"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_plashreny_norm"
+	"$surfaceprop" "plstic"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

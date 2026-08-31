@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "se_decals/resist_poster_5"
+	"$translucent" 1
+	"$decal" "1"
+	"$decalscale" "0.09"
+	"$vertexcolor" "1"
+	"$vertexalpha" "1"
+}

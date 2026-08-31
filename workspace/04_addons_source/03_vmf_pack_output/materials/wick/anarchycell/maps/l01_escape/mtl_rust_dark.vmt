@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "z-o-m-b-i-e/stalker/mtl/mtl_rust_dark"
+
+	$nocull 1
+}

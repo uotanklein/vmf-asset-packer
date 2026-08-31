@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/grnd/grnd_musor_grey"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/grnd/grnd_musor_grey_norm"
+	"$surfaceprop" "dirt"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_dirt_det1"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

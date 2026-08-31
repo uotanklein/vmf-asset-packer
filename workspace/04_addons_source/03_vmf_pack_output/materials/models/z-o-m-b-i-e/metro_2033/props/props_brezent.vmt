@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_brezent"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_brezent_norm"
+	"$surfaceprop" "carpet"
+	"$alphatest" 1
+}

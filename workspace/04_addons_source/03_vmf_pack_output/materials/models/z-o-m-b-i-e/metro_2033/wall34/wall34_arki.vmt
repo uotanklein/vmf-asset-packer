@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wall34/wall34_arki"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wall34/wall34_arki_norm"
+	"$surfaceprop" "concrete"
+}

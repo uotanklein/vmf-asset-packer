@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_brez_podrtilka"
+	"$surfaceprop" "carpet"
+	"$alphatest" 1
+}

@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/act/act_broneshlem_ris"
+	////"$bumpmap" "z-o-m-b-i-e/metro_2033/act/act_broneshlem_ris_disabled_nm"
+	"$surfaceprop" "metal"
+	"$alphatest" 1
+	"$nodecal" "1"
+}
+	

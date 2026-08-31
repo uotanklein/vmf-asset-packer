@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wm34/wm34_eroplakat"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wm34/wm34_eroplakat_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

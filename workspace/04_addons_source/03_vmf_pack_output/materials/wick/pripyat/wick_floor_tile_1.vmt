@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "wick/pripyat/wick_floor_tile_1"
+	"$surfaceprop" "Tile"
+}

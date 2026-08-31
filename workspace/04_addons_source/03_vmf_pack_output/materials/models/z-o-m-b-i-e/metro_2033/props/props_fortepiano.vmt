@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_fortepiano"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_fortepiano_norm"
+	"$surfaceprop" "wood"
+	"$alphatest" 1
+}

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/metal/metal_list_sifer"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/metal/metal_list_sifer_norm"
+	"$surfaceprop" "metal"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_metall_det1"
+	"$detailscale" "10.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}
+
+	

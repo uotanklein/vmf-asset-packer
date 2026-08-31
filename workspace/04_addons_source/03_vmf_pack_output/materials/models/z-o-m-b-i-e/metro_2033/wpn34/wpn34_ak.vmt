@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/wpn34/wpn34_ak"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/wpn34/wpn34_ak_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

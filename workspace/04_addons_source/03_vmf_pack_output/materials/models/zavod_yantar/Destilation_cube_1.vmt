@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	
+	"$basetexture" "models/zavod_yantar/Destilation_cube_1"
+	"$surfaceprop" "metal"
+}

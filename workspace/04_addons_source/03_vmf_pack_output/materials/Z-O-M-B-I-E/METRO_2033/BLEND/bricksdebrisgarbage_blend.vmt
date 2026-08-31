@@ -1,0 +1,12 @@
+"WorldVertexTransition"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/bricks/bricks_debris"
+	"$bumpmap" "z-o-m-b-i-e/metro_2033/bricks/bricks_debris_norm"
+	"$surfaceprop" "brick"
+
+	"$basetexture2" "z-o-m-b-i-e/metro_2033/garbage/garbage_crushed"
+	"$bumpmap2" "z-o-m-b-i-e/metro_2033/garbage/garbage_crushed_norm"
+	"$surfaceprop2" "dirt"
+
+	"%keywords" "blend"
+}

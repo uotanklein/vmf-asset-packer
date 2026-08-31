@@ -1,0 +1,11 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/concrete/concrete_plita_01"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/concrete/concrete_plita_snow_NORM"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_2"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}
+	

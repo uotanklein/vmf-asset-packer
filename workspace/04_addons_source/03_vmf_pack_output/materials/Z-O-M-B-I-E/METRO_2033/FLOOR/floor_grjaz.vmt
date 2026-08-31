@@ -1,0 +1,11 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/floor/floor_grjaz"
+	"$bumpmap" "z-o-m-b-i-e/metro_2033/floor/floor_grjaz_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_3"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}
+	

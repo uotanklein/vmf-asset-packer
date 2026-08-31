@@ -1,0 +1,7 @@
+"lightmappedgeneric"
+{
+	"$basetexture" "redline/vovchik"
+	"$translucent" 1
+                "$decal" 1
+                "$decalscale" 0.25
+}

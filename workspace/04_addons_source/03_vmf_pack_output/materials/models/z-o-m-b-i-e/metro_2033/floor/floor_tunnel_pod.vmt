@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/floor/floor_tunnel_pod"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_3"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

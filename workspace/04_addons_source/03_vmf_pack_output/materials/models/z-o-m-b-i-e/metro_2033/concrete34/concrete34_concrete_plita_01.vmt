@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/concrete34/concrete34_concrete_plita_01"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/concrete34/concrete34_concrete_plita_01_norm"
+	"$surfaceprop" "concrete"
+}

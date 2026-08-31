@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/grnd34/grnd34_grnd"
+	//"$bumpmap" "Z-O-M-B-I-E/metro_2033/grnd34/grnd34_grnd_norm"
+	"$surfaceprop" "dirt"
+}

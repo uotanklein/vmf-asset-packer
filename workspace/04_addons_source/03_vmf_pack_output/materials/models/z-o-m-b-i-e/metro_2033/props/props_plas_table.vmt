@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/props/props_plas_table"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/props/props_plas_table_norm"
+	"$surfaceprop" "plastic"
+}
+
+	

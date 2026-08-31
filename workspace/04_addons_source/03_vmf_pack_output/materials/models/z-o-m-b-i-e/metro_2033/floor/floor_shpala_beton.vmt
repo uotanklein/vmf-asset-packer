@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/floor/floor_shpala_beton"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/floor/floor_shpala_beton_norm"
+	"$surfaceprop" "concrete"
+}

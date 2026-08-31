@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/decal/decal_snow4"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/decal/decal_snow4_norm"
+	"$nodecal" "1"
+	"$translucent" "1"
+}

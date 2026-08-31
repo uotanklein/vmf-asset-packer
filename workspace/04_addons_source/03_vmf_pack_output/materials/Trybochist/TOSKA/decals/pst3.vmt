@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "Trybochist/TOSKA/decals/pst3"
+
+	$alphatest 1
+	$decal 1
+}

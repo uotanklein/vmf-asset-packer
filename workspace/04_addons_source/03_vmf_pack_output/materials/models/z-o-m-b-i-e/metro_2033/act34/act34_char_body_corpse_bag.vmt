@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "Z-O-M-B-I-E/metro_2033/act34/act34_char_body_corpse_bag"
+	$bumpmap "Z-O-M-B-I-E/metro_2033/act34/act34_char_body_corpse_bag_norm"
+}

@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/prop/prop_komp"
+	$bumpmap "wick/lost_alpha/map_materials/prop/prop_komp_bump"
+	$surfaceprop Computer
+
+	$model 1
+}

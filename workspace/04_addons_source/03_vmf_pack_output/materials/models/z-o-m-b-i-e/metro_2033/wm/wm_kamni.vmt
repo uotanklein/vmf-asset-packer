@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/wm/wm_kamni"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

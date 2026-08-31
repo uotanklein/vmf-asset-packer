@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/zavod_yantar/Electric_shield_2"
+	"$surfaceprop" "metal"
+}

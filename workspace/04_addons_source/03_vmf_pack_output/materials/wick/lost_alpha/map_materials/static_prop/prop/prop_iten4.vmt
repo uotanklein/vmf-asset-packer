@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/static_prop/prop/prop_iten4"
+	$bumpmap "wick/lost_alpha/map_materials/static_prop/prop/prop_iten4_bump"
+	$surfaceprop Concrete
+
+	$detail "wick/lost_alpha/map_materials/detail/detail_metall_det1"
+
+	$nocull 1
+
+	$model 1
+}

@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "Z-O-M-B-I-E/metro_2033/act34/act34_goo3_aref"
+	////$bumpmap "Z-O-M-B-I-E/metro_2033/act34/act34_goo3_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

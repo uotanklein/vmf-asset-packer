@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wick/wrbstalker/props/dynamic/wood_board_01"
+	"$bumpmap" "models/wick/wrbstalker/props/dynamic/wood_board_01_bump"
+	$bumpscale 0.4
+}

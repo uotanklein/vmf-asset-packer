@@ -1,0 +1,9 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/concrete/concrete_tile_d06"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_tile_det2"
+	"$detailscale" "9.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+$basetexture "se_decals/rug001a"
+$translucent 1
+$decal 1
+$vertexcolor 1
+$vertexalpha 1
+}

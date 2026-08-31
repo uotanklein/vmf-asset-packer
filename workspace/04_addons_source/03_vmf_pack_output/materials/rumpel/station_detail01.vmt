@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "rumpel/station_detail01"
+	"$surfaceprop" "Metal"
+	"$translucent" 1
+	"$decal" "1"
+	"$decalscale" "0.500"
+}

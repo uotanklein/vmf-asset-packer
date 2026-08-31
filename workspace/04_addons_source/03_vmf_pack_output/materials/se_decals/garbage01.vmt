@@ -1,0 +1,9 @@
+LightmappedGeneric
+{
+$baseTexture "se_decals/garbage01"
+$translucent 1
+$decal 1
+$se_decalscale "0.250000"
+$vertexcolor 1
+$vertexalpha 1
+}

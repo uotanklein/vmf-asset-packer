@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/veh34/veh34_vagon_cart"
+	////"$bumpmap" "Z-O-M-B-I-E/metro_2033/veh34/veh34_vagon_cart_norm"
+	"$surfaceprop" "metal"
+}

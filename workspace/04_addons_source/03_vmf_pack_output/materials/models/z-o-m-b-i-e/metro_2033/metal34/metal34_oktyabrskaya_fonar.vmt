@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/metal34/metal34_oktyabrskaya_fonar"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/metal34/metal34_oktyabrskaya_fonar_norm"
+	"$surfaceprop" "metal"
+}

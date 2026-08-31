@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "textures/russian_war/poster10"
+	"$surfaceprop" "Wood_Solid"
+}

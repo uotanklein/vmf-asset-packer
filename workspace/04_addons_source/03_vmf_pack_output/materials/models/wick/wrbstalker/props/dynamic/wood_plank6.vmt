@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wick/wrbstalker/props/dynamic/wood_plank6"
+	"$bumpmap" "models/wick/wrbstalker/props/dynamic/wood_plank6_bump"
+}

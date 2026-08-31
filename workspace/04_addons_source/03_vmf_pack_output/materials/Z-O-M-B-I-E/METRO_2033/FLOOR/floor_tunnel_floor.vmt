@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/floor/floor_tunnel_floor"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/floor/floor_tunnel_floor_norm"
+	"$surfaceprop" "concrete"
+}

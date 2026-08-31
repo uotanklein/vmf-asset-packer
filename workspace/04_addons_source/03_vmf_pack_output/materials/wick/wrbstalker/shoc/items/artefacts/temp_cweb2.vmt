@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/shoc/items/artefacts/temp_cweb2"
+
+	$translucent 1
+
+	$nocull 1
+
+	$nodecal 1
+
+	$model 1
+}

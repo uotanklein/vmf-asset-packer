@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/wood/fx_wood_fire"
+	"$surfaceprop" "wood"
+	"$frame" "0"
+	
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" 5.00
+		}
+	}
+}
+	

@@ -1,0 +1,9 @@
+LightmappedGeneric
+{
+	$baseTexture "snake/texture_muromoffical"
+	"$translucent" 			"1"
+	"$alpha "				"1"	
+	"$decal" 1
+	"$decalscale" ".25" 
+
+}

@@ -1,0 +1,9 @@
+LightmappedGeneric
+{
+	$baseTexture "snake/ft_brodyga"
+	"$translucent" 			"1"
+	"$alpha "				"1"	
+	"$decal" 1
+	"$decalscale" ".25" 
+
+}

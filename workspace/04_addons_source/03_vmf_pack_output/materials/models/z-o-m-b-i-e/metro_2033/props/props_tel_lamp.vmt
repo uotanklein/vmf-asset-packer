@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_tel_lamp"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_tel_lamp_norm"
+	"$surfaceprop" "metal"
+	"$alphatest" 1
+}

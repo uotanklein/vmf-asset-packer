@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "turbosovetsk/decals/kpp7"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.09"
+
+}

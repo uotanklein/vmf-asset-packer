@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/trees/trees_leaves"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/trees/trees_leaves_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}
+	

@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/snow/snow_ice_des"
+	"$bumpmap" "z-o-m-b-i-e/metro_2033/snow/snow_ice_des_norm"
+	"$surfaceprop" "ice"
+	"$detail" "z-o-m-b-i-e/metro_2033/snow/snow_det_1"
+	"$detailscale" "9.00"
+	"$detailblendfactor" "0.8"
+	"$detailblendmode" "0"
+	"$translucent" "1"
+}

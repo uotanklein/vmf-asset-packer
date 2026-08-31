@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props34/props34_lenin"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/props34/props34_lenin_norm"
+	"$surfaceprop" "carpet"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

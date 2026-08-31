@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wm/wm_blood_1_1"
+	////"$bumpmap" "Z-O-M-B-I-E/metro_2033/wm/wm_blood_1_1_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

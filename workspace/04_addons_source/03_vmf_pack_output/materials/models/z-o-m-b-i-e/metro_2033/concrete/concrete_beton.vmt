@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/concrete/concrete_beton"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_concrete_2"
+	"$detailscale" "8.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/floor/floor_concrete_blocks"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/floor/floor_concrete_blocks_norm"
+	"$surfaceprop" "concrete"
+}

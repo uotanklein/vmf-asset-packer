@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/decal/decal_mud02"
+	"//$bumpmap" "Z-O-M-B-I-E/metro_2033/decal/decal_mud02_norm"
+	//"$nocull" 1
+	//"$nodecal" "1"
+	//"$alphatest" "1"
+	//"$alphatest" "1"
+}

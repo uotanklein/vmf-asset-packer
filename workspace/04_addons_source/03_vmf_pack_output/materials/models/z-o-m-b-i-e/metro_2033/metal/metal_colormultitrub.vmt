@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/metal/metal_colormultitrub"
+	//"//$bumpmap" "z-o-m-b-i-e/metro_2033/metal/metal_colormultitrub_norm"
+	"$surfaceprop" "metal"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}
+
+	

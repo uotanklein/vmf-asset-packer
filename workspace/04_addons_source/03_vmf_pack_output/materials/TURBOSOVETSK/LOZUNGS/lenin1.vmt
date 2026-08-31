@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "turbosovetsk/lozungs/lenin1"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.7"
+
+}

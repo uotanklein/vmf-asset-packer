@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "wp13/hands2"
+	"$decal" 1
+	"$decalscale" 0.25
+	"$translucent" 1
+}

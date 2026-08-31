@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "se_decals/socrealism_panno_02"
+	"$bumpmap" "se_decals/socrealism_panno_02_norm"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.20"   
+}

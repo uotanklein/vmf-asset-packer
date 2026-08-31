@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "se_decals/sg_stain_2"
+	"$translucent" 1
+	$decal 1
+}

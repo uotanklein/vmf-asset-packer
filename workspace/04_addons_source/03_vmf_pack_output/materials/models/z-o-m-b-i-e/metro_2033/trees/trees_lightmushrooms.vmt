@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/trees/trees_lightmushrooms"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/trees/trees_lightmushrooms_norm"
+	"$translucent" 1
+	"$additive" "1"
+	"$selfillum" "1"
+}
+
+	

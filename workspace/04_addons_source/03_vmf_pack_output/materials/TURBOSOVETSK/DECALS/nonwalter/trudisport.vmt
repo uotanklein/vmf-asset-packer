@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "turbosovetsk/decals/nonwalter/trudisport"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.12"
+
+}

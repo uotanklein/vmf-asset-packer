@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/wm/wm_flag_5m"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/wm/wm_flag_5m_norm"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

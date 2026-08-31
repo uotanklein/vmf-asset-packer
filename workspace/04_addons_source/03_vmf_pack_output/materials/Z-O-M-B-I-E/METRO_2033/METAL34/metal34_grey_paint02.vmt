@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/metal34/metal34_grey_paint02"
+	//"$bumpmap" "Z-O-M-B-I-E/metro_2033/metal34/metal34_grey_paint02_norm"
+	"$surfaceprop" "metal"
+}

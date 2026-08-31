@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	// Original shader: DecalBaseTimesLightmapAlphaBlend
+	"$translucent" 1
+	"$basetexture" "se_decals/decal_posters001a"
+	"$decal" 1
+	"$decalscale" 0.125
+}

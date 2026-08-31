@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_kabel_katushka"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_kabel_katushka_norm"
+	"$surfaceprop" "wood"
+}

@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+    "$basetexture"  "urf/plakat_bynull_11"
+    "$translucent"  "1"
+    "$alphatest"    "1"
+}

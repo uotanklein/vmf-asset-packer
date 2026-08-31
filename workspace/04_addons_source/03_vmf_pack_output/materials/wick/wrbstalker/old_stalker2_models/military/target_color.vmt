@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/old_stalker2_models/military/target_color"
+
+	$phong 1
+	$phongfresnelranges "[0.5 0.75 1]"
+	$phongexponent 5
+}

@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/prop/prop_table1c"
+	$bumpmap "wick/lost_alpha/map_materials/prop/prop_table1_bump"
+	$surfaceprop Wood
+
+	$detail "wick/lost_alpha/map_materials/detail/detail_wood_det1"
+
+	$model 1
+}

@@ -1,0 +1,12 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/floor/floor_beton_cap"
+	"$bumpmap" "z-o-m-b-i-e/metro_2033/floor/floor_beton_cap_norm"
+	"$surfaceprop" "concrete"
+	"$detail" "z-o-m-b-i-e/metro_2033/det/det_asvalt"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}
+
+	

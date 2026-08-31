@@ -1,0 +1,15 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "v3sp_glass/glass_picture"
+	"$alphatest" 1
+	$surfaceprop "metal"
+  "Proxies" 
+  { 
+   "ToggleTexture"
+   {
+    "toggleTextureVar" "$baseTexture"
+    "toggleTextureFrameNumVar" "$frame"
+    "toggleTextureShouldWrap" "0"
+   } 	
+  }
+}

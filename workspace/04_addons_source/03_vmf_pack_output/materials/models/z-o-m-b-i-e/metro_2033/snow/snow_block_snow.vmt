@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/snow/snow_block_snow"
+	////"$bumpmap" "Z-O-M-B-I-E/metro_2033/snow/snow_block_snow_norm"
+	"$surfaceprop" "brick"
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/glass/glass_glass"
+	"$surfaceprop" "glass"
+	"$nodecal" "1"
+	"$translucent" "1"
+}

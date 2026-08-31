@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/props/props_setka_ver"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/props/props_setka_ver_norm"
+	"$surfaceprop" "metalgrate"
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

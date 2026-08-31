@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "Models/yantar/metal_pechka03"
+	"$surfaceprop" "metal"
+}

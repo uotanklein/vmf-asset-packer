@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/ani/comps"
+
+	$selfillum 1
+
+	Proxies
+	{
+		AnimatedTexture
+		{
+			animatedTextureVar "$basetexture"
+			animatedTextureFrameNumVar "$frame"
+			animatedTextureFrameRate 4
+		}
+	}
+}

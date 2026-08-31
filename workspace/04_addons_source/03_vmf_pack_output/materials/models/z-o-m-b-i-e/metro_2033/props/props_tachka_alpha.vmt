@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/props/props_tachka_alpha"
+	"$surfaceprop" "metalgrate"
+	"$nocull" 1
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/prop/prop_mus_kont_01a"
+	$surfaceprop Metal
+
+	$detail "wick/lost_alpha/map_materials/detail/detail_metall_det1"
+
+	$model 1
+}

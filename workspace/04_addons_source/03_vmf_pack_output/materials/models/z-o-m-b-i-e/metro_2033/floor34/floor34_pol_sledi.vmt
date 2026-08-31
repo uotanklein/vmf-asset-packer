@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/floor34/floor34_pol_sledi"
+	//"//$bumpmap" "Z-O-M-B-I-E/metro_2033/floor34/floor34_pol_sledi_norm"
+	"$surfaceprop" "concrete"
+}

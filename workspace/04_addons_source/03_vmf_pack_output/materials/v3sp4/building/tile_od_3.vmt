@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "v3sp4/building/tile_od_3"
+	$bumpmap "unioncity/misc/pooltiles_n"
+	$surfaceprop tile
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/props/props_butilkas"
+	"$bumpmap" "z-o-m-b-i-e/metro_2033/props/props_butilkas_norm"
+	"$surfaceprop" "glass"
+}
+	

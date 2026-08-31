@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "wick/lost_alpha/map_materials/ston/ston_bricks11"
+	$bumpmap "wick/lost_alpha/map_materials/ston/ston_bricks11_bump"
+	$surfaceprop Concrete
+
+	$detail "wick/lost_alpha/map_materials/detail/detail_beton_det1"
+
+	$model 1
+}

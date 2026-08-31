@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	"$basetexture" "shinji_08/decals/BUERAKUS"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.05"   
+}

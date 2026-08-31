@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/old_stalker2_models/crate/gas_mask"
+	$bumpmap "wick/wrbstalker/old_stalker2_models/crate/gas_mask_nmap"
+
+	$nocull 1
+
+	$phong 1
+	$phongfresnelranges "[0.5 0.75 1]"
+	$phongwarptexture "wick/wrbstalker/old_stalker2_models/crate/gas_mask_spec"
+	$phongexponent 5
+}

@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "Z-O-M-B-I-E/metro_2033/act34/act34_chr_soldier_ataches"
+	$bumpmap "Z-O-M-B-I-E/metro_2033/act34/act34_chr_soldier_ataches_norm"
+}

@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/ui/ui_gmaska_glass_03"
+	"$surfaceprop" "glass"
+	"$translucent" "1"
+	"$nodecal" "1"
+	"$crackmaterial" "glass/offwndwb_break"
+}

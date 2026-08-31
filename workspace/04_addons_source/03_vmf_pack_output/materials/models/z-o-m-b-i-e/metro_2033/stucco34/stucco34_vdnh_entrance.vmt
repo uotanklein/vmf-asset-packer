@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/stucco34/stucco34_vdnh_entrance"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/stucco34/stucco34_vdnh_entrance_norm"
+	"$surfaceprop" "concrete"
+}

@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/metro_2033/props/props_instru"
+	"$bumpmap" "Z-O-M-B-I-E/metro_2033/props/props_instru_norm"
+	"$surfaceprop" "metal"
+}

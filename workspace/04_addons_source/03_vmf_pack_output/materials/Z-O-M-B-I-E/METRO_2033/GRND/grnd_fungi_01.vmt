@@ -1,0 +1,10 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/metro_2033/grnd/grnd_fungi_01"
+	//"$bumpmap" "z-o-m-b-i-e/metro_2033/grnd/grnd_fungi_01_norm"
+	"$surfaceprop" "dirt"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_dirt_det1"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

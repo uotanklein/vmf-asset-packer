@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "models/z-o-m-b-i-e/metro_2033/act34/rope"
+
+	$nodecal 1
+
+	$model 1
+}

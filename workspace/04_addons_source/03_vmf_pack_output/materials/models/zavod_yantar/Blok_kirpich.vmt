@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/zavod_yantar/Blok_kirpich"
+	"$surfaceprop" "Concrete"
+}

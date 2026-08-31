@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "models/wildwest2/mines/minecart_01_d"
+	$bumpmap "models/wildwest2/mines/minecart_01_n"
+
+	$model 1
+}

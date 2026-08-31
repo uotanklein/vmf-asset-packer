@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/old_stalker2_models/cloth/boot"
+	$bumpmap "wick/wrbstalker/old_stalker2_models/cloth/boot_nmap"
+
+	$alphatest 1
+	$alphatestreference 0.1
+	$nocull 1
+
+	$phong 1
+	$phongfresnelranges "[0.5 0.75 1]"
+	$phongwarptexture "wick/wrbstalker/old_stalker2_models/cloth/boot_spec"
+	$phongexponent 5
+}
