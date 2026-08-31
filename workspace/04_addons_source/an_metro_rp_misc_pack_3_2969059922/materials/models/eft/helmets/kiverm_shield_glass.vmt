@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/eft/helmets/mats/kiverM_shield_glass_d"
+
+
+	"$translucent" 1
+}

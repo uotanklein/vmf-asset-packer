@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "magma/stalker3/helmet_glass"
+	"$translucent" 1
+	"$halflambert" 1
+//	"$nocull" "1"
+}

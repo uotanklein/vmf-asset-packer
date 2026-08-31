@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "tabmenu/scoreboard"
+	"$translucent" 1
+}

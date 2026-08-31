@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/jake/props/act_diger_head1"
+	"$surfaceprop" "metal"
+}

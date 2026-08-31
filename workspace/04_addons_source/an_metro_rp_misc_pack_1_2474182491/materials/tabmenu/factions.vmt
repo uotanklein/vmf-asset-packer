@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "tabmenu/factions"
+	"$translucent" 1
+}

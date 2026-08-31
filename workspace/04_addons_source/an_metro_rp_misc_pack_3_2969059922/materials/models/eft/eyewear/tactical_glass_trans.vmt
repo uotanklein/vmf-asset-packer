@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/eft/eyewear/mats/tactical_glass_d"
+
+	"$translucent" "1"	
+
+}
+

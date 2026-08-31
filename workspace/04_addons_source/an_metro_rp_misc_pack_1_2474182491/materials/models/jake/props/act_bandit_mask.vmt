@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/jake/props/act_bandit_mask"
+	"$surfaceprop" "metal"
+}

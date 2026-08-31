@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/item_barter_electr_lbulb_glass"
+	"$surfaceprop" "metal"
+	$translucent 1
+}
+

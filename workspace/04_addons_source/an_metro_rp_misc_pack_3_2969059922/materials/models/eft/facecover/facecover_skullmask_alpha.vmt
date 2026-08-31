@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\eft\facecover\mats\facecover_skullmask_d"
+	$alphatest 1
+	$alphatestreference	0.4
+
+}

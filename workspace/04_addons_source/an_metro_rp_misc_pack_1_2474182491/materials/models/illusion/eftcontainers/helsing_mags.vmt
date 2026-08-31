@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/helsing_mags"
+	"$surfaceprop" "metal"
+	"$bumpmap" "models/illusion/eftcontainers/helsing_mags_nm"
+}

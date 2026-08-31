@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "tabmenu/inventory"
+	"$translucent" 1
+}

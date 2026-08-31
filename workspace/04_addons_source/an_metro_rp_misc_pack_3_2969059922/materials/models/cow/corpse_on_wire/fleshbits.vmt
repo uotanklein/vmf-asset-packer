@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "models/cow/corpse_on_wire/fleshbits_c"
+	$bumpmap "models/cow/corpse_on_wire/fleshbits_n"
+
+	$phong 1
+	$phongexponent 25
+	$phongboost 0.5
+	$phongfresnelranges	"[0 0.5 1]"
+}

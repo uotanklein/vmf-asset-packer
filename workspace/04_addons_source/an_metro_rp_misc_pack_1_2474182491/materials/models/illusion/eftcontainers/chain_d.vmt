@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/chain_d"
+	"$surfaceprop" "metal"
+	$alphatest 1
+}
+

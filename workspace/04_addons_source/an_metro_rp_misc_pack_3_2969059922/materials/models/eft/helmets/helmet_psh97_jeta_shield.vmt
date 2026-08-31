@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/eft/helmets/mats/helmet_psh97_jeta_shield_d"
+
+$translucent 1
+}
+

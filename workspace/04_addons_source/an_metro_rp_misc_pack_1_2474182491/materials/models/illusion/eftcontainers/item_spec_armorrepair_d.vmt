@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/item_spec_armorrepair_d"
+	"$surfaceprop" "metal"
+}
+

@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/eft/helmets/mats/altyn_glass_d"
+
+
+   	$translucent 1
+}

@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\eft\facecover\mats\facecover_welding_glass_d"
+
+	"$translucent" 0
+}

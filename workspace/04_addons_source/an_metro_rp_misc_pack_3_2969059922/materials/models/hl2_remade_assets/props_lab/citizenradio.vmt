@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\hl2_remade_assets\props_lab\vr_citizenradio_d"
+	"$bumpmap" "models\hl2_remade_assets\props_lab\vr_citizenradio_n"
+	"$phongexponenttexture" "models\hl2_remade_assets\props_lab\vr_citizenradio_p"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint"				"[.3 .3 .3]"	
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmapfresnel"	"1"
+	"$envmaplightscale"	"1"
+
+	"$phong"					"1"
+	"$phongboost"				"1"
+	"$invertphongmask"				    "1"
+	"$phongfresnelranges"		"[1 2 3]"
+	"$phongdisablehalflambert"	"1"
+
+	"$model"					"1"
+	"$halflambert"				"0"
+	"$surfaceprop"				"metal"
+}
+

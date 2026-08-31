@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/eft/helmets/mats/ops_core/helmet_ops_core_fast_visor_glass_d"
+	
+	$translucent 1
+
+}

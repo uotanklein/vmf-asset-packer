@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/lostsignalproject/items/parts/hide_controller"
+	"$nocull" "1"
+}

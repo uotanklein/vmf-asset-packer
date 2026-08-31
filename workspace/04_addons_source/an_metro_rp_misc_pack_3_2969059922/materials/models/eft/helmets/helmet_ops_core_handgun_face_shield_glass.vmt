@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/eft/helmets/mats/ops_core/helmet_ops_core_handgun_face_shield_glass_d"
+
+$translucent 1
+
+}

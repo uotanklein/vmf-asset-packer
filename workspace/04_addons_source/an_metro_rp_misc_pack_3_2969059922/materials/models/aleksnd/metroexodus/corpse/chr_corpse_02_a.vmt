@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+  "$baseTexture"    "models\aleksnd\metroexodus\corpse\chr_corpse_02_a"
+  "$bumpmap"   "models\aleksnd\metroexodus\corpse\chr_corpse_02_a_nm" 
+  "$phong" "1"
+  "$phongboost" "0.35"
+  "$phongfresnelranges" "[0.3 0.75 1.00]"
+  "$phongalbedotint" "1"
+  "$phongexponent"    "15"
+} 

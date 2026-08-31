@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/item_barter_building_pressuregauge_glass"
+	"$surfaceprop" "metal"
+	$alphatest 1
+}
+

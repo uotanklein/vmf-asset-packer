@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/eft/helmets/mats/helmet_shpm_shield_d"
+	"$translucent" 1
+}

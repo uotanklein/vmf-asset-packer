@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/helsing_bow_nm"
+	"$surfaceprop" "metal"
+}
