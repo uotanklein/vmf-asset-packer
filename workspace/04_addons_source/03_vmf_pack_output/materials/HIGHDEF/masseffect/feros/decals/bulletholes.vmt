@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/masseffect/feros/decals/bulletholes"
+	"%keywords" "feros"
+	"$translucent" 1
+	"$decal" 1
+	"$decalscale" .15
+}

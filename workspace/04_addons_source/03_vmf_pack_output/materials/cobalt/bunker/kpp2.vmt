@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cobalt/bunker/kpp2"
+	"$decal" 1
+    	"$decalscale" 1.000000
+    	"$surfaceprop" "Default"
+	"$translucent" 1
+}

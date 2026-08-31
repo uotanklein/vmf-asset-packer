@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$BaseTexture" 				"JohnSheppard44/Chernobylite/Objects/Clothing/Bottom/t_en_SmallJunk_03_bc"
+	"$BumpMap" 				"JohnSheppard44/Chernobylite/Objects/Clothing/Bottom/t_en_SmallJunk_03_n"
+
+	"$HalfLambert"	 			"0"
+	"$NoCull" 				"1"
+	"$SurfaceProp" 				"rubber"
+
+	"$Phong" 					"1"
+	"$PhongExponent" 				"30"
+	"$PhongBoost" 				"0.60"
+	"$PhongFresnelRanges"			"[.3 .3 1]"
+}

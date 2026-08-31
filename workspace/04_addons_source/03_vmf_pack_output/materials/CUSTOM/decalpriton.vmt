@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/DecalPriton"
+
+	$translucent 1
+	$decal 1
+}

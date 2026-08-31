@@ -1,0 +1,7 @@
+"lightmappedgeneric"
+{
+	"$basetexture" "decals/reichcross"
+	"$decal" "1"
+	"$decalscale" 0.25
+	"$translucent" 1
+}

@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/stucco/stucco_stucaturka1"
+	"$bumpmap" "highdef/metro2033/stucco/stucco_stucaturka1_ssbump"
+	"$ssbump" "1"
+	"$surfaceprop" "Default"
+	"%keywords" "metro"
+}

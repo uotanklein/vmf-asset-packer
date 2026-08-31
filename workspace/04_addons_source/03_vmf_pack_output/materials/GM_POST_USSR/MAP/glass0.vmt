@@ -1,0 +1,15 @@
+
+            "Refract"
+            {
+                "%keywords" "gm_post_ussr"
+        
+            "$envmap" "env_cubemap"
+            "$dudvmap" "gm_post_ussr/map/Glass0_REFRACT"
+            "$normalmap" "gm_post_ussr/map/Glass0_REFRACT"
+            "$refractamount" "0.065"
+            "%tooltexture" "gm_post_ussr/map/Glass0_REFRACT"
+        
+            "$refracttinttexture" "gm_post_ussr/map/Glass0_REFRACTTINT"
+        
+        }
+    

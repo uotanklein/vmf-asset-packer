@@ -1,0 +1,6 @@
+"Cable"
+{
+	"$basetexture" "custom/metro_cable_1"
+	"$surfaceprop" "Metal"
+	"%keywords" "cable"
+}

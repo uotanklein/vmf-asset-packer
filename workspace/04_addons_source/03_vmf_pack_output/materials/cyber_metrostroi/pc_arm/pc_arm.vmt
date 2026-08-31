@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "cyber_metrostroi/pc_arm/pc_arm_color"
+	"$bumpmap" "cyber_metrostroi/pc_arm/pc_arm_nmp"
+}

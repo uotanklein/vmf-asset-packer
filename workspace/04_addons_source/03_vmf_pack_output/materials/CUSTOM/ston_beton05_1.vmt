@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "custom/ston_beton05_1"
+	"$bumpmap" "custom/ston_beton05_1_normal"
+        	"$surfaceprop" "concrete"
+
+}

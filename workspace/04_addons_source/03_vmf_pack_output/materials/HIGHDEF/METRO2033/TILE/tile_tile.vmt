@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/tile/tile_tile"
+	"$bumpmap" "highdef/metro2033/tile/tile_tile_ssbump"
+	"$ssbump" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.1 .1 .1]"
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "Tile"
+	"%keywords" "metro"
+}

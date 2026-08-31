@@ -1,0 +1,23 @@
+//"UnlitTwoTexture"
+"DecalModulate"
+{
+	"$basetexture" "esther/fx/caustics_002"
+	"$vertexfog" "1"
+	//	"$additive"	"1"
+	"$decal" 	"1"
+	"$decalscale" 	".25"
+// 	"$mod2x"	"2"
+//	"$nofog"	"1"
+//	"$nocull"	"1"
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" 		"$basetexture"
+			"animatedtextureframenumvar" 	"$frame"
+			"animatedtextureframerate" 	16.50
+		}
+
+	}
+
+}

@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "horror/graffiti-weremad"
+        "$decal" 1
+        "$decalscale" 0.15
+        "$translucent" 1
+}
+

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/balaclava"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "balaclava"
+			baseframes 4
+		}
+	}
+
+}

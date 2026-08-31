@@ -1,0 +1,12 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "highdef/metro2033/ground/grnd_earth_02"
+	"$bumpmap" "highdef/metro2033/ground/grnd_earth_02_ssbump"
+	"$basetexture2" "highdef/metro2033/ground/grnd_sand_02"
+	"$bumpmap2" "highdef/metro2033/ground/grnd_sand_02_ssbump"
+	"$ssbump" "1"
+	"$surfaceprop" "Dirt"
+	"$surfaceprop2" "Dirt"
+	"$blendmodulatetexture" "highdef/metro2033/ground/grass_blendmask"
+	"%keywords" "metro"
+}

@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$BaseTexture" 				"JohnSheppard44/Chernobylite/Environment/Trash/t_en_TrashBag_01_bc"
+	"$BumpMap" 				"JohnSheppard44/Chernobylite/Environment/Trash/t_en_TrashBag_01_n"
+
+//	"$EnvMap"				"env_cubemap"
+//	"$EnvMapTint"				"[1 1 1]" // Controls the intensity of the reflection's red, green and blue color channels. Any positive number can be used. Default is "[1 1 1]", which means 100% intensity. //
+
+	"$HalfLambert"	 			"0"
+	"$NoCull" 				"1"
+	"$SurfaceProp" 				"plastic"
+
+	"$Phong" 					"1"
+	"$PhongExponent" 				"20"
+	"$PhongBoost" 				"0.30"
+	"$PhongFresnelRanges"			"[.3 .3 1]"
+}

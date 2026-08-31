@@ -1,0 +1,11 @@
+
+            "LightmappedGeneric"
+            {
+                "%keywords" "gm_post_ussr"
+        
+            "$basetexture" "gm_post_ussr/map/DirtFloor1_D"
+        
+            "$SurfaceProp" "dirt"
+        
+        }
+    

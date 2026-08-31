@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/gasmask_gp7vm"
+	$nocull 1
+}

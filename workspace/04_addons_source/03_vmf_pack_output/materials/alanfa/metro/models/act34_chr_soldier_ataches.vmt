@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/act34_chr_soldier_ataches"
+	$nocull 1
+}

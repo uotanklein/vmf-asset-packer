@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/act34_char_heavy_ataches"
+	"$bumpmap" "alanfa/metro/models/act34_char_heavy_ataches_normal"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "heavy_ataches"
+			baseframes 3
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/AnarchySimbolDecal"
+
+	$translucent 1
+	$decal 1
+}

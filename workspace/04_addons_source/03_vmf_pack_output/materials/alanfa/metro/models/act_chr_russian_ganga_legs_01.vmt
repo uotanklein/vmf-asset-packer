@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/act_chr_russian_ganga_legs_01"
+	"$bumpmap" "alanfa/metro/models/act_chr_russian_ganga_legs_01_normal"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "bandit_legs_1"
+			baseframes 4
+		}
+	}
+
+}

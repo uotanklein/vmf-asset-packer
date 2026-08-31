@@ -1,0 +1,81 @@
+
+"Water"
+{
+    "%keywords" "gm_post_ussr"
+
+    "$basetexture" "gm_post_ussr/map/Water0_D"
+
+    "Water_DX81"
+    {
+        "$refractamount" ".25"
+    }
+
+    "%tooltexture" "gm_post_ussr/map/Water0_D"
+
+    "$refracttexture" "_rt_WaterRefraction"
+    "$refractamount" "0.02"
+    //"$refracttint" "[.75 .75 .75]"
+
+    "$forceexpensive" 1
+
+    //"$reflectentities" 1
+
+    "$envmap" "env_cubemap"
+    "$reflecttexture" "_rt_WaterReflection"
+    "$reflectamount" "0.05"
+    "$reflecttint" "{200 200 200}"
+    //"$envmaptint" "{20 20 20}"
+
+    "$scale" "[1 1]"
+
+    "$bumpmap" "gm_post_ussr/map/Water0_D"
+    "$normalmap" "gm_post_ussr/map/Water0_D"
+
+    "%compilewater" 1
+
+    "$surfaceprop" "water"
+    "$bottommaterial" "gm_post_ussr/map/Water2_BOTTOM"
+
+    "$fogenable" "1"
+    "$fogcolor" "{5 10 5}"
+    "$fogstart" "0.00"
+    "$fogend" "300.00"
+
+    // Pool water
+    //"$fogcolor" "{15 79 57}"
+    //"$fogstart" "-1000.00"
+    //"$fogend" "1500.00"
+    //"$reflecttint" "{91 151 125}"
+    //"$refractamount" "0.04"
+    //"$reflectamount" "0.07"
+
+    "$bumpframe" "0"
+
+    "$abovewater" 1 
+
+    "$cheapwaterstartdistance" "2000"
+    "$cheapwaterenddistance" "3000"
+
+    "Proxies"
+    {
+        "AnimatedTexture"
+        {
+            "animatedtexturevar" "$normalmap"
+            "animatedtextureframenumvar" "$bumpframe"
+            "animatedtextureframerate" 20.00
+        }
+
+        "TextureScroll"
+        {
+            "texturescrollvar" "$bumptransform"
+            "texturescrollrate" .1
+            "texturescrollangle" 5.00
+        }
+
+        "WaterLOD"
+        {
+        }
+    }
+
+}
+    

@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$vertexcolor" "1"
+	"$vertexalpha" "1"
+	"$translucent" 1
+	"$basetexture" "bermudahotel/fish_graffiti02"
+	"$decal" 1
+	"$decalscale" 0.25
+}

@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/decals/sector"
+	"$decal" "1"
+	"$decalscale" ".15"
+	"%keywords" "metro"
+	"$translucent" 1
+}

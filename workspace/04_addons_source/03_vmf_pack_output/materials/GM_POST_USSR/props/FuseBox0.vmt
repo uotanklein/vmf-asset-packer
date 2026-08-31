@@ -1,0 +1,20 @@
+
+            "VertexLitGeneric"
+            {
+                "%keywords" "gm_post_ussr_props"
+                "$model" "1"
+        
+            "$basetexture" "gm_post_ussr/props/FuseBox0_D"
+        
+            "$bumpmap" "gm_post_ussr/props/FuseBox0_N"
+        
+            "$envmap" "env_cubemap"
+            "$envmaplightscale" "1"
+            "$basealphaenvmapmask" "1"
+            "$basemapalphaphongmask" "1"
+            "$phong" "1"
+            "$phongexponent" "16"
+            "$phongboost" "1"
+        
+        }
+    

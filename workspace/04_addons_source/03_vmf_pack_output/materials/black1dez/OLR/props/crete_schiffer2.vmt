@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "black1dez/OLR/props/crete_schiffer2"
+
+	$nocull 1
+}

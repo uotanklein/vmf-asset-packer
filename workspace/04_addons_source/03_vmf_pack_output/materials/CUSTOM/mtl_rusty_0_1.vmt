@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "custom/mtl_rusty_0_1"
+	"$bumpmap" "custom/mtl_rusty_0_1_normal"
+	"$surfaceprop" "metal"
+}

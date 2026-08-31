@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$BaseTexture" 				"JohnSheppard44/Chernobylite/Environment/Trash/t_en_ContainerGarbage_01_1001_bc"
+	"$BumpMap" 				"JohnSheppard44/Chernobylite/Environment/Trash/t_en_ContainerGarbage_01_1001_n"
+
+//	"$EnvMap"				"env_cubemap"
+//	"$EnvMapTint"				"[1 1 1]" // Controls the intensity of the reflection's red, green and blue color channels. Any positive number can be used. Default is "[1 1 1]", which means 100% intensity. //
+
+	"$HalfLambert"	 			"0"
+	"$NoCull" 				"1"
+	"$SurfaceProp" 				"metal"
+
+	"$Phong" 					"1"
+	"$PhongExponent" 				"20"
+//	"$PhongExponentTexture" 			"JohnSheppard44/Shared/Exponent"
+	"$PhongBoost" 				"0.20"
+	"$PhongFresnelRanges"			"[.3 .3 1]"
+//	"$PhongAlbedoBoost"			"0" // Ranges 0-255 //
+//	"$PhongAlbedoTint"				"1"
+//	"$PhongTint" 				"[0.5 0.5 0.5]" // Color tint of the phong reflection. The channels are interpreted relative to each other (so "[0 0 0]" and "[1 1 1]" are the same). //
+//	"$PhongWarpTexture"			"JohnSheppard44/Shared/hjk_dark_gradation"
+}

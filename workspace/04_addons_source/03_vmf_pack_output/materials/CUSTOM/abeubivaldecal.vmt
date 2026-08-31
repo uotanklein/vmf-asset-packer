@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/abeubivalDecal"
+
+	$translucent 1
+	$decal 1
+}

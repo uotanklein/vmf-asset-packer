@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/DecalAria"
+
+	$alphatest 1
+	$decal 1
+}

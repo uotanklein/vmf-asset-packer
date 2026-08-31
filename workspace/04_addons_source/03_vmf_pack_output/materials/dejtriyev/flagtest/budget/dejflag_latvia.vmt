@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "dejtriyev/flagtest/budget/dejflag_latvia"
+        "$bumpmap"    "dejtriyev/flagtest/budget/dejflag_n"
+$phong "1"
+
+$nocull 1
+}
+
+

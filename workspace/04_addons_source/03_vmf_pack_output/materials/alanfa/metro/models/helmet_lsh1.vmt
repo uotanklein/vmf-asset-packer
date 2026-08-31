@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/helmet_lsh"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "helmet_lsh"
+			baseframes 4
+		}
+	}
+}

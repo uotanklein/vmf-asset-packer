@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+	// Original shader: BaseTimesLightmap
+	"$basetexture" "Concrete/concretewall040a"
+	"$surfaceprop" "concrete"
+// 	"$detail" "FF_Detail/plaster_detail"
+// 	"$detailscale" 5
+
+	"$detail" "FF_Detail/sweden2_detail"
+	"$detailscale" 3
+}

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/golova"
+	"$bumpmap" "alanfa/metro/models/golova_bump"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "golova"
+			baseframes 26
+		}
+	}
+
+}

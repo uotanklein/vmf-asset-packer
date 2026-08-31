@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/KartonGraffiti"
+
+	$translucent 1
+	$decal 1
+}

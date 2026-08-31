@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Goldeneye/Archives_Classic/decals/poster02"
+
+	"$translucent" 1
+
+	"$decal" "1"
+	"$decalscale" "0.0625"
+}

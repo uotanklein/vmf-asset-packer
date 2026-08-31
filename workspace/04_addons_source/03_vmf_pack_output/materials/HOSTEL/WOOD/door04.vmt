@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "hostel/wood/door04"
+	"$bumpmap" "hostel/wood/door04_b"
+	"$surfaceprop" "wood"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$envmapcontrast" ".8"
+	"$envmapsaturation" ".5"
+}

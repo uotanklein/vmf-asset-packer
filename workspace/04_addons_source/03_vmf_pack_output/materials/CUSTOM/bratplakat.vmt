@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/bratplakat"
+
+	$translucent 1
+	$decal 1
+}

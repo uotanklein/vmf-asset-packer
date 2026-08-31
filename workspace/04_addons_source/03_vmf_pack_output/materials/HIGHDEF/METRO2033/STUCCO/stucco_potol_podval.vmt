@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/stucco/stucco_potol_podval"
+	"$bumpmap" "highdef/metro2033/stucco/stucco_potol_podval_ssbump"
+	"$ssbump" "1"
+	"$surfaceprop" "Default"
+	"%keywords" "metro"
+}

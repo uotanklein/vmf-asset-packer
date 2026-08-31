@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/DecalNitsheDrankHisMocha"
+
+	$translucent 1
+	$decal 1
+}

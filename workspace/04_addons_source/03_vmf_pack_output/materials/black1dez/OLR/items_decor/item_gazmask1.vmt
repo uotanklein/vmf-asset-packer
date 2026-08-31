@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "black1dez/OLR/items_decor/item_gazmask1"
+
+	$nocull 1
+}

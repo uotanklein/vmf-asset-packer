@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/act_diger_slemnew"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "shlem_sparta"
+			baseframes 1
+		}
+	}
+}

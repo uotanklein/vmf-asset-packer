@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/MZAZACDZSZUTHGRZNEWLIFETOP1"
+	"$alphatest" 1
+		$nocull 1
+}

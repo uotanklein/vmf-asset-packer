@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/metro_pomoika"
+	"$alphatest" 1
+		$nocull 1
+}

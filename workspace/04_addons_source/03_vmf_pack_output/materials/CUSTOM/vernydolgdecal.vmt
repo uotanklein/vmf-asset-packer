@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/VernyDolgDecal"
+
+	$translucent 1
+	$decal 1
+}

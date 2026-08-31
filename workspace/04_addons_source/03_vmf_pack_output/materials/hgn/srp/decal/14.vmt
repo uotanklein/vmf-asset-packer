@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "hgn/srp/decal/14"
+	"$alphatest" "1"
+	"$decal" "1"
+	"$decalscale"	"0.1"
+}

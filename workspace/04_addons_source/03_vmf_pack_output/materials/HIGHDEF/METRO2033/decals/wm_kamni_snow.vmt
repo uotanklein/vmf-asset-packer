@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/decals/wm_kamni_snow"
+	"$decal" "1"
+	"$decalscale" ".07"
+	"%keywords" "metro"
+	"$translucent" 1
+}

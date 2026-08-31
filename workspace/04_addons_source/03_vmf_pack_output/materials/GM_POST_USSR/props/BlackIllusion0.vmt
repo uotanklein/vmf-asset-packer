@@ -1,0 +1,11 @@
+
+            "VertexLitGeneric"
+            {
+                "%keywords" "gm_post_ussr_props"
+                "$model" "1"
+        
+            "$basetexture" "gm_post_ussr/props/BlackIllusion0_DAT"
+            "$translucent" "1"
+        
+        }
+    

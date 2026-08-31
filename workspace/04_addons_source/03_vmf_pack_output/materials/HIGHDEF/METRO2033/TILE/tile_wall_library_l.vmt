@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/tile/tile_wall_library_l"
+	"$bumpmap" "highdef/metro2033/tile/tile_wall_library_l_ssbump"
+	"$ssbump" "1"
+	"$surfaceprop" "Default"
+	"%keywords" "metro"
+}

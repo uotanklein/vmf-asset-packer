@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/decalsubashibiss"
+
+	$translucent 1
+	$decal 1
+}

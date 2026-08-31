@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cop/decal_star"
+	"$decal" 1
+	"$decalscale" 0.25
+	"$translucent" 1
+}

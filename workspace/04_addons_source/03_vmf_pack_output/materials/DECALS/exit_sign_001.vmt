@@ -1,0 +1,7 @@
+"lightmappedgeneric"
+{
+	"$basetexture" "decals/exit_sign_001"
+	"$decal" "1"
+	"$decalscale" 0.1
+	"$translucent" 1
+}

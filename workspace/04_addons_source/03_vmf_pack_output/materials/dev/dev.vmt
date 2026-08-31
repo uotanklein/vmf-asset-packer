@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "dev/dev"
+	"$surfaceprop" 	"concrete"
+	"%keywords" "pashalko"
+	"$translucent" 1
+}

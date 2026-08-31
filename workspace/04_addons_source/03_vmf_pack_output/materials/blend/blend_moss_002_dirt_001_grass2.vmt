@@ -1,0 +1,22 @@
+WorldVertexTransition
+{
+	"$basetexture2"			"nature/moss_002"
+	"$basetexture" 		"nature/dirt_001"
+
+
+	"$bumpmap2"			"nature/moss_002_ssbump"
+	"$bumpmap" 			"nature/dirt_001_ssbump"
+	"$ssbump" 			"1"
+
+
+	"$surfaceprop2" 			"grass"
+	"$surfaceprop" 		"dirt"
+
+
+	"$blendmodulatetexture" 	"blend/blendmodulate_002"
+
+        "%detailtype"                   "cursedwoods_lotsagrass"
+
+	
+	"%tooltexture"			"blend/blend_moss_002_dirt_001"
+}

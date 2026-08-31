@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "highdef/metro2033/floor/floor_reshetka1"
+	"$bumpmap" "highdef/metro2033/floor/floor_reshetka1_ssbump"
+	"$ssbump" "1"
+	"$surfaceprop" "MetalGrate"
+	"%keywords" "metro"
+	"$translucent" 1
+}

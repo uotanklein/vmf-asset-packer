@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "custom\poster90_8"
+                "$translucent" "1"
+                "$decal" "1"
+                "$decalscale" "0.125"
+}

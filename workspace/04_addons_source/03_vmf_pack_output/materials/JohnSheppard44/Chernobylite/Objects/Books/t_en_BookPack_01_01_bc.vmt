@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$BaseTexture" 				"JohnSheppard44/Chernobylite/Objects/Books/t_en_BookPack_01_01_bc"
+	"$BumpMap" 				"JohnSheppard44/Chernobylite/Objects/Books/t_en_BookPack_01_01_n"
+
+	"$HalfLambert"	 			"0"
+	"$NoCull" 				"1"
+	"$SurfaceProp" 				"paper"
+
+	"$Phong" 					"1"
+	"$PhongExponent" 				"30"
+	"$PhongBoost" 				"0.15"
+	"$PhongFresnelRanges"			"[.3 .3 1]"
+}

@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "custom/DeskmateGraffiti"
+
+	$translucent 1
+	$decal 1
+}

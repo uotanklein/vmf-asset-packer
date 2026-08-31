@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$translucent 1
+	$basetexture custom_decals/carpet01b
+	$decal 1
+	$decalscale 0.5
+}

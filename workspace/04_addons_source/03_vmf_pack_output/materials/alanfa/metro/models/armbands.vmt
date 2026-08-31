@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/armbands_d"
+
+	Proxies
+	{
+		SkinGroup
+		{
+			id "armband"
+			baseframes 10
+		}
+	}
+}

@@ -1,0 +1,11 @@
+LightmappedGeneric
+{
+$vertexcolor 1
+$vertexalpha 1
+
+$translucent 1
+"$basetexture" "decals/bunker_room_001"
+
+$decal 1
+$decalscale 0.15
+}

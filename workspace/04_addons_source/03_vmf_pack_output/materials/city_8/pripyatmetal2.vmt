@@ -1,0 +1,22 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Metal/metalpipe003a"
+	"%keywords" "c17industrial"
+	"$bumpmap" "Metal/metalpipe003a_normal"
+	
+	"$surfaceprop" "metal"
+	"$envmaptint" "[ .5 .5 .5 ]"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+	
+    "$phong" 					"1"
+	"$phongexponenttexture" 	"Metal/metalpipe003a_normal"
+	"$phongboost"				"0.1"
+	"$phongfresnelranges"		"[0.4 0.4 0.4]"
+	"$rimlight" 				"1"
+	"$rimlightexponenttexture" 	"Metal/metalpipe003a_normal"									
+	"$rimlightexponent" 		"0.5"								
+	"$rimlightboost" 			"0.1"	
+}

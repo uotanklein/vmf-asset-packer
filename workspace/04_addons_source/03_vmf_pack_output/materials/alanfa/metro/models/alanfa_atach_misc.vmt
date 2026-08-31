@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/alanfa_atach_misc"
+	$nocull 1
+}

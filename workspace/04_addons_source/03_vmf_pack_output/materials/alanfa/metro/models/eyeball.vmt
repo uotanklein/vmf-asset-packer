@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/eyeball"
+	"$bumpmap" "alanfa/metro/models/eye_reflections_nm"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "eyeball"
+			baseframes 13
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "alanfa/metro/models/act_kaska"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "kaska"
+			baseframes 2
+		}
+	}
+}

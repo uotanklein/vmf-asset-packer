@@ -1,0 +1,10 @@
+LightmappedGeneric
+{
+$vertexcolor 1
+$vertexalpha 1
+
+
+
+$basetexture "Decals/cp_pos2"
+$decal 1
+}

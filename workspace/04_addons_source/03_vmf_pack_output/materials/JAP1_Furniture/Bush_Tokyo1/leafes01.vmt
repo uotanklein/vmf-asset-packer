@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "JAP1_Furniture/Bush_Tokyo1/leafes01"
+	"$alphatest" 1
+	//"$translucent" 1
+	"$nodecal" 1
+	"$allowalphatocoverage" 1
+	"$nocull" 1
+	"$model" 1
+	"$surfaceprop" "foliage"
+}

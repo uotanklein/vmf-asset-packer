@@ -1,0 +1,7 @@
+"lightmappedGeneric"
+{
+	"$baseTexture" "dm_stad/decals/crayonpaint01"
+	"$decal" 1
+	"$decalscale" 0.25
+	"$translucent" 1
+}

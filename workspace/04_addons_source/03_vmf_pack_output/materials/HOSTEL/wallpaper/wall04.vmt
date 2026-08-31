@@ -1,0 +1,11 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "hostel/wallpaper/wall04"
+	"$bumpmap" "hostel/wallpaper/wall04_b"
+	"$surfaceprop" "default"
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$envmapcontrast" ".7"
+	"$envmapsaturation" ".5"
+}

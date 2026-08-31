@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "custom/crete_plitka_qllab_1"
+	"$bumpmap" "custom/crete_plitka_qllab_1_normal"
+	"$ssbump" "1"
+        	"$surfaceprop" "concrete"
+}
