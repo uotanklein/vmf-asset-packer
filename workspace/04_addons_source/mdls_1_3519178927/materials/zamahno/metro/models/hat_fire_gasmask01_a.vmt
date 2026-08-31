@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/hat_fire_gasmask01"
+	"$bumpmap" "zamahno/metro/models/hat_fire_gasmask01_nm"
+	"$translucent" 1
+}

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/golova"
+	"$bumpmap" "zamahno/metro/models/golova_bump"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "golova"
+			baseframes 26
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/nkvd_cap_service_col"
+	$bumpmap "zamahno/metro/models/nkvd_cap_service_nml"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "rus_cap"
+			baseframes 6
+		}
+	}
+
+}

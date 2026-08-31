@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/forest_bandit_attaches_01"
+	"$bumpmap" "zamahno/metro/models/forest_bandit_attaches_01_nm"
+	$alphatest 1
+}

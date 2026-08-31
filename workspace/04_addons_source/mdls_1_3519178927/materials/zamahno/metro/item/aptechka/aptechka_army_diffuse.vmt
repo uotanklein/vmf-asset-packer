@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/item/aptechka/aptechka_army_diffuse"
+	"$bumpmap" "zamahno/metro/item/aptechka/aptechka_basic_bump"
+}

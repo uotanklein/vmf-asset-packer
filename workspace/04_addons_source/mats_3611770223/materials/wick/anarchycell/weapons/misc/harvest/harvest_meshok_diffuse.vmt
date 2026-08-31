@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/weapons/misc/harvest/harvest_meshok_diffuse"
+	$bumpmap "wick/anarchycell/weapons/misc/harvest/harvest_meshok_bump"
+
+	$nocull 		1
+	$phong                      "1"
+    	$phongboost                 "1"
+   	$phongfresnelranges         "[.2 .2 1]"
+}

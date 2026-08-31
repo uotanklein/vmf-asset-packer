@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/forest_bandit_00_head"
+	"$bumpmap" "zamahno/metro/models/forest_bandit_00_head_nm"
+
+}

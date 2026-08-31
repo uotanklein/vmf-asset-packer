@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/act_chr_russian_ganga_legs_02"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "bandit_legs_2"
+			baseframes 5
+		}
+	}
+
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/Glass_Gasmask10"
+	$translucent 1
+}

@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "zamahno/metro/entities/weapon_m2033_gasmask"
+	"$nocull" 1
+	"$nodecal" 1
+	"$nolod" 1
+	"$translucent" 1
+}

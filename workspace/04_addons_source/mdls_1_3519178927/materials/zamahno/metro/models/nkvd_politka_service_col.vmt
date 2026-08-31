@@ -1,0 +1,12 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/nkvd_politka_service_col"
+	$bumpmap "zamahno/metro/models/nkvd_politka_service_nml"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "rus_politka"
+			baseframes 4
+		}
+}

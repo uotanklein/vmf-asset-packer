@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/helmet_glass"
+	"$translucent" 1
+	"$halflambert" 1
+	"$nocull" "1"
+}

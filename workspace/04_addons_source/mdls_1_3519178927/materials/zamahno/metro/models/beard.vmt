@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/beard"
+	"$translucent" 1
+
+	Proxies
+	{
+		SkinGroup
+		{
+			id "beard"
+			baseframes 4
+		}
+	}
+}

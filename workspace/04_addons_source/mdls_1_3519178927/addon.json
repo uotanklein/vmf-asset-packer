@@ -1,0 +1,11 @@
+{
+  "title": "MDLS #1",
+  "type": "model",
+  "tags": [
+    "realism",
+    "fun"
+  ],
+  "ignore": [
+    "wav"
+  ]
+}

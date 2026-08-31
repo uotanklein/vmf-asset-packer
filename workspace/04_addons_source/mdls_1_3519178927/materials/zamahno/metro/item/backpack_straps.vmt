@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/item/backpack_straps"
+	"$bumpmap" "zamahno/metro/item/backpack_straps_bump"
+}

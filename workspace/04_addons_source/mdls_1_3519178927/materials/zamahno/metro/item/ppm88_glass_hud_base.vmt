@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/item/ppm88_glass_hud_base"
+	"$bumpmap" "zamahno/metro/item/ppm88_glass_hud_bump"
+	"$alphatest" 1
+}

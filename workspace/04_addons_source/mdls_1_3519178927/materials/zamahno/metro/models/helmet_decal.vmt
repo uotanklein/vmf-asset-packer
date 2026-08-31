@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/helmet_decal_censored"
+	$bumpmap "zamahno/metro/models/helmet_decal_nml"
+
+	$translucent 1
+	Proxies
+	{
+		SkinGroup
+		{
+			id "nazi_censored"
+			baseframes 1
+		}
+	}
+
+}

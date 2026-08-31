@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+
+	$basetexture "zamahno/metro/models/nkvd_gb_kantik_col"
+	$bumpmap "zamahno/metro/models/nkvd_gb_kantik_nml"
+	$color2 "[0.67 0.17 0.18]"
+}

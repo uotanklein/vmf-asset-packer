@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/item/crown/eat_crow"
+	"$bumpmap" "zamahno/metro/item/crown/eat_crow_bump"
+}

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/act_chr_russian_ganga_body_01"
+	"$bumpmap" "zamahno/metro/models/act_chr_russian_ganga_body_01_normal"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "bandit_goliu"
+			baseframes 2
+		}
+	}
+
+}

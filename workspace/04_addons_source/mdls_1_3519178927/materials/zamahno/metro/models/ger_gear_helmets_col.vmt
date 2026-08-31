@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/ger_gear_helmets_col"
+	$bumpmap "zamahno/metro/models/ger_gear_helmets_nml"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.26 0.26 0.26]"
+}

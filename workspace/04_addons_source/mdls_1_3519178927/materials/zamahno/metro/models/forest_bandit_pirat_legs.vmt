@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/forest_bandit_pirat_legs"
+	"$bumpmap" "zamahno/metro/models/forest_bandit_00_legs_nm"
+}

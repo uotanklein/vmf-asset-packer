@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/item/bint/bint_bio_diffuse"
+	"$bumpmap" "zamahno/metro/item/bint/bint_basic_bump"
+}

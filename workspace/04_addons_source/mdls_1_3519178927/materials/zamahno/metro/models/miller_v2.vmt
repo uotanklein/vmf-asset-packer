@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/miller_v2"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "miller_sviter"
+			baseframes 2
+		}
+	}
+
+}

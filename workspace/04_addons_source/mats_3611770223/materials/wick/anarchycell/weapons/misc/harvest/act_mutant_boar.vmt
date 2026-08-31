@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/weapons/misc/harvest/act_mutant_boar"
+	$bumpmap "wick/anarchycell/weapons/misc/harvest/act_poltergeyst_bump"
+
+	$nocull 1
+
+	$phong 1
+	$phongfresnelranges "[0.2 0.2 1]"
+	$phongexponent 5
+}

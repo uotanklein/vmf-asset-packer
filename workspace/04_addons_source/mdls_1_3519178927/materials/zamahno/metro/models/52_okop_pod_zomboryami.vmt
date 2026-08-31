@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/52_okop_pod_zomboryami"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "52_okop_pod_zomboryami"
+			baseframes 2
+		}
+	}
+
+}

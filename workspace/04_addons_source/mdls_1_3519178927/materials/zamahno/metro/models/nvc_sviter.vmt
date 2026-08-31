@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/nvc_sviter"
+	"$bumpmap" "zamahno/metro/models/nvc_sviter_bump"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "plash_sviter"
+			baseframes 4
+		}
+	}
+}

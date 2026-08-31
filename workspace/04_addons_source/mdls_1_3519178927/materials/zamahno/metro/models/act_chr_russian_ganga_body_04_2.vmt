@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/act_chr_russian_ganga_body_04_2"	
+Proxies
+	{
+		SkinGroup
+		{
+			id "gandonka"
+			baseframes 1
+		}
+	}
+
+}

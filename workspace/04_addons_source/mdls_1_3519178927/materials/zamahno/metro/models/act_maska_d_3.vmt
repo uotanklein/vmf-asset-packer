@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$additive" "1"
+	"$bumpmap" "metro2033/ui/ui_maska_d_2"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.5 0.5 0.5]"
+	
+	"$nocull" "1"
+}

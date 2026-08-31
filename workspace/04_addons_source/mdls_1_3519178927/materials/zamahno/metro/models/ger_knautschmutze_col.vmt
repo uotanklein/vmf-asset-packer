@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/ger_knautschmutze_heer_col"
+	$bumpmap "zamahno/metro/models/ger_knautschmutze_nml"
+	$normalmapalphaenvmapmask 1
+	Proxies
+	{
+		SkinGroup
+		{
+			id "nazi_pilitka"
+			baseframes 1
+		}
+	}
+
+}

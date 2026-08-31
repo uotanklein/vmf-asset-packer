@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/new_legs"
+"$bumpmap" "zamahno/metro/models/new_legs_nm"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "new_legs"
+			baseframes 6
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/balaclava"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "balaclava"
+			baseframes 4
+		}
+	}
+
+}

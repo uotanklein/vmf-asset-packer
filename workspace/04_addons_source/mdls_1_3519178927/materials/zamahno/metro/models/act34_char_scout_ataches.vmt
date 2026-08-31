@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/act34_char_scout_ataches"
+	$nocull 1
+}

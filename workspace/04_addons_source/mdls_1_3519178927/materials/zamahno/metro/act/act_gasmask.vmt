@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "metro2033/act/act_gasmask"
+	"$bumpmap" "metro2033/act/act_gasmask_normal"
+	
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongexponenttexture" "metro2033/act/act_gasmask_exp"
+	"$phongfresnelranges" "[0.1 0.5 1]"
+}

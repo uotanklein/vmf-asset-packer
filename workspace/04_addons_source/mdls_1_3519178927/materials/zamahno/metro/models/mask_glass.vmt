@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/mask_glass"
+
+	"$model" "1"
+	"$phong" "1"
+	"$phongexponent" "26"
+	"$phongboost"	".5"
+	"$phongfresnelranges"	"[.5 3 48]"
+	$translucent 1
+	$ambientocclusion 0
+
+}

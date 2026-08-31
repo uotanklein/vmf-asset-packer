@@ -1,0 +1,30 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/act34_char_sniper_ataches"
+     $lightwarptexture "zamahno/metro/misc/light"
+     $nocull 1
+     $halflambert 1
+     $model 1
+
+    "$color2" "[.9 .9 .9]"                                     
+
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+
+
+     $detail zamahno\metro\misc\det_fabric_3
+     $detailscale 18
+     $detailblendfactor 1
+     $detailblendmode 0
+
+	Proxies
+	{
+		SkinGroup
+		{
+			id "ataches_sniper_1"
+			baseframes 1
+		}
+	}
+}

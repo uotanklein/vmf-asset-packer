@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/bandit_heavy_04_torso"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "bandit_heavy_04_torso"
+			baseframes 2
+		}
+	}
+
+}
+

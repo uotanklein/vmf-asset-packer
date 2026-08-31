@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/badge1"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "obshmt_badge"
+			baseframes 6
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/ger_eqipment_2_col"
+	$bumpmap "zamahno/metro/models/ger_eqipment_2_nml"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "nazi_helmet"
+			baseframes 7
+		}
+	}
+
+}

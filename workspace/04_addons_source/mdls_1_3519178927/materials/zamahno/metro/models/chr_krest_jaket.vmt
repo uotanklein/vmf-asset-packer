@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+ 	"$basetexture" "zamahno/metro/models/chr_krest_jaket"
+ 	"$bumpmap" "zamahno/metro/models//chr_krest_jaket_normal"
+  		"$nocull" 1
+}

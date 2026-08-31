@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	//"$basetexture" "vgui/black"
+	"$additive" "1"
+	//"$bumpmap" "dev/flat_normal"
+	
+	"$envmap" "env_cubemap"
+	//"$envmap" "engine/defaultcubemap"
+	"$envmaptint" "[0.4 0.4 0.4]"
+	
+	"$nocull" "1"
+}

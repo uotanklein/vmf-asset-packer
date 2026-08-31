@@ -1,0 +1,18 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/ger_hat_01_col"
+	$bumpmap "zamahno/metro/models/ger_hat_01_nml"
+
+	$envmap "env_cubemap"
+	$normalmapalphaenvmapmask 1
+	$envmaptint "[0.50 0.50 0.50]"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "nazi_cap"
+			baseframes 1
+		}
+	}
+
+}

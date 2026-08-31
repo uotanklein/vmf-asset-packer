@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/fisherman_mil_02_torso"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "fishman_telo_3"
+			baseframes 3
+		}
+	}
+
+}

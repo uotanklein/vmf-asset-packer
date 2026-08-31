@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/MZAZACDZSZUTHGRZNEWLIFETOP1"
+	"$alphatest" 1
+		$nocull 1
+}
