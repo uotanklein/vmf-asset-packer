@@ -1,0 +1,10 @@
+UnlitGeneric
+{
+	$basetexture "qanon/glowlightbulb"
+
+	$translucent 1
+	$additive 1
+
+	$vertexcolor 1
+	$vertexalpha 1
+}

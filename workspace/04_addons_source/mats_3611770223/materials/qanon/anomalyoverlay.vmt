@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+     $basetexture "qanon/anomalyoverlay"
+	$additive "1"
+	$detail "detail/noise"
+	$detailscale "2"
+	$detailblendmode "0"
+	$detailblendfactor ".8"
+}

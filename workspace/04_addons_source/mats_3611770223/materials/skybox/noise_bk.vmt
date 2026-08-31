@@ -1,0 +1,20 @@
+"Unlitgeneric"
+{
+	$basetexture "skybox/noise_bk"
+	$hdrcompressedtexture "skybox/noise_bk"
+	$nofog 1
+	$ignorez 1
+	"$detail" 			"gc13/Noise/noise_static"
+	"$detailscale"		"4096"
+	"$detailblendfactor"		"1"
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+		"texturescrollvar" "$baseTextureTransform"
+		"texturescrollrate" "60"
+		"texturescrollangle" "90"
+		}
+	}
+}

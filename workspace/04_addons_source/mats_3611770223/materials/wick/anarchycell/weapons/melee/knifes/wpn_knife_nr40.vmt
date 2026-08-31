@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/weapons/melee/knifes/wpn_knife_nr40"
+	$bumpmap "wick/anarchycell/weapons/melee/knifes/wpn_knife_nr40_bump"
+
+	$phong 1
+	$phongexponenttexture "wick/anarchycell/weapons/melee/knifes/wpn_knife_nr40_glossines"
+	$phongfresnelranges "[0.2 0.2 1]"
+	$phongboost 2
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/source/hands/act_arm_mon_1.vtf"
+	"$nocull" "1"
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 			"planshet/planshet_diff"		// (Texture) Determines which texture is used for your meshes surface. 
+
+	"$model" 				"1"				// (Boolean) Neccessary for some parameters to function, and tells Hammer not to display this for map brush textures.
+
+	"$rimlight"			"1"				// (Boolean) Adds a shine to the backfaces of the mesh. Not neccessarily realistic, but is visually appealing and good for creatures and metallic objects.
+	"$rimlightexponent"       		"1"				// (Float) Controls the "tightness" of the rimlight, higher values providing smaller, but harsher edges (Smoother surface). May be negligible.
+	"$rimlightboost"          		"3"				// (Float) Controls the overall brightness of the rimlight. Higher values more useful for metallic items.
+	"$selfillum"                                               "1"
+	"$selfillummask"                                      "planshet/planshet_lightmap"
+	"$selfillumtint"                                           "[1 1 1]"
+}

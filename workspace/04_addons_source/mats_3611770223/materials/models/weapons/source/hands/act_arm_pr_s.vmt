@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/source/hands/act_arm_pr_s.vtf"
+	"$bumpmap"  "models/weapons/source/hands/act_arm_pr_l_bump.vtf"
+	"$nocull" "1"
+}
