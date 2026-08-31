@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\props_sr_food\cork"
+	"$bumpmap" "models\props_sr_food\cork_normal"
+	"$surfaceprop" "cloth"
+}

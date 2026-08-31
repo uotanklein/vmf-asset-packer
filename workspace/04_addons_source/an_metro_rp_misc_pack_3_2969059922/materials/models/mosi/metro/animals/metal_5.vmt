@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/animals/metal_kr_color"
+	"$bumpmap" "models/mosi/metro/animals/metal_kr_normal"
+	"$halflambert" "1"
+}

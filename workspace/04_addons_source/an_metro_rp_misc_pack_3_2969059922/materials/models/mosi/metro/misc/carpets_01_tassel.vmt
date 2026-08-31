@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/carpets_01_color"
+	"$bumpmap" "models/mosi/metro/misc/carpets_01_normal"
+	
+	"$alphatest" "1"
+	"$allowalphatocoverage" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".45"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

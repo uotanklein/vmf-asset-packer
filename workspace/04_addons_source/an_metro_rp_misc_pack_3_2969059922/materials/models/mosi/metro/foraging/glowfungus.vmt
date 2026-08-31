@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/glowfungus_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/glowfungus_normal"
+	
+	"$selfillum" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".35"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

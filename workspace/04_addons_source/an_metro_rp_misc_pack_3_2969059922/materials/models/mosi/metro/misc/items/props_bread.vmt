@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/mosi/metro/misc/items/props_bread_color"
+    "$bumpmap"     "models/mosi/metro/misc/items/props_bread_normal"
+	"$halflambert" 1
+}

@@ -1,0 +1,15 @@
+"VertexlitGeneric"
+{
+	// concept design by Rat_ aka whatever the fuck
+	// texture and model work (-emblem) by dickmosi
+	// if you like this idea, feel free to yoink it but ur better off making your own, much better model lol.
+	// urfim can sugma balls))))
+
+	"$basetexture" "models/mosi/metro/misc/pac/armband_color"
+	"$bumpmap" "models/mosi/metro/misc/pac/armband_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".45"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

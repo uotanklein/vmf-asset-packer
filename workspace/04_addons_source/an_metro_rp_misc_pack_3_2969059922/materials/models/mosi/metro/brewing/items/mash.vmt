@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/brewing/items/wort_color"
+	"$bumpmap" "models/mosi/metro/brewing/items/wort_normal"
+	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 156 translate 0 0"
+	
+	"$selfillum" "1"
+	"$selfillumtint" "[.35 1 .25]"
+	
+	"$color2" "{145 180 100}"
+	
+	"$phong"	"1"
+	"$phongexponent"	"13"
+	"$phongboost" ".66"
+	"$phongtint" "{145 180 100}"
+	"$phongfresnelranges"	"[1 .5 0]"
+}

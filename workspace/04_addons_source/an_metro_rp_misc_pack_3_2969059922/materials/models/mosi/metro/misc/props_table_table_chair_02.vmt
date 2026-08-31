@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/props_table_table_chair_02_color"
+	"$bumpmap" "models/mosi/metro/misc/props_table_table_chair_02_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".45"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

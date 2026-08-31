@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/defenses/wood34_wallconstr_01_color"
+	"$bumpmap" "models/mosi/metro/misc/metal_nako_normal"
+	
+	"$alphatest" "1"
+	"$alphatestreference" ".3"
+	"$nocull" "1"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".55"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

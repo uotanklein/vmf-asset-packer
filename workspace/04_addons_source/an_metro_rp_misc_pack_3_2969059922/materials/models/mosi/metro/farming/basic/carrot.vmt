@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/carrot_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/carrot_normal"
+	
+	"$nocull" "1"
+	
+	"$alphatest" "1"
+	"$alphatestreference" ".66"
+	"$allowalphatocoverage" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

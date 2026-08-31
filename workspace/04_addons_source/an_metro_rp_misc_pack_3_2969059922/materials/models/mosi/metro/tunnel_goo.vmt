@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/test_sd_goo_tonel01_color"
+	"$bumpmap" "models/mosi/metro/test_sd_goo_tonel01_normal"
+	
+	"$detail" "models/mosi/metro/det_monster2"
+	"$detailscale" "2"
+	"$detailblendfactor" ".5"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".25"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

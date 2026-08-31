@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/station_washbasin_color"
+	"$bumpmap" "models/mosi/metro/misc/station_washbasin_normal"
+	
+	"$alphatest" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".75"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

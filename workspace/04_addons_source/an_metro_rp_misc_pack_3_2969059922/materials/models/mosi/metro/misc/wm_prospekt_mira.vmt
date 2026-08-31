@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/wm_prospekt_mira_color"
+	"$bumpmap" "models/mosi/metro/misc/wm_prospekt_mira_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"5"
+	"$phongboost" ".45"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

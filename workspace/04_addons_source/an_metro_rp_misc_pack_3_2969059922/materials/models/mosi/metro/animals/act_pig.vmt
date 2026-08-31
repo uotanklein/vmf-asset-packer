@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/animals/act_pig_color"
+	"$bumpmap" "models/mosi/metro/animals/act_pig_normal"
+	
+	"$detail" "models/mosi/metro/animals/act_pig_detail"
+	"$detailscale" "10"
+	"$detailblendfactor" ".33"
+	
+	"$phong"	"1"
+	"$phongexponent"	"7"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

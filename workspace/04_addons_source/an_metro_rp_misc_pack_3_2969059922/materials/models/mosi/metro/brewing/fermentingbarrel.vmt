@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/brewing/fermentingbarrel_color"
+	"$bumpmap" "models/mosi/metro/brewing/fermentingbarrel_normal"
+
+	"$phong" "1"
+	"$phongexponent" "3"
+	"$phongboost" ".75"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

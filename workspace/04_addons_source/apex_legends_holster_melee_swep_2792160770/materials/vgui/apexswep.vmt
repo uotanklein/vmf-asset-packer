@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"vgui/apexswep"
+	"$vertexcolor" 		1
+	"$vertexalpha" 		1
+	"$nolod" 			1
+}

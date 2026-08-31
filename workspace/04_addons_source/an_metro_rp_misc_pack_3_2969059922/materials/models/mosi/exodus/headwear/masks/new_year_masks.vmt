@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/headwear/masks/new_year_masks_color"
+	"$bumpmap" "models/mosi/exodus/headwear/masks/new_year_masks_normal"
+	"$nocull" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".2"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

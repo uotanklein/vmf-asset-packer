@@ -1,0 +1,17 @@
+VertexLitGeneric
+{
+$halflambert "1"
+
+$phong "1"
+$phongboost "5"
+$phongexponent "20"
+$phongfresnelranges "[1 10 8]"
+
+
+$baseTexture "models\weapons\tfa_nmrih\item_zippo\welder_color"
+$bumpmap "models\weapons\tfa_nmrih\item_zippo\welder_normal"
+
+$surfaceprop "metal"
+	"keywords" "zippo"
+}
+}

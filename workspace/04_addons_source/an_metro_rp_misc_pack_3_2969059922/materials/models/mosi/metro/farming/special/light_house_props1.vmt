@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/special/light_house_props1_color"
+	"$bumpmap" "models/mosi/metro/farming/special/light_house_props1_normal"
+	
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[.33 .33 .36]"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

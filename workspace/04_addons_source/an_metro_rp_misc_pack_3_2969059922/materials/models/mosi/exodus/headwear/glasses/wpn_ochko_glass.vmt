@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/headwear/glasses/wpn_ochko_color"
+	"$bumpmap" "models/mosi/exodus/headwear/glasses/wpn_ochko_normal"
+	
+	"$translucent" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" "2"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

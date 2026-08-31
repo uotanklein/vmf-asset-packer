@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/heracles421/metro_sweps/metro_dynamo"
+	"$bumpmap" "models/weapons/heracles421/metro_sweps/metro_dynamo_n"
+
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[.1 .1 .1]"
+	"$basemapalphaphongmask" 	"1"
+	"$phong" 			"1"
+	"$phongtint" 			"[1 .85 .85]"
+	"$phongexponent" 		"1"
+	"$phongboost" 			"0.1"
+	"$phongfresnelranges"		"[.5 .85 30]"
+	"$halflambert"			"1"
+	"$model" "1"
+	"$phongalbedotint" "1"
+	$rimlight 1
+	$rimlightexponent 0.5
+	$rimlightboost .1
+	"$selfillum" 1
+}

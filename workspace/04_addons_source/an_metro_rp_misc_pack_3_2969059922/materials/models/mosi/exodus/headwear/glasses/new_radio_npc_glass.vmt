@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/equipment/new_radio_npc_color"
+	"$bumpmap" "models/mosi/exodus/equipment/new_radio_npc_normal"
+	
+	"$translucent" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"1"
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

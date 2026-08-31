@@ -1,0 +1,8 @@
+VertexLitGeneric {
+	$basetexture "models/weapons\tfa_nmrih\item_zippo\base_color"
+
+	$envmap "env_cubemap"
+$envmaptint "[.5 0.18 0]"
+$normalmapalphaenvmapmask "1"
+}
+

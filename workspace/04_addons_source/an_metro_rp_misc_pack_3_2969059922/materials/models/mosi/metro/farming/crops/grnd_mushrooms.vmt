@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/grnd_mushrooms_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/grnd_mushrooms_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

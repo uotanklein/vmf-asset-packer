@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/brewing/items/crate_color"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".05"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

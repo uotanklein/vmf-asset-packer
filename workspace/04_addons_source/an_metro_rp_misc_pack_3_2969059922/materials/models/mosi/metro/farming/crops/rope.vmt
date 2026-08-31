@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/rope"
+	"$bumpmap" "models/mosi/metro/farming/crops/rope_n"
+	
+	"$phong"	"1"
+	"$phongexponent"	"1"
+	"$phongboost" ".22"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

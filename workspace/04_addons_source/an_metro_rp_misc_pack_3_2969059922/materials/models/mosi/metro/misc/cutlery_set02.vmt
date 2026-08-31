@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/cutlery_set02_color"
+	"$bumpmap" "models/mosi/metro/misc/cutlery_set02_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".66"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

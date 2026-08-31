@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+// $phong "1"
+// $phongtint "[0.5 .15 .1]"
+// $phongboost "5"
+// $phongexponent "10"
+// $phongfresnelranges [1 10 8]
+
+$basetexture "models\weapons\tfa_nmrih\item_zippo\v_item_zippo_d1"
+$bumpmap "models\weapons\tfa_nmrih\item_zippo\v_item_zippo_n"
+
+$surfaceprop "metal"
+	"keywords" "zippo"
+}
+

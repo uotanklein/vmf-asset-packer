@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/brewing/items/faina_color"
+	"$bumpmap" "models/mosi/metro/brewing/items/faina_normal"
+	
+	"$translucent" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".15"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/wood_box_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/wood_box_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".2"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

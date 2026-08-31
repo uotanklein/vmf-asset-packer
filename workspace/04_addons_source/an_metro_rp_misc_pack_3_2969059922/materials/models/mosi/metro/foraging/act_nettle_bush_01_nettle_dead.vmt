@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/foraging/act_nettle_bush_color"
+	"$bumpmap" "models/mosi/metro/foraging/act_nettle_bush_normal"
+	"$color2" "{175 175 175}"
+	
+	"$selfillum" "1"
+	"$selfillumtint" "[.06 .02 .0015]"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/grnd_earth_02_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/grnd_earth_02_normal"
+	"$color2" "{175 175 175}"
+	
+	"$phong"	"1"
+	"$phongexponent"	"1"
+	"$phongboost" ".1"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

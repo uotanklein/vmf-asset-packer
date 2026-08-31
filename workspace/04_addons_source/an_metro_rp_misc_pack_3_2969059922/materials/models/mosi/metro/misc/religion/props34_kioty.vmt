@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/religion/props34_kioty_color"
+	"$bumpmap" "models/mosi/metro/misc/religion/props34_kioty_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".5"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

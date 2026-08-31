@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+$halflambert "1"
+
+$baseTexture "models\weapons\tfa_nmrih\item_zippo\cover_color"
+$bumpmap "models\weapons\tfa_nmrih\item_zippo\cover_n"
+
+$surfaceprop "metal"
+	"keywords" "zippo"
+}
+

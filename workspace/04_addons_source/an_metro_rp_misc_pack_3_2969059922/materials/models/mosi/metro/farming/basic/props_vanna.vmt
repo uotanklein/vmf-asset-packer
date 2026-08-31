@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/props_vanna_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/props_vanna_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

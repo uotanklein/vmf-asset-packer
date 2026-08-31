@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/defenses/metal34_stripes_01_color"
+	"$bumpmap" "models/mosi/metro/misc/defenses/metal34_stripes_01_normal"
+	
+	"$alphatest" "1"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

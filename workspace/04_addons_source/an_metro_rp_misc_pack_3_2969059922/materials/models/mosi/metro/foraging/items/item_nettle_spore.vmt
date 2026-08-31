@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/foraging/items/item_nettle_spore_color"
+	"$bumpmap" "models/mosi/metro/foraging/items/item_nettle_spore_normal"
+	
+	"$selfillum" "1"
+	"$selfillumtint" "[.6 .2 .015]"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".15"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

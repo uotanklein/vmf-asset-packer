@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/burlaplow_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/burlaplow_normal"
+	"$halflambert" "1"
+	"$color2" "[.75 .75 .75]"
+}

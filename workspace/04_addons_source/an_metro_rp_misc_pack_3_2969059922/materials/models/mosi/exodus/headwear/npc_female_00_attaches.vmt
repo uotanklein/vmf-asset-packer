@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/headwear/npc_female_00_attaches_color"
+	"$bumpmap" "models/mosi/exodus/headwear/npc_female_00_attaches_normal"
+	
+	"$alphatest" "1"
+	"$alphatestreference"	".2"
+	"$allowalphatocoverage"	"1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".1"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

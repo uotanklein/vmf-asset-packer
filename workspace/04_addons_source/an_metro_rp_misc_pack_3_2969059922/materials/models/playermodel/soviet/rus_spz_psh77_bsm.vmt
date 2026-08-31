@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\Playermodel\Soviet/rus_spz_psh77_bsm"
+	"$bumpmap"    "models\Playermodel\Soviet/rus_spz_psh77_nrm"
+	
+	"$phong"	"1"
+	"$phongexponent"	"1"
+	//"$phongalbedotint"	"1"
+	"$phongboost"	"0.25"
+	"$phongfresnelranges"	"[0.1 5.75 15.55]"
+    "$lightwarptexture" 	"models\Playermodel\Clothes_wrp"
+	"$phongexponenttexture" "models\Playermodel\exp"
+"$PhongDisableHalfLambert" "1"
+}
+

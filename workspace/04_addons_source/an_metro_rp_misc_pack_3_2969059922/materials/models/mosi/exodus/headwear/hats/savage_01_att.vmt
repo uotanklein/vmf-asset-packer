@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/headwear/hats/savage_01_att_color"
+	"$bumpmap" "models/mosi/exodus/headwear/hats/savage_01_att_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".7"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

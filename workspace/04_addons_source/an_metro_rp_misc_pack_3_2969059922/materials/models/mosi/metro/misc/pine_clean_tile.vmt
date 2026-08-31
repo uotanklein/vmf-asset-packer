@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/pine_clean_tile_color"
+	"$bumpmap" "models/mosi/metro/misc/pine_clean_tile_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".75"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

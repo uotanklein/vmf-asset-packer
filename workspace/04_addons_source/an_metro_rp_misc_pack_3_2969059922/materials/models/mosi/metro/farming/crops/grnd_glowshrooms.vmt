@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	//"$basetexture" "models/mosi/metro/farming/crops/grnd_glowshrooms_color"
+	//"$bumpmap" "models/mosi/metro/farming/crops/grnd_glowshrooms_normal"
+	
+	"$basetexture" "models/mosi/metro/farming/crops/grnd_mushrooms_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/grnd_mushrooms_normal"
+	"$color2" "{150 200 150}"
+	
+	"$selfillum" "1"
+	"$selfillumtint" "[.15 .3 .15]"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".25"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

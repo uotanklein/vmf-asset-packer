@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/props_library_l_setka_color"
+	"$bumpmap" "models/mosi/metro/misc/props_library_l_setka_normal"
+	
+	"$alphatest" "1"
+	"$allowalphatocoverage" "1"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".45"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

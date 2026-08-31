@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/trees_leaves_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/trees_leaves_normal"
+	"$color2" "{220 255 220}"
+	
+	"$alphatest" "1"
+	"$allowalphatocoverage" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".033"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

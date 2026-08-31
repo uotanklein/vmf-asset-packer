@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/basic/glowfungus_color"
+	"$bumpmap" "models/mosi/metro/farming/basic/glowfungus_normal"
+}

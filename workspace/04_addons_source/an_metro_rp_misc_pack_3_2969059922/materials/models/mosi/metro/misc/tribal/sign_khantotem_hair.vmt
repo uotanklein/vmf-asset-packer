@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/tribal/sign_khantotem"
+	"$bumpmap" "models/mosi/metro/misc/tribal/sign_khantotem_n"
+	
+	"$translucent" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".35"
+	"$phongfresnelranges"	"[1 1 1]"
+}

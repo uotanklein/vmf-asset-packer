@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/props_grill_color"
+	"$bumpmap" "models/mosi/metro/misc/props_grill_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongboost" ".65"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

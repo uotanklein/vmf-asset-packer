@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/potato_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/potato_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".22"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/tribal/props_hovel1_color"
+	"$bumpmap" "models/mosi/metro/misc/tribal/props_hovel1_normal"
+	
+	"$alphatest" "1"
+	"$allowalphatocoverage" "1"
+
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/hunting/rat_trap_color"
+	"$bumpmap" "models/mosi/metro/hunting/rat_trap_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"8"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

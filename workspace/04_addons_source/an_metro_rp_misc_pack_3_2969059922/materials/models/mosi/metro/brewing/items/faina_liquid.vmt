@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/brewing/items/faina_liquid_color"
+	"$bumpmap" "models/mosi/metro/brewing/items/faina_liquid_normal"
+	
+	"$translucent" "1"
+	"$halflambert" "1"
+}

@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+$baseTexture "models\weapons\tfa_nmrih\item_zippo\rope_color"
+$bumpmap "models\weapons\tfa_nmrih\item_zippo\rope_n"
+
+$surfaceprop "metal"
+	"keywords" "zippo"
+}
+

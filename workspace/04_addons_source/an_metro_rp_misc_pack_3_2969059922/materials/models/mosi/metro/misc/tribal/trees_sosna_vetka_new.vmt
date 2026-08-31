@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/tribal/trees_sosna_vetka_new_color"
+	"$bumpmap" "models/mosi/metro/misc/tribal/trees_sosna_vetka_new_normal"
+	
+	"$translucent" "1"
+
+	"$phong"	"1"
+	"$phongexponent"	"2"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

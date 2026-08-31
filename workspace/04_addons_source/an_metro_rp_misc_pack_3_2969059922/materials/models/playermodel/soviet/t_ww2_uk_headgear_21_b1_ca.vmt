@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Playermodel\Soviet/T_WW2_UK_Headgear_21_B1_CS"
+	"$bumpmap" "models\Playermodel\Soviet/T_WW2_UK_Headgear_21_B1_NX"
+	
+//"$additive" "1"
+"$translucent" "1"
+	"$phong"	"1"
+        "$nocull"	"1"
+	"$phongexponent"	"1"
+	//"$phongalbedotint"	"1"
+	"$phongboost"	"0.25"
+	"$phongfresnelranges"	"[0.1 5.75 15.55]"
+    "$lightwarptexture" 	"models\Playermodel\Clothes_wrp"
+	"$phongexponenttexture" "models\Playermodel\exp"
+"$PhongDisableHalfLambert" "1"
+}

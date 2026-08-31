@@ -1,0 +1,12 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/foraging/spore_sd_goo_01_color"
+	"$bumpmap" "models/mosi/metro/foraging/spore_sd_goo_01_normal"
+	
+	"$translucent" "1"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

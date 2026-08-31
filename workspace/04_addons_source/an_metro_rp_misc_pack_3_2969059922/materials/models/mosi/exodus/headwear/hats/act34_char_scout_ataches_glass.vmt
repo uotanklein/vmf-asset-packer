@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/act34_char_scout_ataches_color"
+	"$bumpmap" "models/mosi/exodus/act34_char_scout_ataches_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".66"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

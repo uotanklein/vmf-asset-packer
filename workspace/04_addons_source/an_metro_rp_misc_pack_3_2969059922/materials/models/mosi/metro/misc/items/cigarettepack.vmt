@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/mosi/metro/misc/items/cigarettepack"
+    "$bumpmap"     "models/mosi/metro/misc/items/cigarettepack_n"
+	"$halflambert" 1
+}

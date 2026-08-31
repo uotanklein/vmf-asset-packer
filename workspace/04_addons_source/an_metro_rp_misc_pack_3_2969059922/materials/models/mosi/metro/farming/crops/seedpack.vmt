@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/farming/crops/seedpack_color"
+	"$bumpmap" "models/mosi/metro/farming/crops/seedpack_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"10"
+	"$phongboost" ".6"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

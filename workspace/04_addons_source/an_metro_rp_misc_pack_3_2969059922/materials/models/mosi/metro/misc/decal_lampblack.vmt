@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/decal_lampblack_color"
+	"$bumpmap" "models/mosi/metro/misc/decal_lapmblack_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".1"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

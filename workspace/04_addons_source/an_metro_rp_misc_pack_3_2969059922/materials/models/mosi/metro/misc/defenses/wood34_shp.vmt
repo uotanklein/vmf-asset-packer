@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/misc/defenses/wood34_shp_color"
+	"$bumpmap" "models/mosi/metro/misc/defenses/wood34_shp_normal"
+
+	"$phong"	"1"
+	"$phongexponent"	"4"
+	"$phongboost" ".75"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

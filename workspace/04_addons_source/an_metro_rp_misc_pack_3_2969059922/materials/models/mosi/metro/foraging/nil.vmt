@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/foraging/nil"
+	"$alphatest" "1"
+}

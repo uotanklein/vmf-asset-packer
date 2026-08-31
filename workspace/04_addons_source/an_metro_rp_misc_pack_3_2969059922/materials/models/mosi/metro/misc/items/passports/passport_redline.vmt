@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/mosi/metro/misc/items/passports/passport_redline_color"
+    "$bumpmap"     "models/mosi/metro/misc/items/passports/passport_redline_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"5"
+	"$phongboost" ".22"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

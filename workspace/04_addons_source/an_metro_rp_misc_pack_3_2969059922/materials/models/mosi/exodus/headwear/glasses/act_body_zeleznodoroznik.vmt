@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/exodus/act_body_zeleznodoroznik_color"
+	"$bumpmap" "models/mosi/exodus/act_body_zeleznodoroznik_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"6"
+	"$phongboost" ".33"
+	"$phongfresnelranges"	"[1 .75 0]"
+}

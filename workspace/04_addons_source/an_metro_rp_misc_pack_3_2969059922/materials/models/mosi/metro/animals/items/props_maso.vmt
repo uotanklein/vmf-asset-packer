@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/mosi/metro/animals/items/props_maso_color"
+	"$bumpmap" "models/mosi/metro/animals/items/props_maso_normal"
+	
+	"$phong"	"1"
+	"$phongexponent"	"8"
+	"$phongboost" ".3"
+	"$phongfresnelranges"	"[1 .75 0]"
+}
