@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{ 
+	"$basetexture" "models/akabenko/item_broke_phone"
+	"$bumpmap" "models/akabenko/item_broke_phone_normal"
+}

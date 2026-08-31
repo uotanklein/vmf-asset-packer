@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{ 
+	"$basetexture" "models/akabenko/passport_metro"
+	"$bumpmap" "models/akabenko/passport_metro_normal"
+}

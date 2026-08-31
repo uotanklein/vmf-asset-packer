@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{ 
+	"$basetexture" "models/akabenko/entity_small_ferma"
+	"$bumpmap" "models/akabenko/entity_small_ferma_normal"
+}

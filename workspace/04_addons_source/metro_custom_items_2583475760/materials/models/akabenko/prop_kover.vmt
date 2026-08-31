@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{ 
+	"$basetexture" "models/akabenko/prop_kover"
+	"$bumpmap" "models/akabenko/prop_kover_normal"
+}
