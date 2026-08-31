@@ -1,0 +1,5 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/tablet_lamp_base"
+	"$bumpmap" "models/props_se/tablet_lamp_base_norm"
+}

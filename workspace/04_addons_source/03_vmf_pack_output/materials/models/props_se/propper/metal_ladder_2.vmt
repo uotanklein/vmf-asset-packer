@@ -1,0 +1,9 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/metal_ladder_2"
+	
+	"$detail" "detail\noise_detail_01"
+	"$detailscale" "12.0"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+}

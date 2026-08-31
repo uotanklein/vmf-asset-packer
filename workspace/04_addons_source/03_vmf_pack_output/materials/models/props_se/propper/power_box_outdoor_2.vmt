@@ -1,0 +1,8 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/power_box_outdoor_2"
+	"$detail" "detail\metal_paint_2_detail"
+	"$detailscale" "2.00"
+	"$detailblendfactor" 1.2
+	"$detailblendmode" "0"
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/kitchen_tv"
+    "$model" 1
+}

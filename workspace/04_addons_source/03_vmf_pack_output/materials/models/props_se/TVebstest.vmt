@@ -1,0 +1,9 @@
+UnLitGeneric
+{
+$baseTexture "models\props_se/TVebstest"
+
+$color2 "[.43 .43 .43]"
+$surfaceprop glass
+$envmap env_cubemap
+$envmapmask "models\props_se\TVstatic_ref"
+}

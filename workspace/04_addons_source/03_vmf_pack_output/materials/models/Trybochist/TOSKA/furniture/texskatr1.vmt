@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "models/Trybochist/TOSKA/furniture/texskatr1"
+
+	$detail "detail\plaster_detail_01"
+	$detailblendfactor 0.5
+}

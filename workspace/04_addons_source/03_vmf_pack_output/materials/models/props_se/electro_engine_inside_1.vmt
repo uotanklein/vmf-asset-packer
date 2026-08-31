@@ -1,0 +1,13 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/electro_engine_inside_1"
+
+	"$detail" "detail\metal_detail_01"
+	"$detailscale" "4.0"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.35 .35 .35]"
+	"$envmapmask" "models/props_se/electro_engine_inside_1_env"
+}

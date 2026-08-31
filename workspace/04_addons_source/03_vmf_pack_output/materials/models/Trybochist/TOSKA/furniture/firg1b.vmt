@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "models/trybochist/toska/furniture/firg1"
+	$surfaceprop Concrete
+
+	$envmap "env_cubemap"
+}

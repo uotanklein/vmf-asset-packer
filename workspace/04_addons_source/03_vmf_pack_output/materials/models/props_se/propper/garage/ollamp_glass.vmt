@@ -1,0 +1,16 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/garage/ollamp_glass"
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "glass"
+	"$envmapmask" "glass/glasswindowbreak070a_mask"
+	"$translucent" 1
+	"$multipass" 1
+	"$nocull" 1
+	//"$crackmaterial" "glass/glasswindowbreak070b"
+	"LightmappedGeneric_hdr_dx9"
+	{
+		"$envmaptint" "[ .08 .08 .08]"
+	}
+
+}

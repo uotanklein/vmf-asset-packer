@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/tile/fiberglass_lowdispl"
+    "$model" "1"
+}

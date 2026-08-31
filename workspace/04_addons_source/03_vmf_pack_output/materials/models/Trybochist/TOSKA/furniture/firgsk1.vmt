@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "models/Trybochist/TOSKA/furniture/firgsk1"
+
+	$alphatest 1
+}

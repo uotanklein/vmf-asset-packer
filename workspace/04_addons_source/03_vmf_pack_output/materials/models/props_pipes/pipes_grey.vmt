@@ -1,0 +1,16 @@
+VertexlitGeneric
+{
+	$basetexture "models/props_pipes/pipes_grey"
+	"$surfaceprop" "metal"
+	$bumpmap models/props_pipes/pipes_bumpmap
+	$phong 1
+	$phongexponent 50
+	$phongboost 3.0
+	$phongfresnelranges	"[0.05 0.5 1]"
+	
+	$rimlight               1
+	$rimlightexponent       2
+	$rimlightboost          1.2	
+	
+}
+

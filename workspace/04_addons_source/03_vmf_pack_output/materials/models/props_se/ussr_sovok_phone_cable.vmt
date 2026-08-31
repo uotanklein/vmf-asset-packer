@@ -1,0 +1,6 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/ussr_sovok_phone_cable"
+	"$alphatest" 1
+	"$nocull" 1
+}

@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/tv_foton276"
+    "$model" 1
+    "$translucent" "1"      // делает материал прозрачным
+    "$alpha" "1"            // множитель прозрачности, 1 = полностью видимый
+    "$nocull" "1"           // опционально, если нужна видимость с обеих сторон
+}

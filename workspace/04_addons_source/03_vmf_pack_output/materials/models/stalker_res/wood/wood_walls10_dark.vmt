@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/stalker_res/wood/wood_walls10_dark"
+
+      	"$bumpmap" "models/stalker_res/wood/wood_walls8_1_normal"
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_mine/mine_shroom_001"
+	"$selfillum"		"1"
+}

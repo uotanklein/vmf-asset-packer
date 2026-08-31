@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "models/props_metrourf/electricka_vagon_001a"
+
+	$model 1
+}

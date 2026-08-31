@@ -1,0 +1,6 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/tv_monitor_rubin_b"
+		"$envmap" "env_cubemap"
+	"$basealphaenvmapmask" 1
+}

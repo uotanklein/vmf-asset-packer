@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models/Trybochist/TOSKA/miniprop/chl1"
+	$surfaceprop Metal
+}

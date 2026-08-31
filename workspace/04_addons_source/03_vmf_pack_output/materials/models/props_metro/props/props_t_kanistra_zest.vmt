@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/props_t_kanistra_zest"
+    "$model" 1
+}

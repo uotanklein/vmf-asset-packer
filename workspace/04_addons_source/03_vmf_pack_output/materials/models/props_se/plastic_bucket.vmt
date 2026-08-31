@@ -1,0 +1,9 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/plastic_bucket"
+	"$bumpmap" "models/props_se/plastic_bucket_norm"
+	$phong 1
+	$phongexponent   2
+	$phongboost    0.5
+	$phongfresnelranges  "[0.8 0.8 0.8]"
+}

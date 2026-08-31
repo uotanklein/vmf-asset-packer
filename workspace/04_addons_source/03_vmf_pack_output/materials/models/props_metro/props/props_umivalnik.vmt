@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/props_umivalnik"
+    "$model" 1
+    "$nocull" "1"           // опционально, если нужна видимость с обеих сторон
+}

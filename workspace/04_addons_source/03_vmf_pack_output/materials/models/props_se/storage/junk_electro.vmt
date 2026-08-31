@@ -1,0 +1,12 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/storage/junk_electro"
+	
+	
+	$phong 1
+$phongexponent 100
+$phongboost ".5"
+$phongfresnelranges "[.3 .6 4]"
+
+$basemapalphaphongmask 1
+}

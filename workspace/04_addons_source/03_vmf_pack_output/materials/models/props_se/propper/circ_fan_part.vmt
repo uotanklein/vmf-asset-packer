@@ -1,0 +1,5 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/circ_fan_part"
+	"$bumpmap" "models/props_se/propper/circ_fan_part_norm"
+}

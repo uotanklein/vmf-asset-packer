@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "models/props_nextoren/electricka_vagon_001a"
+
+	$model 1
+}
+

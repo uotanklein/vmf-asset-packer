@@ -1,0 +1,7 @@
+"SDK_VertexLitGeneric"
+{
+	"$basetexture" "Models/props_pipes/pipeset_metal14"
+	"$surfaceprop" "metal"
+//	"$envmap" "env_cubemap"
+//	"$basealphaenvmapmask" 1
+}

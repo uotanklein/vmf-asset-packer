@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/propper/radiator_heater_industrial"
+	"$bumpmap" "models/props_se/propper/radiator_heater_industrial_norm"
+		"$detail" "detail\metal_paint_2_detail"
+	"$detailscale" "2.00"
+	"$detailblendfactor" 1.2
+	"$detailblendmode" "0"
+}

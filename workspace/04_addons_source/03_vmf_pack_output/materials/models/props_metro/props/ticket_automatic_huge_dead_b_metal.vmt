@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/ticket_automatic_huge_dead_b"
+    "$model" 1
+}

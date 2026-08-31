@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "models/trybochist/toska/furniture/firg1"
+	$surfaceprop Metal
+
+	$phong 1
+	$phongfresnelranges "[0.5 0.75 1]"
+	$halflambert 1
+	$phongexponent 5
+}

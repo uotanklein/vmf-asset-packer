@@ -1,0 +1,13 @@
+"vertexlitGeneric"
+{
+	"$basetexture"					"models/props_se/radiohim_kazakstan"
+	"$bumpmap"						"models/props_se/radiohim_kazakstan_norm"
+	
+	"$alphatest" 1
+	
+	"$phongexponent"				"60"
+	"$phong"						"1"
+	"$phongboost"					"0.12"
+	"$phongfresnelranges"			"[1 3 5]"
+	"$PhongAlbedoTint"				"1"
+}

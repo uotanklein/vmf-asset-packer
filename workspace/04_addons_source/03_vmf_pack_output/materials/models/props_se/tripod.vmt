@@ -1,0 +1,8 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/tripod"
+	"$bumpmap" "models/props_se/tripod_norm"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .9 .9 .9 ]"
+	$normalmapalphaenvmapmask 1
+}

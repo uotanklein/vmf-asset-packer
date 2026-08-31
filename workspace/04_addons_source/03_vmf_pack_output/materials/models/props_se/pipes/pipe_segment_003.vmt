@@ -1,0 +1,10 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/pipes/pipe_segment_003"
+	"$bumpmap" "models/props_se/pipes/pipe_segment_003_norm"
+
+	$phong 1
+	$phongexponent   3
+    $phongboost    0.15
+	$phongfresnelranges  "[0.5 0.5 0.5]"
+}

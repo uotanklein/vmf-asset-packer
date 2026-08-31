@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/valley_totem_01_cloth_candle"
+    "$model" 1
+}

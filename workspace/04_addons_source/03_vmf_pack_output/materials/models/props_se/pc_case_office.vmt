@@ -1,0 +1,9 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/pc_case_office"
+	"$bumpmap" "models/props_se/pc_case_office_norm"
+	
+	$phong 1
+	$phongexponent   20 //чем меньше, тем блик больше
+	$phongboost    10 //чем меньше, тем сила блика меньше
+}

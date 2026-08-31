@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/st_props/prop_box_3"
+	"$bumpmap" "models/st_props/prop_box_3_bump"
+	"$surfaceprop" "metal"
+}
+	

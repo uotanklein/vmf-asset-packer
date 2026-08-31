@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models/trybochist/toska/furniture/texskaf2"
+	$surfaceprop Wood
+}

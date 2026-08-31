@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/wood34/wood34_boards"
+    "$model" 1
+    "$nocull" "1"
+}

@@ -1,0 +1,6 @@
+VertexlitGeneric
+{
+	$basetexture "models/props_pipes/pipes_red"
+	"$surfaceprop" "metal"
+	$bumpmap models/props_pipes/pipes_bumpmap
+}

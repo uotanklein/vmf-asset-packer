@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/wm/wm_graffiti_dsc"
+    "$model" 1
+}

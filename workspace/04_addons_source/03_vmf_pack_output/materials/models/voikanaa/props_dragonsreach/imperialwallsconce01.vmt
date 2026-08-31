@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+// File Created by Wall Worm ( http://dev.wallworm.com )
+	// Get Wall Worm Pro to remove this comment ( https://wallworm.com/store/index.php?route=product/product&product_id=54 )
+
+// BEGIN Textures
+	$basetexture "models/voikanaa/props_dragonsreach/imperialwallsconce01"
+	$bumpmap "models/voikanaa/props_dragonsreach/imperialwallsconce01_n"
+// END Textures
+
+	$alphatest 1
+	$nocull 1
+
+	"$phong" "1"
+	"$phongexponent" "20"
+	"$phongboost" "6"
+	"$phongfresnelranges" "[0.1 0.2 0.5]"
+
+}

@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+	$basetexture models/props_pipes/pipes_white
+	$bumpmap models/props_pipes/pipes_silver_n
+	$color2	"[.5 .5 .5]"
+	$detail detail/dirt_detail_02
+	$detailscale 3
+	$detailblendfactor 1
+	$detailblendmode 0
+	$phong 1
+	$phongwarptexture custom_uni/warp_blueflytrap998
+	$phongexponenttexture custom_uni/exponent_albedotint
+	$phongalbedotint 1
+	$phongexponent 2
+	$phongboost	5
+	$phongfresnelranges	"[0.5 4.75 5]"
+	$lightwarptexture custom_uni/warp_blueflytrap998
+	$rimlight 1
+	$rimlightexponent       2
+	$rimlightboost          2
+}

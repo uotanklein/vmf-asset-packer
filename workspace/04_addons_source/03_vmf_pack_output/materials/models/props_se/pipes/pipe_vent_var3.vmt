@@ -1,0 +1,12 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/pipes/pipe_vent_var3"
+	
+	"$detail" "detail\metal_detail_01"
+	"$detailscale" "4.0"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+	
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models/props_se/pipes/pipe_vent_var_ref"
+}

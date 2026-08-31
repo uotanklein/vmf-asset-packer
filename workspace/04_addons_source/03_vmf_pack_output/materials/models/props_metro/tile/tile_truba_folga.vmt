@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/tile/tile_truba_folga"
+    "$model" "1"
+}

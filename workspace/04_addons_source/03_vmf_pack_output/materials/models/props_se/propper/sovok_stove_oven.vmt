@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/propper/sovok_stove_oven"
+	"$detail" "detail\metal_paint_detail"
+	"$bumpmap" "models/props_se/propper/sovok_stove_oven_norm"
+	"$phong" "1"
+
+	"$phongboost" ".5"
+	"$phongfresnelranges" "[5 1 2]"
+
+	"$phongexponent" "15"
+
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "models/props_se/propper/sovok_stove_oven_exp"
+	"$detailscale" "8.283"
+	"$detailblendfactor" 1.2
+	"$detailblendmode" "0"
+}

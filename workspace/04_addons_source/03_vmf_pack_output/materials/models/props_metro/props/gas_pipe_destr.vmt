@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/gas_pipe_destr"
+    "$model" 1
+}

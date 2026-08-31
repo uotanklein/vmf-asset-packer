@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wick/strpmodels/metal/prop_dangerbox"
+	"$bumpmap" "models/wick/strpmodels/metal/prop_dangerbox_bump"
+}

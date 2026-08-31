@@ -1,0 +1,14 @@
+"VertexLitGeneric" 
+//Created in MjolnirSDK 0.89
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/mtl/mtl_fence4"
+	//"$uvmap" "z-o-m-b-i-e/STALKER/mtl/mtl_fence4_uvmap.pypv"
+	"$surfaceprop" "metal"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_metall_det1"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+	"$nocull" 1
+	"$nodecal" "1"
+	"$alphatest" "1"
+}

@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/propper/turbo_hatch_0"
+	"$bumpmap" "models/props_se/propper/turbo_hatch_norm"
+	
+	"$detail" "detail\metal_detail_01"
+	"$detailscale" "8.0"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+}

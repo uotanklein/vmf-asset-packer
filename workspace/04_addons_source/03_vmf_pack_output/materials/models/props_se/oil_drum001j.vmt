@@ -1,0 +1,6 @@
+
+VertexLitGeneric
+{
+$baseTexture "models/props_se/oil_drum001j.vtf"
+$bumpmap "models/props_se/oil_drum001_normal.vtf"
+}

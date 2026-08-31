@@ -1,0 +1,5 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/fire_equipment_1"
+	"$bumpmap" "models/props_se/propper/fire_equipment_1_norm"
+}

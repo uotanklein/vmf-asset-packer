@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models/Trybochist/TOSKA/furniture/pill1"
+	$surfaceprop Paper
+}

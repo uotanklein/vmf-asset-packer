@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_nature/spiderweb_001"
+	"$alphatest" 1
+	"$alphatestreference" 0.6
+	//"$allowalphatocoverage" 1
+	//"$envmapmask" "models/props_nature/spiderweb_001_mask"
+	//"$envmap" "env_cubemap"
+    //"$envmaptint" "[ .8 .8 .8 ]"	
+}

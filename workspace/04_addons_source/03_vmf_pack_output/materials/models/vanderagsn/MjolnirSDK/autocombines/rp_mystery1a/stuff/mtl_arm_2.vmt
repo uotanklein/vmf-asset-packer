@@ -1,0 +1,6 @@
+"VertexLitGeneric" 
+//Created in MjolnirSDK 0.89
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/mtl/mtl_arm_2"
+	"$surfaceprop" "metal"
+}

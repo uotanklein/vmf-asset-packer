@@ -1,0 +1,11 @@
+VertexlitGeneric
+{
+	$basetexture "models/props_pipes/pipes_green_rust2"
+	"$surfaceprop" "metal"
+	$bumpmap models/props_pipes/pipes_bumpmap
+	$phong 1
+	$phongexponent 30
+	$phongfresnelranges "[0 0.5 1]"
+	$phongboost 3.0
+}
+

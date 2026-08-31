@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "Z-O-M-B-I-E/STALKER/glow/glow_galogen"
+		"$translucent"	"1"
+	"$additive"			"1"
+	"$nocull"			"1"
+}

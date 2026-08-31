@@ -1,0 +1,11 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture"	"models/props_se/propper/garage/weld_canister_2"	
+	"$bumpmap"	      "models/props_se/propper/garage/weld_canister_norm"
+
+	"$phong" "1"
+	"$phongexponenttexture"  "models/props_se/propper/garage/weld_canister_exp"
+	"$phongboost" "2" 
+	"$phongfresnelranges" "[.1 .5 1]" 
+
+}

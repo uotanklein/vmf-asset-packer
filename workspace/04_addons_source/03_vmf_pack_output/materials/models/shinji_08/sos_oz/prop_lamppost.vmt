@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "z-o-m-b-i-e/stalker/prop/prop_lamppost"
+	"$bumpmap" "z-o-m-b-i-e/stalker/prop/prop_lamppost_norm"
+	"$surfaceprop" "metal"
+}

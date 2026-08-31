@@ -1,0 +1,6 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/electro_engine_1"
+	"$bumpmap" "models/props_se/electro_engine_norm"
+	"$surfaceprop" "Metal"
+}

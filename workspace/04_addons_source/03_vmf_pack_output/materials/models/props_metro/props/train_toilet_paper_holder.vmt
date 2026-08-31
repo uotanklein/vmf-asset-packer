@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/train_toilet_paper_holder"
+    "$model" 1
+}

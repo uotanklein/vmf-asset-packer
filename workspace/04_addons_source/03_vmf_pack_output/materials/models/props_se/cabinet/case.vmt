@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/cabinet/case"
+	"$bumpmap" "models/props_se/cabinet/case_norm"
+}

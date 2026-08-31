@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+"$basetexture" "models/props_se/workshop/vise"
+"$bumpmap" "models/props_se/workshop/vise_norm"
+"$envmap" "env_cubemap"
+"$envmapmask" "models/props_se/workshop/vise_env"
+"$detail" "detail\se_metal"
+"$detailscale" 2.25
+"$detailblendfactor" 0.5
+"$detailblendmode" 0
+}

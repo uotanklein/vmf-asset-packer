@@ -1,0 +1,10 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/ussr_sovok_phone3"
+	"$bumpmap"	"models/props_se/detail_normal_1"
+	$phong 1
+	$phongexponent   10
+    $phongboost    0.4
+	$phongfresnelranges  "[0.5 0.5 0.5]"
+}
+

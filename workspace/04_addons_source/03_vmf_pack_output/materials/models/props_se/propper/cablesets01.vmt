@@ -1,0 +1,9 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/propper/cablesets01"
+	"$bumpmap" "models/props_se/propper/cablesets01_norm"
+	$phong 1
+	$phongexponent   20
+	$phongboost    2
+	$phongfresnelranges  "[0.5 0.5 0.5]"
+}

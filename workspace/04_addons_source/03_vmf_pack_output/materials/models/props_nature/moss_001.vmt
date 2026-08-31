@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_nature/moss_001"
+	"$alphatest" 1
+	"$alphatestreference" 0.6
+	$nocull 1
+	$allowalphatocoverage	1
+	$FlashlightNoLambert 1
+}

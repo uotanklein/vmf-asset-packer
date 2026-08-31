@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{"$basetexture"		"models\static_fittings\light03_basetint"
+  "$PhongExponentTexture"		"models/vehicles/humvee_exp"
+	
+	$selfillum 0
+	$phong 				"1"
+	$PhongAlbedoTint 		"1"	
+	$BasemapLuminancePhongMask	"1"
+	
+	$phongboost 			"40"
+ "$phongfresnelranges"		"[1 5 3]"
+
+	$rimlight               	"1"
+	$rimlightexponent       	"30"
+	$rimlightboost          	".25"
+}
+
+

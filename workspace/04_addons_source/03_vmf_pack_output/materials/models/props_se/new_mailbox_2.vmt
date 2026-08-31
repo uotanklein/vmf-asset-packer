@@ -1,0 +1,9 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/new_mailbox_2"
+	
+	"$detail" "detail\metal_paint_2_detail"
+	"$detailscale" "8.0"
+	"$detailblendfactor" .8
+	"$detailblendmode" "0"
+}

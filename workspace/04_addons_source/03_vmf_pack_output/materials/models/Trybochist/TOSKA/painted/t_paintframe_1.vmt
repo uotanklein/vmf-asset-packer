@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models/Trybochist/TOSKA/painted/t_paintframe_1"
+	$surfaceprop Wood
+}

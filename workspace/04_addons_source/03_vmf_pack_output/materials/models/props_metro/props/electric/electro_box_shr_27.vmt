@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/electric/electro_box_shr_27"
+    "$model" 1
+    "$nocull" "1"
+}

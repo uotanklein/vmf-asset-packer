@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "models/trybochist/toska/furniture/texskaf2"
+	$surfaceprop Wood
+
+	$envmap "env_cubemap"
+	$envmaptint "[0.30 0.30 0.30]"
+	$envmapcontrast 0.68
+	$envmapsaturation 0.2
+}

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "z-o-m-b-i-e/STALKER/mtl/mtl_barrel_big_rust"
+	////"$bumpmap" "z-o-m-b-i-e/STALKER/mtl/mtl_barrel_big_rust_norm"
+	"$nocull"	"1"
+	"$surfaceprop" "metal"
+	"$detail" "z-o-m-b-i-e/STALKER/detail/detail_metall_det1"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "1.0"
+	"$detailblendmode" "0"
+}

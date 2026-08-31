@@ -1,0 +1,37 @@
+VertexlitGeneric
+{
+	$basetexture	models/props_pipes/pipes_brown2
+	$bumpmap		models/props_pipes/pipes_bumpmap
+ 	$model 			1
+	
+	// Flesh Interior Pass
+	$FleshInteriorEnabled      		1 
+	$FleshInteriorTexture     		custom_uni\arcadegrid001b
+	$FleshNormalTexture			 	Effects/com_shield004b
+	$FleshBorderTexture1D     	 	effects/stunstick
+	$FleshInteriorNoiseTexture 		Engine/noise-blur-256x256
+	$FleshSubsurfaceTexture	 		custom_uni/forcefield_transparent
+	$FleshCubeTexture          		env_cubemap
+	$FleshBorderNoiseScale     		3 
+	$FleshBorderWidth			 	0.06 
+	$FleshBorderSoftness		 	0.5 
+	$FleshBorderTint			 	"[.2 .4 .2]"  
+	$FleshGlossBrightness		 	1.0  
+	$FleshDebugForceFleshOn	 		0 
+	$FleshScrollSpeed			 	1.0
+	$Time 							0.0
+	
+	Proxies
+	{
+		FleshInterior
+		{
+		}
+		MaterialModify
+		{
+		}
+		CurrentTime
+		{
+			resultVar $time
+		}
+	}
+}

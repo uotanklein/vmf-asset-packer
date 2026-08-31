@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+
+	$basetexture "models/props_xen/xen_fl_stala_1"
+
+
+	$phong 1
+        $phongexponent 4
+        $phongboost .2
+        $phongtint "[.7 .7 1]"
+        $halflambert 0
+        $phongfresnelranges "[.4 .1 1]"
+	$rimlight "1"
+	$rimlightexponent "20"
+	$rimlightboost "0.2"
+
+
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wick/strpmodels/metal/prop_bed1"
+	"$alphatest" 1
+}

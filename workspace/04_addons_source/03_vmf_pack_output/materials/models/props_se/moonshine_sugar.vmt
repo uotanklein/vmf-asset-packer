@@ -1,0 +1,5 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/moonshine_sugar"
+	"$bumpmap" "models/props_se/moonshine_sugar_norm"
+}

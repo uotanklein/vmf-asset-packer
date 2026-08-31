@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/lamppost_traflight_4"
+	"$selfillum" 1
+}

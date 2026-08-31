@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_se/propper/sovok_vending_water_machine"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models/props_se/propper/sovok_vending_water_machine_env"
+}

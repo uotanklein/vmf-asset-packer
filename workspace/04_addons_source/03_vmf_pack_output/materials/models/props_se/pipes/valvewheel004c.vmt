@@ -1,0 +1,5 @@
+"VertexlitGeneric" //gener 2311
+{
+	"$basetexture" "models/props_se/pipes/valvewheel004c"
+	"$bumpmap" "models/props_se/pipes/valvewheel004_norm"
+}

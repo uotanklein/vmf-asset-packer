@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/wick/strpmodels/wood/wood_table_03"
+	"$bumpmap" "models/wick/strpmodels/wood/wood_table_03_bump"
+}

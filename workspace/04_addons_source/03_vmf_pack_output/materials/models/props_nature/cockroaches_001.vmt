@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_nature/cockroaches_001"
+	$translucent 1
+}

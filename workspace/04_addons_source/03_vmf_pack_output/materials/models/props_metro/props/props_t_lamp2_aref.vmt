@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/props_metro/props/props_t_lamp2_aref"
+    "$model" 1
+}

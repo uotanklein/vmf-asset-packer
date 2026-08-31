@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_windows_door_arch/door_var_2_001"
+	"$bumpmap" "models/props_windows_door_arch/door_var_2_001_norm"
+}

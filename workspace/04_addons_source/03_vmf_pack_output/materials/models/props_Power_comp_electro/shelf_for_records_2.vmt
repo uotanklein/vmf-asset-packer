@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props_Power_comp_electro/shelf_for_records_2"
+	"$envmap" "env_cubemap"
+	"$basealphaenvmapmask" 1
+	"$surfaceprop" "metal"
+}
