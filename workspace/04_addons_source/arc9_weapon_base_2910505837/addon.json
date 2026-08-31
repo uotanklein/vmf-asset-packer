@@ -1,0 +1,16 @@
+{
+  "title": "ARC9 Weapon Base",
+  "type": "weapon",
+  "tags": [
+    "fun",
+    "roleplay",
+    "realism"
+  ],
+  "ignore": [
+    "*.stuff",
+    "*.py",
+    "workfolder*",
+    ".stuff*",
+    "wank*"
+  ]
+}
