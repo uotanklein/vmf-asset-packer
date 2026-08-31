@@ -1,0 +1,6 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "zamahno/metro/models/Yadulin_color"
+    	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+}

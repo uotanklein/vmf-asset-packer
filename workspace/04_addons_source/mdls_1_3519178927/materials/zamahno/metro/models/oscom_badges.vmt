@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/oscom_badges"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "onom_spine_badges"
+			baseframes 1
+		}
+	}
+
+}
+

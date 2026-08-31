@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/shared_misc_stuff_col_censored"
+	$bumpmap "zamahno/metro/models/shared_misc_stuff_nml_censored"
+	$alphatest 1
+	$normalmapalphaenvmapmask 1
+}

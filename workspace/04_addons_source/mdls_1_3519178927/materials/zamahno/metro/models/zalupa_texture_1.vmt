@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/zalupa_texture_1"
+	$nocull 1
+     $halflambert 1
+     $model 1
+
+    "$color2" "[.9 .9 .9]"                                     
+
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+
+$detail zamahno\metro\misc\det_char_comb_01
+$detailscale 18
+$detailblendfactor 1
+$detailblendmode 0
+}

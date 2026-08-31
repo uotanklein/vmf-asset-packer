@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/spartan_suit_basic_helmet_01"
+	"$alphatest" 1
+	$nocull 1
+	Proxies
+	{
+		SkinGroup
+		{
+			id "spartan_suit_basic_helmet_01"
+			baseframes 2
+		}
+	}
+
+}

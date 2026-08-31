@@ -1,0 +1,6 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "zamahno/metro/models/voda_paper"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+}

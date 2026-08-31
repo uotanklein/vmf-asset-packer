@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/plash_hood"
+	"$bumpmap" "zamahno/metro/models/plash_hood_bump"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "plash_hood"
+			baseframes 4
+		}
+	}
+}

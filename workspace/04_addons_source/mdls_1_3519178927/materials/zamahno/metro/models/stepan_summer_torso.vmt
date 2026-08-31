@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/stepan_summer_torso_01"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "stepan_summer_torso_01"
+			baseframes 2
+		}
+	}
+
+}
+

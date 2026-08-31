@@ -1,0 +1,11 @@
+VertexLitGeneric
+{ 
+	"$basetexture" "zamahno/metro/models/zvezda"
+    	"$bumpmap" "zamahno/metro/models/zvezda_bump"
+	"$normalmapalphaenvmapmask" 1
+	"$halflambert" "1"
+	"$phong" "1"
+	"$phongexponent"			"40"			
+	"$phongboost"				"1.0"
+	"$phongfresnelranges"		"[0 0.7 0.4]"
+}

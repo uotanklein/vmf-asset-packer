@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/secta_civil_v1_torso"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "secta_civil_torso"
+			baseframes 3
+		}
+	}
+
+}

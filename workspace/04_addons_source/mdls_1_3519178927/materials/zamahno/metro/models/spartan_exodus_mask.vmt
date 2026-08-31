@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/spartan_exodus_mask"
+	"$bumpmap" "zamahno/metro/models/spartan_exodus_mask_nm"
+	"$alphatest" 1	
+Proxies
+	{
+		SkinGroup
+		{
+			id "spartan_exodus_mask"
+			baseframes 3
+		}
+	}
+
+}

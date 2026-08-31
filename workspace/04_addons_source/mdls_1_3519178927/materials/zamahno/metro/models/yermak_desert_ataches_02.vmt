@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/yermak_desert_ataches_02"
+	"$bumpmap" "zamahno/metro/models/yermak_desert_ataches_02_nm"
+	"$nocull" 1
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/spartan_suit_stealth_legs"
+	"$bumpmap" "zamahno/metro/models/spartan_suit_stealth_legs_nm"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "spartan_suit_basic_legs_2"
+			baseframes 1
+		}
+	}
+}

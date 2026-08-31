@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	//"$basetexture" "vgui/black"
+	"$basetexture" "metro2033/ui/ui_maska_d"
+	//"$additive" "1"
+	"$translucent" "1"
+}

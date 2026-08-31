@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "zamahno/metro/models/waffenfarbe_pipping_color_white"
+	$bumpmap "zamahno/metro/models/fabric_nml1"
+}

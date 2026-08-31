@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/sniper_attaches"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "sniper_ataches"
+			baseframes 3
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "zamahno/metro/models/sailor_legs"
+	"$bumpmap" "zamahno/metro/models/sailor_legs_nm"
+	Proxies
+	{
+		SkinGroup
+		{
+			id "sailor_legs"
+			baseframes 1
+		}
+	}
+
+}
