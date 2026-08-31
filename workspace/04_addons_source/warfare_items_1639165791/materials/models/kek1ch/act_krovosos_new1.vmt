@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/wick/wrbstrp/common/krovosos_wrbstrp/act_krovosos_soc_2"
+	"$bumpmap"     "models/wick/wrbstrp/common/krovosos_wrbstrp/act_krovosos_soc_bump"
+
+}

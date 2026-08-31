@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_simple2"
+
+	$allowalphatocoverage 1
+}

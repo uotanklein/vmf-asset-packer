@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$basetexture "models/kek1ch/item_merger_soc"
+	"$bumpmap" "models\kek1ch\item_safe_container_bump"
+}

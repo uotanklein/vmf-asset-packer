@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/anomaly/items/food_protein"
+
+	$nocull 1
+}

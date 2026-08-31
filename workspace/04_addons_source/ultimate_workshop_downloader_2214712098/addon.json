@@ -1,0 +1,16 @@
+{
+  "title": "Ultimate Workshop Downloader",
+  "type": "tool",
+  "tags": [
+    "build",
+    "fun",
+    "roleplay"
+  ],
+  "ignore": [
+    "todo.txt",
+    "events_logic.odg",
+    "materials/mr/create vmts.bat",
+    "lua/gm13/libs/mee-portals/license",
+    "*.jpeg"
+  ]
+}

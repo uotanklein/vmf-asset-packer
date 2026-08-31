@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/nlc7/items/mtl_tubes3"
+
+	$nocull 1
+}

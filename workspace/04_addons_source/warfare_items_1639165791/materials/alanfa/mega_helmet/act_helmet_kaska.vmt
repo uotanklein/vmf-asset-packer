@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/mega_helmet/act_helmet_kaska"
+	"$bumpmap" "alanfa/mega_helmet/act_helmet_bump"
+}

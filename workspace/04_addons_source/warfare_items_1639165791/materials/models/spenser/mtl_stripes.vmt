@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Spenser\SSK\mtl_stripes"
+	"$surfaceprop" "metal"
+	"$model" 1
+}

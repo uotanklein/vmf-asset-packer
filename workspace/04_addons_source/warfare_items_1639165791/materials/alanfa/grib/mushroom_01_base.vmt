@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/grib/mushroom_01_base"
+	"$bumpmap" "alanfa/grib/mushroom_01_bump"
+}

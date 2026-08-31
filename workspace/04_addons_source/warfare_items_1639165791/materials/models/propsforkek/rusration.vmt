@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+    "$baseTexture" "models/propsforkek/rusration"
+	"$bumpmap" "models/propsforkek/rusration_n"
+    "$nodecal" "1"
+}

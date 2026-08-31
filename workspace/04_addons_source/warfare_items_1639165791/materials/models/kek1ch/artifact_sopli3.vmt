@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/kek1ch/artifact_sopli2"
+ // $selfillum 1
+ // $selfillumtint "[ 0.2 0.2 0.2 ]"
+	
+	
+}

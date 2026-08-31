@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/builds/common/cherepa3"
+
+	$selfillum 1
+	$selfillum_envmapmask_alpha 1
+	$selfillumtint "[2 2 2]"
+}

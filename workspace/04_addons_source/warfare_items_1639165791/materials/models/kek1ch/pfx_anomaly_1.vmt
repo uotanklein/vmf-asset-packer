@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/kek1ch/pfx_anomaly_1"
+	 $additive 1
+  "$selfillum" 1
+    "$nocull" 1
+}

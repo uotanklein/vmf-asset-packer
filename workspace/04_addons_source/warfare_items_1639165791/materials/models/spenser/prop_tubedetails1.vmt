@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Spenser\SSK\prop_tubedetails1"
+	"$surfaceprop" "metal"
+	"$model" 1
+}

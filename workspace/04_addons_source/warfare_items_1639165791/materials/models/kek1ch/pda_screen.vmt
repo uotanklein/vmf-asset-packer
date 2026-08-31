@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\kek1ch\pda_screen"
+	$nocull 1
+	$alphatest 1
+}

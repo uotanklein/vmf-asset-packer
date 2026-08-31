@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/propsforkek/rubik"
+	"$bumpmap" "models/propsforkek/rubik_n"
+	"$nodecal" 1
+}

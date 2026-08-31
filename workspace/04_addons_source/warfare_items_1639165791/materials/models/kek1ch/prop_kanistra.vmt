@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\kek1ch\prop_kanistra"
+	"$surfaceprop" "metal"
+	"$model" 1
+	//"$translucent" "1"
+	//"$nocull" 1
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Zippy's Library",
+  "type": "tool",
+  "tags": [
+    "fun",
+    "realism",
+    "build"
+  ],
+  "ignore": [
+    "*.md",
+    "*.py",
+    ".git",
+    "*.txt",
+    "*.zip",
+    "version",
+    "uncompressed*"
+  ]
+}

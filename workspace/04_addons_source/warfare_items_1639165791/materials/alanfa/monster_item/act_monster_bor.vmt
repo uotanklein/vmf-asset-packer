@@ -1,0 +1,28 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models/monsters/act_monster_bor"
+
+	"$bumpmap" "models/monsters/act_monster_bor_n"
+
+
+
+
+
+
+"$reflectivity" "[.5 .5 .5]"
+
+
+
+"$ssbump" "1"
+"$parallaxmapscale" "1" 
+
+"$rimlightboost" ".5"
+"$rimmask" "1"
+"$rimlight" "1"
+"$rimlightexponent" "3"
+
+
+	"$halflambert" "1"
+
+
+}

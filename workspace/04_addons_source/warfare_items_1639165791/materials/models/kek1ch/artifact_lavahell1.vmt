@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$bumpmap" "models/kek1ch/artifact_lavahell1"
+	$selfillum 1
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Warfare Items",
+  "type": "ServerContent",
+  "tags": [
+    "roleplay",
+    "scenic"
+  ],
+  "ignore": [
+    "*.rar",
+    "*.sh",
+    "*.zip",
+    "*.dds",
+    "*.otf"
+  ]
+}

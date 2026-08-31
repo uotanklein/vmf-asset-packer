@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/nlc7/items/glas_dirt2"
+
+	$translucent 1
+	$nocull 1
+}

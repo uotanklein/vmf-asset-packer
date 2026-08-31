@@ -1,0 +1,7 @@
+UnlitGeneric
+{
+	"$basetexture" "alanfa/grib/artifact_fire_light"
+                $halflambert "1"
+	$translucent 1
+	$additive 1
+}

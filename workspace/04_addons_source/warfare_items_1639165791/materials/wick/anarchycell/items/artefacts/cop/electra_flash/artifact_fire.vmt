@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_fire"
+	$bumpmap "wick/anarchycell/items/artefacts/soc/common/artifact_fire"
+
+	$alpha 0.3
+	$translucent 1
+	$additive 1
+	$nocull 1
+
+	$selfillum 1
+	$selfillum_envmapmask_alpha 1
+	$selfillumtint "[0.40 0.40 0.40]"
+}

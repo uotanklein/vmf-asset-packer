@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\hardhat_glasses_base"
+	$bumpmap "models\akabenko\hardhat_glasses_bump"
+
+}

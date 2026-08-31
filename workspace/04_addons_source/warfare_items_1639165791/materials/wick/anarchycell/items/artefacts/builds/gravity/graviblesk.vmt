@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/builds/common/graviblesk"
+
+	$selfillum 1
+	$selfillummask "wick/anarchycell/items/artefacts/builds/common/graviblesk"
+	$selfillumtint "[2 2 2]"
+}

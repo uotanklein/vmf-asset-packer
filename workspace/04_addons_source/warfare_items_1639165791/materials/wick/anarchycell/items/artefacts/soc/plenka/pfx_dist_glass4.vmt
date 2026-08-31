@@ -1,0 +1,18 @@
+Refract
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/plenka/pfx_dist_glass4"
+
+	$alpha 0.47
+	$translucent 1
+	$additive 1
+	$nocull 1
+
+	$refract 1
+	$normalmap "wick/anarchycell/items/artefacts/soc/plenka/pfx_dist_glass4_normal"
+
+	$vertexcolor 1
+	$vertexalpha 1
+
+	$dudvmap "wick/anarchycell/items/artefacts/soc/plenka/pfx_dist_glass4"
+	$model 1
+}

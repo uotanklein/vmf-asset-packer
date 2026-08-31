@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Spenser\SSK\prop_electricalunit3b"
+	"$surfaceprop" "metal"
+	"$model" 1
+}

@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_hell1"
+
+	$selfillum 1
+
+	Proxies
+	{
+		AnimatedTexture
+		{
+			animatedtexturevar "$basetexture"
+			animatedtextureframenumvar "$frame"
+			animatedtextureframerate 30.00
+		}
+	}
+}

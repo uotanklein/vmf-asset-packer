@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/kek1ch/prop_pult5"
+	$selfillum 1
+    $selfillumtint "[ 10 10 10 ]"
+}

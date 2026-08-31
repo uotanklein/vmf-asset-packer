@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/monsters/act_izlom9"
+
+	"$bumpmap" "models/monsters/act_izlom_n"
+
+}

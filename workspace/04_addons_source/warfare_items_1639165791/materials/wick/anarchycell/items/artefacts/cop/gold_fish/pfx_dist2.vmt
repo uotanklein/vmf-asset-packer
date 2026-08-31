@@ -1,0 +1,15 @@
+Refract
+{
+	$nocull 1
+
+	$refract 1
+	$normalmap "wick/anarchycell/items/artefacts/cop/common/pfx_dist2_normal"
+	$bluramount 4
+
+	$nodecal 1
+
+	$dudvmap "wick/anarchycell/items/artefacts/cop/common/pfx_dist2"
+	$forcerefract 1
+	$model 1
+	$scale "[1 1]"
+}

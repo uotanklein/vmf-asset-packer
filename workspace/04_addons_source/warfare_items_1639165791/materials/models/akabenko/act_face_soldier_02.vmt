@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\act_face_soldier_02"
+	"$nocull" 1
+}

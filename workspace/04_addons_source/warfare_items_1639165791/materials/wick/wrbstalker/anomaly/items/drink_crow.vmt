@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/anomaly/items/drink_crow"
+
+	$nocull 1
+}

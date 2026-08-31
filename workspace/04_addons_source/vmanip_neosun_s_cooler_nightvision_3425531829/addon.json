@@ -1,0 +1,17 @@
+{
+  "title": "[VManip] Neosun's Cooler Nightvision",
+  "type": "entity",
+  "tags": [
+    "roleplay",
+    "scenic",
+    "realism"
+  ],
+  "ignore": [
+    "*.py",
+    "*.smd",
+    "*.qc",
+    "*.gitattributes",
+    ".stuff*",
+    "*.txt"
+  ]
+}

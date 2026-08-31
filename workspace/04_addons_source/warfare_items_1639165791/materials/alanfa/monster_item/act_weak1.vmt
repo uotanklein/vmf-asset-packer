@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/monster_item/act_weak1"
+	"$translucent" 1
+}

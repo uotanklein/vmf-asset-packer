@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/GSC/S.T.A.L.K.E.R/Monsters/act_controller"
+	"$bumpmap" "models/GSC/S.T.A.L.K.E.R/Monsters/act_controller_bump"
+
+}

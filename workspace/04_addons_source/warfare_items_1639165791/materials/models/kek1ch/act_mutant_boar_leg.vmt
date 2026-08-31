@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\wick\wrbstrp\common\boar_wrbstrp\act_mutant_boar_e"
+	"$alphatest" 1
+
+}

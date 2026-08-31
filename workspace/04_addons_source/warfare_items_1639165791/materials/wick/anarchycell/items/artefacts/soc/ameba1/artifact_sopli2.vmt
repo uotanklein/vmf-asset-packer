@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_sopli2"
+
+	$translucent 1
+	$additive 1
+	$decal 1
+	$nocull 1
+
+	$allowalphatocoverage 1
+}

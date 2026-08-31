@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/anomaly/items/ammo/762x51_fmj"
+
+	$nocull 1
+}

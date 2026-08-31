@@ -1,0 +1,15 @@
+"LightMappedGeneric"
+{
+"$baseTexture" "arctic_nvg/panos"
+"$surfaceprop" "Default"
+"$translucent" 1
+"Proxies"
+{
+"AnimatedTexture"
+{
+"animatedTextureVar" "$basetexture"
+"animatedTextureFrameNumVar" "$frame"
+"animatedTextureFrameRate" "15"
+}
+}
+}

@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_myasorubka2"
+
+	$selfillum 1
+	$selfillumtint "[5 5 5]"
+}

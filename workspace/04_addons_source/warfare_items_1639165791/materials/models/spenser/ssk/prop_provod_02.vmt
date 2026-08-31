@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Spenser\SSK\prop_provod_02"
+	"$surfaceprop" "metal"
+	"$model" 1
+}

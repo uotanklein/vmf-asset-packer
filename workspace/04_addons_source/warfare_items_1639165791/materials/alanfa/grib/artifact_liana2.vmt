@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/grib/artifact_liana2"
+                $halflambert "1"
+	$translucent 1
+}

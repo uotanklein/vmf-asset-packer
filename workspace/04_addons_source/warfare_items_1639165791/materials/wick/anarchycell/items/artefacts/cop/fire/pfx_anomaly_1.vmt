@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/cop/common/pfx_anomaly_1"
+	$bumpmap "wick/anarchycell/items/artefacts/cop/common/pfx_anomaly_1"
+
+	$translucent 1
+	$additive 1
+
+	$selfillum 1
+	$selfillum_envmapmask_alpha 1
+}

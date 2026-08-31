@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture "black1dez/olr/arts/artifact_simple2"
+
+	$nocull 1
+
+	$selfillum 1
+}

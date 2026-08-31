@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/nlc7/items/mtl_bo4ka_big_iov"
+
+	$nocull 1
+}

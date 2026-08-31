@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\gas_mask_glass"
+	"$alphatest" 1
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "alanfa/warfare/cod4_cymka"
+	"$bumpmap" "alanfa/warfare/cod4_cymka_bump"
+}

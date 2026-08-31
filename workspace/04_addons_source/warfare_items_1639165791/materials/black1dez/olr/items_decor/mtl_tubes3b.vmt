@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "black1dez/OLR/items_decor/mtl_tubes3b"
+
+	$nocull 1
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dfch/elka"
+	"$alphatest" "1"
+	"$nocull" "1"
+}

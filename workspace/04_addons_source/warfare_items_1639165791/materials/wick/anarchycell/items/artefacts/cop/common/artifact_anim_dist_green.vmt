@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/cop/common/artifact_anim_dist_green"
+	$bumpmap "wick/anarchycell/items/artefacts/cop/common/artifact_anim_dist_green"
+
+	$alpha 0.8
+	$additive 1
+
+	$selfillum 1
+	$selfillumtint "[0.10 0.10 0.10]"
+
+	Proxies
+	{
+		AnimatedTexture
+		{
+			animatedtexturevar "$basetexture"
+			animatedtextureframenumvar "$frame"
+			animatedtextureframerate 20
+		}
+	}
+}

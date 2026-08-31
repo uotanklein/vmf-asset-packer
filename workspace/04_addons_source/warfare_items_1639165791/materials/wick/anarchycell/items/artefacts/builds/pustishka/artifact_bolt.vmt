@@ -1,0 +1,7 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_bolt"
+
+	$additive 1
+	$nocull 1
+}

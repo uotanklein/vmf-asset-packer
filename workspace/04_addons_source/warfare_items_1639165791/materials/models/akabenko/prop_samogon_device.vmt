@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\prop_samogon_device"
+	"$nocull" 1
+}

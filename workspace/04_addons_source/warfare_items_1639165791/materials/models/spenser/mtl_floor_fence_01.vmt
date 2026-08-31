@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Spenser\SSK\mtl_floor_fence_01"
+	"$surfaceprop" "metal"
+	"$model" 1
+	"$translucent" "1"
+	"$nocull" 1
+}

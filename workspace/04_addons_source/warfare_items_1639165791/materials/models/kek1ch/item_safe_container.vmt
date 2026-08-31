@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\kek1ch\item_safe_container"
+	"$bumpmap" "models\kek1ch\item_safe_container_bump"
+
+	$phong 1
+	$rimlight 1
+}
+

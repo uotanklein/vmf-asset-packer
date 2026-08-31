@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/common/artifact_glow"
+
+	$alpha 0.3
+	$translucent 1
+	$additive 1
+
+	$selfillum 1
+}

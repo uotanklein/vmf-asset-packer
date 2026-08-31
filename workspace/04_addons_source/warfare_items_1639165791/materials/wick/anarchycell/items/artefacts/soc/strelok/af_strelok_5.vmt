@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/soc/strelok/af_strelok_5"
+
+	$selfillum 1
+}

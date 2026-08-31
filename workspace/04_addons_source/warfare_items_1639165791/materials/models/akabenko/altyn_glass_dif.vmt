@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/akabenko/altyn_glass_dif"
+	$envmap env_cubemap
+	"$envmaptint" "[.2 .2 .2]"
+	"$translucent" 1
+}

@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\kek1ch\user_flag_renegat"
+	"$bumpmap" "models\kek1ch\user_flag_bump2"
+	$nocull 1
+	$alphatest 1
+
+}

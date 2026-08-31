@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\kek1ch\mina_petal"
+	"$bumpmap"  "models\kek1ch\mina_petal_normal"
+	
+	"$envmap"   "env_cubemap" 
+	"$phong"   "1"
+
+	$rimlight              1
+	$rimlightexponent       50
+	$rimlightboost          .025
+}

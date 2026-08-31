@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/builds/common/prop_elec_door_01_wall"
+
+	$alpha 0.6
+	$translucent 1
+	$additive 1
+	$nocull 1
+}

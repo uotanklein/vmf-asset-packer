@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/akabenko/helmet_zsh_1"
+	"$bumpmap" "models/akabenko/helmet_zsh_1_normal"
+
+    "$phong" "1"
+    "$phongexponent" "4"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+}

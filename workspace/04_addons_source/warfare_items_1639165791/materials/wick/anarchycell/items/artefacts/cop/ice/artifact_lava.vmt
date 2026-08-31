@@ -1,0 +1,24 @@
+VertexLitGeneric
+{
+	$basetexture "wick/anarchycell/items/artefacts/cop/common/artifact_lava"
+
+	$selfillum 1
+	$selfillumtint "[2 2 2]"
+
+	Proxies
+	{
+		AnimatedTexture
+		{
+			animatedtexturevar "$normalmap"
+			animatedtextureframenumvar "$bumpframe"
+			animatedtextureframerate 30.00
+		}
+
+		AnimatedTexture
+		{
+			animatedtexturevar "$basetexture"
+			animatedtextureframenumvar "$frame"
+			animatedtextureframerate 30.00
+		}
+	}
+}

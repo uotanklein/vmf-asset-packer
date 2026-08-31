@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture "wick/wrbstalker/anomaly/items/prt_o_retardant_1"
+
+	$nocull 1
+}

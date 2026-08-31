@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\act_stalker_soldier_b"
+	"$bumpmap" "models\akabenko\act_stalker_dolg_3_bump"
+}

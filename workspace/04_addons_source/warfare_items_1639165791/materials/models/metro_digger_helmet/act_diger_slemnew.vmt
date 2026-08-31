@@ -1,0 +1,7 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Models/metro_digger_helmet/act_diger_slemnew"
+	$bumpmap "Models/metro_digger_helmet/metro_sparta_bump"
+	"$hallambert" 1
+	"$nocull" 1
+}

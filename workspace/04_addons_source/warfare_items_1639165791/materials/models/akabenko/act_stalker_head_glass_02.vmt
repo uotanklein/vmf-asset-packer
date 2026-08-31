@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\akabenko\act_stalker_head_glass_02"
+	"$alphatest" 1
+}
