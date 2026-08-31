@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/cmbmtk/moonshine_table/skip"
+	"$additive"	1
+}

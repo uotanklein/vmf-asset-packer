@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/screw_nut_bolt_d"
+	"$surfaceprop" "metal"
+}
+

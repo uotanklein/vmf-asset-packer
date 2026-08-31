@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+    $basetexture "models/custom/rad15"
+    $bumpmap "models/custom/rad15_nm"
+    $surfaceprop Plastic
+
+    $envmap "env_cubemap"
+    $envmaptint "[0.012 0.012 0.012]"
+    $envmapsaturation 0.98
+
+    $phong 1
+    $phongfresnelranges "[5 15 5]"
+    $phongexponent 10
+    $phongboost 0.06
+
+    $rimlight 1
+    $rimlightexponent 3
+    $rimlightboost 1
+
+    $model 1
+}

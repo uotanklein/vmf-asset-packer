@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{ 
+	"$basetexture" "models/akabenko/trees_lightmushrooms"
+	"$bumpmap" "models/akabenko/trees_lightmushrooms_normal"
+}

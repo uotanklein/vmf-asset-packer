@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/cmbmtk/moonshine_table/armored"
+    "$bumpmap" "models/cmbmtk/moonshine_table/armored_normal"
+}

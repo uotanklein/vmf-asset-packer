@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/illusion/eftcontainers/item_barter_medical_syringe_2"
+	"$surfaceprop" "metal"
+	$translucent 1
+}
+

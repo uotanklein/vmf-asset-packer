@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/cmbmtk/moonshine_table/wood_pol"
+	"$surfaceprop" "wood"
+}

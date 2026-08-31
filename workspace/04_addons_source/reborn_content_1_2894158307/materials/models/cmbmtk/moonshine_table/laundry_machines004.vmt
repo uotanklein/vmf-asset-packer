@@ -1,0 +1,8 @@
+
+"VertexLitGeneric"
+{
+	"$basetexture" "models/cmbmtk/moonshine_table/laundry_machines004"
+	"$surfaceprop" "metal"
+	"$envmap" "env_cubemap"
+	"$basealphaenvmapmask" 1
+}

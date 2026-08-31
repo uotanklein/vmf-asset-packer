@@ -1,0 +1,13 @@
+vertexlitgeneric
+{
+$baseTexture "models/hopwire/dying_light/props/supplies_box_straps"
+$bumpmap "models/hopwire/dying_light/props/supplies_box_straps_n"
+$phong 1
+$phongboost 0.01
+$phongtint "[1 1 1]"
+$halflambert 0
+$phongfresnelranges "[.4 .8 30]"
+$ambientocclusion 1
+
+$diffuseexp "1.5"
+}

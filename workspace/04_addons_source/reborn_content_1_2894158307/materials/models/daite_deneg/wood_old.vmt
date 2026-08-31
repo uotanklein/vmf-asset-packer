@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/daite_deneg/wood_old"
+	"$bumpmap" "models/daite_deneg/wood_old_norm"
+	"$surfaceprop" "wood"
+	"$detail" "models/daite_deneg/detail_wood_det2"
+	"$detailscale" "6.00"
+	"$detailblendfactor" "0.4"
+	"$detailblendmode" "0"
+}

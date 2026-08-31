@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/eft/nvgs/mats/nvg_wilcox_pvs7_adapter_d"
+	"$bumpmap" "models/eft/nvgs/mats/nvg_wilcox_pvs7_adapter_n"
+
+	"$phong" "1"
+	"$phongexponenttexture" "models/eft/nvgs/mats/nvg_wilcox_pvs7_adapter_g"
+//    "$phongalbedotint" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges"    "[.3 .3 .3]"
+
+
+
+}

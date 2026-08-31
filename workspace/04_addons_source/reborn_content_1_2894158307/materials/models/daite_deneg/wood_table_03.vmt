@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/daite_deneg/wood_table_03"
+	"$bumpmap" "models/daite_deneg/wood_table_03_norm"
+	"$surfaceprop" "wood"
+}
